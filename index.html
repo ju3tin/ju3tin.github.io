@@ -101,6 +101,44 @@
 	    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="js/typed.custom.js" type="text/javascript"></script>
   <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.1.0/css/font-awesome.css">
+  
+  
+  	<script>
+	$(function(){
+
+		$("#typed1").typed({
+			strings: ["Typed.js is a JavaScript library.", "It tyops out", "It types out sentences.", "And then deletes them.", "Try it out!"],
+			typeSpeed: 30,
+      callback: function(){
+        shift();
+      }
+		});
+
+	});
+  function shift(){
+      $(".head-wrap").addClass("shift-text");
+      terminalHeight();
+  }
+
+  function terminalHeight(){
+      var termHeight = $(".terminal-height");
+      var value = termHeight.text();
+      value = parseInt(value);
+      setTimeout(function(){
+          if (value > 10){
+              value = value-1;
+              this.txtValue = value.toString();
+              termHeight.text(this.txtValue);
+              self.terminalHeight();
+          }
+          else{
+              clearTimeout();
+          }
+      }, 10);
+  }
+	</script>
+  
+  
 	<script>
 	$(function(){
 
@@ -188,7 +226,7 @@
                 <span>Typed.js is a <strong>JavaScript</strong> library.</span>
                 <p>It <em>types</em> out sentences.</p>
                 <p>And then deletes them.</p>
-		    <p><h1 class="pro-name">Web Developer</h1></p>
+		    <p>Web Developer</p>
             </div>
             <span id="typed" style="font-size: 100px;
     margin: 0;
@@ -211,7 +249,6 @@
 			    
 			    <!--test -->
 			   
-                        <h1 class="pro-name">Web <!-- <span style="color: #71b644;" > -->Developer<!-- </span> --></h1>
                         <p class="tagline">Bring your dreams to life</p>
                         <div class="skills">
 

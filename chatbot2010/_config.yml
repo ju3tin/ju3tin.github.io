@@ -29,5 +29,5 @@ compress_html:
   startings:        [html, head, body]
 
 sass:
-  sass_dir:         assets/scss
+  sass_dir:         /assets/scss
   style:            compressed # expanded

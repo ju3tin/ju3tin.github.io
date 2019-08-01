@@ -15,7 +15,7 @@ social:
   - title: "facebook"
     url: "https://facebook.com/"
   - title: "twitter"
-    url: "https://twitter.com/"
+    url: "https://twitter.com/ju3t1ng"
   - title: "github"
     url: "https://github.com/ju3tin"
   - title: "bitcoin"

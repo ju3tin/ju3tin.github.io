@@ -10,15 +10,15 @@
 #   email: someone@something.com //--> optional
 
 -
-  id: someone
-  name: Some Person
+  id: Justin
+  name: Justin Grierson
   avatar: /profile-pic.jpg
   bio: this is some more information about the author.
   facebook: https://www.facebook.com/someone
-  twitter: https://twitter.com/someone
-  instagram: http://instagram.com/someone
-  email: someone@something.com
+  twitter: https://twitter.com/ju3t1ng
+  instagram: http://instagram.com/ju3tin1
+  email: ju3tin@hotmail.co.uk
 -
-  id: person
+  id: Justin
   avatar: /profile-pic.jpg
   bio: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id, quidem.

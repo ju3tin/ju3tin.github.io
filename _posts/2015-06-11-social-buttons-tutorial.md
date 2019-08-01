@@ -13,7 +13,7 @@ You can edit them with the following variables:
 <pre><code data-trim class="yaml">
 social:
   - title: "facebook"
-    url: "https://facebook.com/"
+    url: "https://facebook.com/justin.grierson.5"
   - title: "twitter"
     url: "https://twitter.com/ju3t1ng"
   - title: "github"

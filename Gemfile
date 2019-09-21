@@ -10,6 +10,8 @@ gem 'jekyll-paginate'
 gem 'wdm'
 gemspec
 
+gem 'jekyll-paginate', group: :jekyll_plugins
+
 
 
 

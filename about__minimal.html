@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="assets/font-awesome/css/fontawesome-all.min.css">
     <link rel="stylesheet" href="assets/css/magnific-popup.css">
     <link rel="stylesheet" href="assets/css/odometer-theme-default.css">
-    <link rel="stylesheet" href="assets/css/style1.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 	<title>Preus</title>
 
@@ -80,7 +80,7 @@
                 ========================================================================================================
                 -->
                 <li class="nav-item">
-                    <a class="nav-link" href="#collapse__about" data-toggle="collapse" role="button">About</a>
+                    <a class="nav-link active" href="#collapse__about" data-toggle="collapse" role="button">About</a>
                     <div class="collapse" id="collapse__about">
                         <ul class="nav flex-column">
 
@@ -102,7 +102,7 @@
                 ========================================================================================================
                 -->
                 <li class="nav-item">
-                    <a class="nav-link active" href="#collapse-portfolio" data-toggle="collapse" role="button">Portfolio</a>
+                    <a class="nav-link" href="#collapse-portfolio" data-toggle="collapse" role="button">Portfolio</a>
                     <div class="collapse" id="collapse-portfolio">
                         <ul class="nav flex-column">
 
@@ -220,20 +220,29 @@
         ================================================================================================================
         ================================================================================================================
         -->
-        <header id="ts-hero" class="ts-block mt-5">
+        <header id="ts-hero" class="ts-block ts-height--100vh">
 
-            <div class="container pt-2 pt-lg-5">
+            <div class="container">
 
-                <blockquote class="blockquote text-center">
-                    <h2>Cras nisl lacus, tincidunt vitae neque vitae, interdum iaculis tortor. Orci varius natoque</h2>
-                    <div class="blockquote-footer">Penatibus et magnis dis parturient montes nascetur</div>
-                </blockquote>
+                <h1 data-animate="ts-reveal">
+                    <span class="wrapper">
+                        <span>We are</span>
+                    </span>
+                    <br>
+                    <span class="wrapper">
+                        <span data-ts-delay=".05s">Preus Interactive</span>
+                    </span>
+                </h1>
+
+                <h4 class="font-weight-bold" data-animate="ts-fadeInUp" data-ts-delay=".1s">We'll Do Your Next Project</h4>
+
+                <a href="#" class="btn btn-dark" data-animate="ts-fadeInUp" data-ts-delay=".15s">Let's Do It!</a>
 
             </div>
 
             <div class="ts-background">
-                <div class="ts-background-image ts-background-repeat ts-img-into-bg">
-                    <img src="assets/img/bg__pattern--dot.png" alt="">
+                <div class="ts-background-image ts-background-repeat ts-img-into-bg ts-opacity__70">
+                    <img src="assets/img/bg__pattern--dot--dark.png" alt="">
                 </div>
             </div>
 
@@ -245,133 +254,43 @@
         -->
         <main id="ts-content">
 
-            <!--Gallery Big
+            <!--About
             ============================================================================================================
             -->
-            <section id="about" class="py-5 ts-gallery">
+            <section id="about" class="ts-block py-5">
                 <div class="container pt-5">
-
-                    <a href="assets/img/img__work--11.jpg" class="ts-gallery__item ts-gallery__item--big popup-image">
-                        <div class="ts-background ts-img-into-bg">
-                            <img src="assets/img/img__work--11.jpg" alt="">
-                        </div>
-                    </a>
-
-                </div>
-
-            </section>
-
-            <!--Description
-            ============================================================================================================
-            -->
-            <section class="ts-block pt-4">
-                <div class="container">
-
-                    <div class="ts-title">
-                        <h1>StarCreative</h1>
-                        <h3>Branding</h3>
-                    </div>
-
                     <div class="row">
 
+                        <div class="col-md-4">
+                            <div class="ts-title">
+                                <h2>About Us</h2>
+                            </div>
+                        </div>
+
                         <div class="col-md-8">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec nunc vitae
-                                nibh congue pellentesque. Mauris scelerisque quam semper feugiat tincidunt. Pellentesque
-                                a ullamcorper erat, id dapibus velit. Aliquam erat volutpat. Proin at sapien leo. Nullam
+                            <p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque nec nunc vitae nibh
+                                congue pellentesque. Mauris scelerisque quam semper feugiat tincidunt. Pellentesque a
+                                ullamcorper erat, id dapibus velit. Aliquam erat volutpat. Proin at sapien leo. Nullam
                                 fermentum purus ac massa dignissim, in cursus turpis lobortis. Aliquam lacinia ante a
                                 velit viverra scelerisque. Suspendisse nec dui sed tortor mollis rutrum nec at leo.
                             </p>
-                        </div>
-
-                        <div class="col-md-4">
-                            <dl class="ts-description-list">
-                                <dt>Client</dt>
-                                <dd>Vertical Solutions</dd>
-                                <dt>Date</dt>
-                                <dd>03-12-2016</dd>
-                                <dt>Website</dt>
-                                <dd><a href="#" class="ts-underline">www.example.com</a></dd>
-                                <dt>Share</dt>
-                                <dd>
-                                    <a href="#" class="px-1">
-                                        <i class="fab fa-facebook-square"></i>
-                                    </a>
-                                    <a href="#" class="px-1">
-                                        <i class="fab fa-twitter-square"></i>
-                                    </a>
-                                    <a href="#" class="px-1">
-                                        <i class="fab fa-pinterest-square"></i>
-                                    </a>
-                                </dd>
-                            </dl>
+                            <div class="ts-group h5">
+                                <a href="#" class="px-1">
+                                    <i class="fab fa-facebook-square"></i>
+                                </a>
+                                <a href="#" class="px-1">
+                                    <i class="fab fa-twitter-square"></i>
+                                </a>
+                                <a href="#" class="px-1">
+                                    <i class="fab fa-pinterest-square"></i>
+                                </a>
+                            </div>
                         </div>
 
                     </div>
-
                 </div>
-            </section>
 
-            <!--Gallery
-            ============================================================================================================
-            -->
-            <section id="gallery" class="ts-block pt-5">
-                <div class="container">
-
-                    <div class="row ts-gallery">
-
-                        <div class="col-md-6">
-                            <a href="portfolio__detail--default.html" class="card ts-gallery__item">
-                                <div class="ts-background ts-img-into-bg">
-                                    <img src="assets/img/img__work--01.jpg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <!--end gallery item-->
-
-                        <div class="col-md-6">
-                            <a href="portfolio__detail--default.html" class="card ts-gallery__item">
-                                <div class="ts-background ts-img-into-bg">
-                                    <img src="assets/img/img__work--02.jpg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <!--end gallery item-->
-
-                        <div class="col-md-4">
-                            <a href="portfolio__detail--default.html" class="card ts-gallery__item">
-                                <div class="ts-background ts-img-into-bg">
-                                    <img src="assets/img/img__work--03.jpg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <!--end gallery item-->
-
-                        <div class="col-md-4">
-                            <a href="portfolio__detail--default.html" class="card ts-gallery__item">
-                                <div class="ts-background ts-img-into-bg">
-                                    <img src="assets/img/img__work--04.jpg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <!--end gallery item-->
-
-                        <div class="col-md-4">
-                            <a href="portfolio__detail--default.html" class="card ts-gallery__item ts-half">
-                                <div class="ts-background ts-img-into-bg">
-                                    <img src="assets/img/img__work--05.jpg" alt="">
-                                </div>
-                            </a>
-                            <a href="portfolio__detail--default.html" class="card ts-gallery__item ts-half">
-                                <div class="ts-background ts-img-into-bg">
-                                    <img src="assets/img/img__work--06.jpg" alt="">
-                                </div>
-                            </a>
-                        </div>
-                        <!--end gallery item-->
-
-                    </div>
-
-                </div>
             </section>
 
             <!--Services
@@ -466,7 +385,7 @@
                             <a href="#" class="ts-link ts-underline mb-5 mb-md-0 d-inline-block">More About Us</a>
                         </div>
 
-                        <div class="col-sm-6 col-md-4">
+                        <div class="col-md-4">
                             <address class="ts-text-muted---white">
                                 1565 Broadcast Drive
                                 <br>
@@ -482,7 +401,7 @@
                             </address>
                         </div>
 
-                        <div class="col-sm-6 col-md-3">
+                        <div class="col-md-3">
                             <nav class="nav flex-column">
                                 <a class="nav-link" href="#">Home</a>
                                 <a class="nav-link" href="#">About us</a>

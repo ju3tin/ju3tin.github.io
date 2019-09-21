@@ -1,0 +1,10 @@
+I"6<p>This is a youtube post type video.</p>
+
+<p>For a YouTube video, no embedding code is required, it all works through the video ID. A featured image is not needed, as the video thumbnail will be used.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">youtube</span>
+<span class="na">yt-video-id</span><span class="pi">:</span> <span class="s">JUT-3jGyjoM</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+:ET

@@ -1,0 +1,68 @@
+I"R<p>Here you’ll find a simple gallery, that just adds all of the images at full-width directly in the post content.</p>
+
+<p><br /></p>
+
+<h6 id="front-matter">front matter</h6>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">gallery</span>
+<span class="na">gallery</span><span class="pi">:</span>
+    <span class="pi">-</span> <span class="na">images</span><span class="pi">:</span>
+      <span class="pi">-</span> <span class="na">filename</span><span class="pi">:</span> <span class="s">gallery-1.jpg</span>
+        <span class="na">alttext</span><span class="pi">:</span> <span class="s">Bloom Flat</span>
+      <span class="pi">-</span> <span class="na">filename</span><span class="pi">:</span> <span class="s">gallery-2.jpg</span>
+        <span class="na">alttext</span><span class="pi">:</span> <span class="s">Bloom</span>
+      <span class="pi">-</span> <span class="na">filename</span><span class="pi">:</span> <span class="s">gallery-3.jpg</span>
+        <span class="na">alttext</span><span class="pi">:</span> <span class="s">Blossom in a Star</span>
+      <span class="pi">-</span> <span class="na">filename</span><span class="pi">:</span> <span class="s">gallery-4.jpg</span>
+        <span class="na">alttext</span><span class="pi">:</span> <span class="s">Blossom</span>
+      <span class="pi">-</span> <span class="na">filename</span><span class="pi">:</span> <span class="s">gallery-5.jpg</span>
+        <span class="na">alttext</span><span class="pi">:</span> <span class="s">Bubbly Bloom</span>
+      <span class="pi">-</span> <span class="na">filename</span><span class="pi">:</span> <span class="s">gallery-6.jpg</span>
+        <span class="na">alttext</span><span class="pi">:</span> <span class="s">Rays of Gold</span>
+      <span class="pi">-</span> <span class="na">filename</span><span class="pi">:</span> <span class="s">gallery-7.jpg</span>
+        <span class="na">alttext</span><span class="pi">:</span> <span class="s">Exotic</span>
+      <span class="pi">-</span> <span class="na">filename</span><span class="pi">:</span> <span class="s">gallery-8.jpg</span>
+        <span class="na">alttext</span><span class="pi">:</span> <span class="s">Filled out</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+<p><br /></p>
+
+<h6 id="post-content">post content</h6>
+
+<div class="language-liquid highlighter-rouge"><div class="highlight"><pre class="highlight"><code>
+<span class="p">{%</span><span class="w"> </span><span class="nt">include</span><span class="w"> </span><span class="nx">gallery.html</span><span class="w"> </span><span class="p">%}</span>
+
+</code></pre></div></div>
+
+<!-- simple gallery, where each of the files is just put after one another -->
+<div class="gallery">
+    
+        
+            <b>Bloom Flat</b>
+            <img src="/gallery-1.jpg" alt="Bloom Flat" />
+        
+            <b>Bloom</b>
+            <img src="/gallery-2.jpg" alt="Bloom" />
+        
+            <b>Blossom in a Star</b>
+            <img src="/gallery-3.jpg" alt="Blossom in a Star" />
+        
+            <b>Blossom</b>
+            <img src="/gallery-4.jpg" alt="Blossom" />
+        
+            <b>Bubbly Bloom</b>
+            <img src="/gallery-5.jpg" alt="Bubbly Bloom" />
+        
+            <b>Rays of Gold</b>
+            <img src="/gallery-6.jpg" alt="Rays of Gold" />
+        
+            <b>Exotic</b>
+            <img src="/gallery-7.jpg" alt="Exotic" />
+        
+            <b>Filled out</b>
+            <img src="/gallery-8.jpg" alt="Filled out" />
+        
+    
+</div>
+:ET

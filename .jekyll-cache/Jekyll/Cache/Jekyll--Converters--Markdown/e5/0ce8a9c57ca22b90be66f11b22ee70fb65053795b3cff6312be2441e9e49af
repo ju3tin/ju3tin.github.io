@@ -1,0 +1,12 @@
+I"Ø<p>This youtube video uses the iframe instead of the thumbnail image on the index pages.</p>
+
+<p>For a YouTube video, no embedding code is required, it all works through the video ID.</p>
+
+<div class="language-yml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">post-full</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">youtube</span>
+<span class="na">yt-video-id</span><span class="pi">:</span> <span class="s">E802ZnXbnFY</span>
+<span class="na">homedisplay</span><span class="pi">:</span> <span class="s">iframe</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+:ET

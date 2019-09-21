@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -41,7 +42,7 @@
     ====================================================================================================================
     -->
     <div id="main-navigation">
-        <nav class="navbar navbar-dark" data-bg-color="#0f1018">
+        <nav class="navbar navbar-dark">
             <ul class="navbar-nav">
 
                 <!--Home
@@ -219,44 +220,30 @@
         ================================================================================================================
         ================================================================================================================
         -->
-        <header id="ts-hero" class="ts-height--100vh text-white" >
+        <header id="ts-hero" class="ts-height--100vh ts-has-overlay text-white">
 
             <div class="container">
-                <div class="row ts-align__vertical">
 
-                    <div class="col-sm-6 col-md-7">
-                        <h1 data-animate="ts-reveal">
-                            <span class="wrapper">
-                                <span>Share Your Taste</span>
-                            </span>
-                        </h1>
+                <h1 data-animate="ts-reveal">
+                    <span class="wrapper">
+                        <span>We Are</span>
+                    </span>
+                    <br>
+                    <span class="wrapper">
+                        <span data-ts-delay=".05s">Preus Interactive</span>
+                    </span>
+                </h1>
 
-                        <div  data-animate="ts-fadeInUp" data-ts-delay=".1s">
-                            <p>
-                                Aenean et feugiat libero. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                In suscipit fringilla dolor. Fusce volutpat nulla sed placerat tempor
-                            </p>
-                        </div>
+                <h4 data-animate="ts-fadeInUp" data-ts-delay=".1s">A digital agency based in London</h4>
 
-                        <div class="ts-group d-none d-md-block">
-                            <a href="#" class="btn btn-light mr-2 my-2" data-animate="ts-fadeInUp" data-ts-delay=".15s">Buy Now</a>
-                            <a href="#" class="btn btn-outline-light my-2" data-animate="ts-fadeInUp" data-ts-delay=".2s">Read More</a>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-6 col-md-5">
-                        <div class="text-center d-none d-sm-block" data-animate="ts-fadeInRight" data-ts-delay=".25s">
-                            <img src="assets/img/img__mobile--01.png" class="ts-img-fluid py-5" alt="">
-                        </div>
-                    </div>
-
+                <div data-animate="ts-fadeInUp" data-ts-delay=".15s">
+                    <a href="#" class="btn btn-outline-light btn-sm">Check Our Works</a>
                 </div>
+
             </div>
 
-            <div class="ts-background ts-bg-black">
-                <div class="ts-img-into-bg ts-background-image ts-parallax-element">
-                    <img src="assets/img/bg__gradient--dark.jpg" alt="">
-                </div>
+            <div class="ts-background" data-bg-parallax="scroll" data-bg-parallax-speed="3">
+                <div class="ts-video-bg ts-parallax-element" data-vide-bg="assets/video/Working-Space" data-vide-options="loop: true, muted: true, position: 50% 50%"></div>
             </div>
 
         </header>
@@ -267,10 +254,91 @@
         -->
         <main id="ts-content">
 
+            <!--Blockquote
+            ============================================================================================================
+            -->
+            <section id="blockquote" class="ts-block ts-bg-black text-white">
+                <div class="container">
+
+                    <blockquote class="blockquote">
+                        <h2>Cras nisl lacus, tincidunt vitae neque vitae, interdum iaculis tortor. Orci varius natoque</h2>
+                        <footer class="blockquote-footer">Penatibus et magnis dis parturient montes nascetur</footer>
+                    </blockquote>
+
+                </div>
+            </section>
+
+            <!--Works
+            ============================================================================================================
+            -->
+            <section id="works" class="ts-block">
+                <div class="container">
+
+                    <div class="ts-title text-center">
+                        <h2>My Works</h2>
+                    </div>
+
+                    <div class="row ts-gallery">
+
+                        <div class="col-md-6">
+                            <a href="portfolio__detail--default.html" class="card ts-gallery__item">
+                                <div class="ts-background ts-img-into-bg">
+                                    <img src="assets/img/img__work--01.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <!--end gallery item-->
+
+                        <div class="col-md-6">
+                            <a href="portfolio__detail--default.html" class="card ts-gallery__item">
+                                <div class="ts-background ts-img-into-bg">
+                                    <img src="assets/img/img__work--02.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <!--end gallery item-->
+
+                        <div class="col-md-4">
+                            <a href="portfolio__detail--default.html" class="card ts-gallery__item">
+                                <div class="ts-background ts-img-into-bg">
+                                    <img src="assets/img/img__work--03.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <!--end gallery item-->
+
+                        <div class="col-md-4">
+                            <a href="portfolio__detail--default.html" class="card ts-gallery__item">
+                                <div class="ts-background ts-img-into-bg">
+                                    <img src="assets/img/img__work--04.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <!--end gallery item-->
+
+                        <div class="col-md-4">
+                            <a href="portfolio__detail--default.html" class="card ts-gallery__item ts-half">
+                                <div class="ts-background ts-img-into-bg">
+                                    <img src="assets/img/img__work--05.jpg" alt="">
+                                </div>
+                            </a>
+                            <a href="portfolio__detail--default.html" class="card ts-gallery__item ts-half">
+                                <div class="ts-background ts-img-into-bg">
+                                    <img src="assets/img/img__work--06.jpg" alt="">
+                                </div>
+                            </a>
+                        </div>
+                        <!--end gallery item-->
+
+                    </div>
+
+                </div>
+            </section>
+
             <!--Features
             ============================================================================================================
             -->
-            <section id="features" class="ts-block text-white text-center text-sm-left" data-bg-color="#14141c">
+            <section id="features" class="ts-block text-white text-center text-sm-left">
                 <div class="container">
                     <div class="row">
 
@@ -303,101 +371,11 @@
 
                     </div>
                 </div>
-            </section>
 
-            <!--Our Experience
-            ============================================================================================================
-            -->
-            <section class="ts-block text-white pb-0" data-bg-color="#191a21">
-                <div class="container">
-
-                    <div class="ts-title text-center">
-                        <h2>Main Features</h2>
+                <div class="ts-background ts-bg-black">
+                    <div class="ts-background-image ts-background-repeat ts-opacity__10 ts-img-into-bg">
+                        <img src="assets/img/bg__pattern--topo-white.png" alt="">
                     </div>
-
-                    <div class="row">
-
-                        <div class="col-md-4 mb-5">
-                            <img src="assets/img/img__mobile--02.png" class="mw-100" alt="">
-                        </div>
-
-                        <div class="col-md-6">
-                            <ul class="list list-text list-dashed">
-
-                                <li data-animate="ts-fadeInRight">
-                                    <h4>Scream Interactive</h4>
-                                    <p>
-                                        Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh
-                                        condimentum tristique eu finibus lorem. Nullam sed eleifend massa.
-                                    </p>
-                                </li>
-                                <!--end Experience block-->
-
-                                <li data-animate="ts-fadeInRight" data-ts-delay=".1s">
-                                    <h4>Weston PhotoDesign</h4>
-                                    <p>
-                                        Vestibulum eu ex sed nibh condimentum tristique eu finibus lorem. Nullam sed
-                                        eleifend massa. Morbi nulla turpis, pharetra
-                                    </p>
-                                </li>
-                                <!--end Experience block-->
-
-                                <li data-animate="ts-fadeInRight" data-ts-delay=".2s">
-                                    <h4>Freelance</h4>
-                                    <p>
-                                        Tristique eu finibus lorem. Nullam sed eleifend massa. Morbi nulla turpis,
-                                        pharetra et nisl eu, pellentesque molestie erat
-                                    </p>
-                                </li>
-                                <!--end Experience block-->
-
-                            </ul>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!--Achieved
-            ============================================================================================================
-            -->
-            <section id="achieved" class="ts-block text-center text-white pb-0" data-bg-color="#1e1e27">
-                <div class="container">
-
-                    <div class="ts-title">
-                        <h2>What We Have Achieved</h2>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-md-8 offset-sm-2">
-                            <p class="mb-5 pb-3">
-                                Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum tristique
-                                finibus lorem. Nullam sed eleifend massa. Morbi nulla turpis, pharetra et nisl eu, pellentesque
-                                molestie erat
-                            </p>
-                        </div>
-                    </div>
-
-                    <div>
-                        <img src="assets/img/img__dashboard.png" class="img-fluid" alt="">
-                    </div>
-
-                </div>
-            </section>
-
-            <!--Blockquote
-            ============================================================================================================
-            -->
-            <section id="blockquote" class="ts-block">
-                <div class="container">
-
-                    <blockquote class="blockquote mb-5">
-                        <h2>Cras nisl lacus, tincidunt vitae neque vitae, interdum iaculis tortor. Orci varius natoque</h2>
-                        <footer class="blockquote-footer">Penatibus et magnis dis parturient montes nascetur</footer>
-                    </blockquote>
-
-                    <a href="#" class="ts-link ts-underline mb-5 m-sm-0 d-inline-block">More About Us</a>
-
                 </div>
             </section>
 
@@ -422,6 +400,58 @@
                 </div>
             </section>
 
+            <!--Skills
+            ============================================================================================================
+            -->
+            <section id="my-skills" class="ts-block">
+                <div class="container">
+
+                    <div class="ts-title">
+                        <h2>Our Skills</h2>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-6 mb-4">
+                            <p>
+                                Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum tristique
+                                eu finibus lorem. Nullam sed eleifend massa. Morbi nulla turpis, pharetra et nisl eu,
+                                pellentesque molestie erat
+                            </p>
+                            <a href="contact__default.html" class="ts-link">Contact Us</a>
+                        </div>
+                        <!--end Paragraph-->
+
+                        <div class="col-md-6">
+
+                            <div class="progress" data-progress-width="100%">
+                                <h5 class="ts-progress-title">Webdesign</h5>
+                                <figure class="ts-progress-value"></figure>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <!--end Skill-->
+
+                            <div class="progress" data-progress-width="80%">
+                                <h5 class="ts-progress-title">Photography</h5>
+                                <figure class="ts-progress-value"></figure>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <!--end Skill-->
+
+                            <div class="progress" data-progress-width="90%">
+                                <h5 class="ts-progress-title">Coding</h5>
+                                <figure class="ts-progress-value"></figure>
+                                <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                            <!--end Skill-->
+
+                        </div>
+                    </div>
+                    <!--end .row-->
+                </div>
+                <!--end .container-->
+            </section>
+
             <!--Call to action
             ============================================================================================================
             -->
@@ -441,6 +471,209 @@
                 </div>
             </section>
 
+            <!--Promo numbers
+            ============================================================================================================
+            -->
+            <section class="ts-block ts-background-repeat text-white ts-bg-black" data-bg-image="assets/img/bg__pattern--dot--white.png">
+                <div class="container ts-promo-numbers">
+                    <div class="row">
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure class="odometer" data-odometer-final="43">0</figure>
+                                <h5>Clients</h5>
+                            </div>
+                        </div>
+                        <!--end Promo number-->
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure class="odometer" data-odometer-final="68">0</figure>
+                                <h5>Projects</h5>
+                            </div>
+                        </div>
+                        <!--end Promo number-->
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure class="odometer" data-odometer-final="17">0</figure>
+                                <h5>Awards</h5>
+                            </div>
+                        </div>
+                        <!--end Promo number-->
+
+                        <div class="col-sm-6 col-md-3">
+                            <div class="ts-promo-number text-center">
+                                <figure class="odometer" data-odometer-final="12">0</figure>
+                                <h5>Years Experience</h5>
+                            </div>
+                        </div>
+                        <!--end Promo number-->
+
+                    </div>
+                </div>
+            </section>
+
+            <!--Our Experience
+            ============================================================================================================
+            -->
+            <section class="ts-block">
+                <div class="container">
+
+                    <div class="ts-title">
+                        <h2>Our Experience</h2>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <img src="assets/img/img__plant.jpg" class="w-100" alt="">
+                        </div>
+
+                        <div class="col-md-6 mt-5">
+                            <ul class="list list-text list-dashed">
+
+                                <li data-animate="ts-fadeInRight">
+                                    <h5 class="opacity-30"><strong>2010 - 2013</strong></h5>
+                                    <h4>Scream Interactive</h4>
+                                    <p>
+                                        Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh
+                                        condimentum tristique eu finibus lorem. Nullam sed eleifend massa.
+                                    </p>
+                                </li>
+                                <!--end Experience block-->
+
+                                <li data-animate="ts-fadeInRight" data-ts-delay=".1s">
+                                    <h5 class="opacity-30"><strong>2013 - 2016</strong></h5>
+                                    <h4>Weston PhotoDesign</h4>
+                                    <p>
+                                        Vestibulum eu ex sed nibh condimentum tristique eu finibus lorem. Nullam sed
+                                        eleifend massa. Morbi nulla turpis, pharetra
+                                    </p>
+                                </li>
+                                <!--end Experience block-->
+
+                                <li data-animate="ts-fadeInRight" data-ts-delay=".2s">
+                                    <h5 class="opacity-30"><strong>Until Now</strong></h5>
+                                    <h4>Freelance</h4>
+                                    <p>
+                                        Tristique eu finibus lorem. Nullam sed eleifend massa. Morbi nulla turpis,
+                                        pharetra et nisl eu, pellentesque molestie erat
+                                    </p>
+                                </li>
+                                <!--end Experience block-->
+
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--Blog
+            ============================================================================================================
+            -->
+            <section class="ts-block pt-0">
+                <div class="container">
+
+                    <div class="ts-title">
+                        <h2>From The Blog</h2>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="ts-blog-thumb">
+                                <a href="blog__detail.html" class="ts-blog-image ts-background">
+                                    <div class="ts-background-image ts-img-into-bg">
+                                        <img src="assets/img/img__blog__thumb--01.jpg" alt="">
+                                    </div>
+                                </a>
+                                <h6>02-05-2019</h6>
+                                <h4>
+                                    <a href="blog__detail.html">10 best design books</a>
+                                </h4>
+                                <p>
+                                    Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum
+                                    tristique eu finibus lorem.
+                                </p>
+                                <footer>
+                                    <a href="#" class="mr-3">
+                                        <i class="fa fa-comment"></i>
+                                        20
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                        46
+                                    </a>
+                                </footer>
+                            </div>
+                        </div>
+                        <!--end Blog post thumbnail-->
+
+                        <div class="col-md-4">
+                            <div class="ts-blog-thumb">
+                                <a href="blog__detail.html" class="ts-blog-image">
+                                    <div class="ts-background-image ts-img-into-bg">
+                                        <img src="assets/img/img__blog__thumb--02.jpg" alt="">
+                                    </div>
+                                </a>
+                                <h6>24-04-2019</h6>
+                                <h4>
+                                    <a href="blog__detail.html">How to be more creative</a>
+                                </h4>
+                                <p>
+                                    Quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum tristique eu finibus
+                                    lorem. Nullam sed eleifend massa.
+                                </p>
+                                <footer>
+                                    <a href="#" class="mr-3">
+                                        <i class="fa fa-comment"></i>
+                                        42
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                        38
+                                    </a>
+                                </footer>
+                            </div>
+                        </div>
+                        <!--end Blog post thumbnail-->
+
+                        <div class="col-md-4">
+                            <div class="ts-blog-thumb">
+                                <a href="blog__detail.html" class="ts-blog-image">
+                                    <div class="ts-background-image ts-img-into-bg">
+                                        <img src="assets/img/img__blog__thumb--03.jpg" alt="">
+                                    </div>
+                                </a>
+                                <h6>17-04-2019</h6>
+                                <h4>
+                                    <a href="blog__detail.html">Start your day well!</a>
+                                </h4>
+                                <p>
+                                    Vestibulum eu ex sed nibh condimentum tristique eu finibus lorem.  Nullam sed eleifend
+                                    massa. Morbi nulla turpis
+                                </p>
+                                <footer>
+                                    <a href="#" class="mr-3">
+                                        <i class="fa fa-comment"></i>
+                                        18
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-heart"></i>
+                                        51
+                                    </a>
+                                </footer>
+                            </div>
+                        </div>
+                        <!--end Blog post thumbnail-->
+
+                    </div>
+
+                </div>
+            </section>
+
         </main>
         <!--end #content-->
 
@@ -448,7 +681,7 @@
         ================================================================================================================
         ================================================================================================================
         -->
-        <footer id="ts-footer" data-bg-color="#060714">
+        <footer id="ts-footer">
             <section id="ts-footer-main">
                 <div class="container">
 
@@ -515,8 +748,13 @@
 	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/imagesloaded.pkgd.min.js"></script>
 	<script src="assets/js/isInViewport.jquery.js"></script>
+	<script src="assets/js/jquery.magnific-popup.min.js"></script>
 	<script src="assets/js/scrolla.jquery.min.js"></script>
+	<script src="assets/js/jquery.validate.min.js"></script>
+	<script src="assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>
+	<script src="assets/js/odometer.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>
+    <script src="assets/js/jquery.vide.min.js"></script>
     <script src="assets/js/custom.js"></script>
 
 </body>

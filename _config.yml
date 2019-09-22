@@ -238,7 +238,8 @@ url:
 
 # Jekyll Configuration
 encoding: UTF-8
-permalink: /:title/
+# permalink: /:title/
+permalink: /:title.html
 paginate: 5
 paginate_path: "/blog/page/:num/"
 

@@ -6,8 +6,15 @@
             ========================================================================================================
             -->
             <li class="nav-item">
-                <a class="nav-link active" href="#collapse__home" data-toggle="collapse" role="button">Home</a>
-                <div class="collapse" id="collapse__home">
+
+                    <script type="text/javascript">
+                        if(window.location.href === "https://ju3tin.github.io/index4a.html") {
+                            document.write('<a class="nav-link active" href="#collapse__home" data-toggle="collapse" role="button">Home</a>')
+                        } else {
+                            document.write(' <a class="nav-link" href="#collapse__home" data-toggle="collapse" role="button">Home</a>')
+                        }
+                    </script>
+                 <div class="collapse" id="collapse__home">
                     <ul class="nav flex-column">
 
                         <li class="nav-item">

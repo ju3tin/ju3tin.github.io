@@ -1,8 +1,10 @@
 <head>
 	<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="author" content="ThemeStarz">
-
+    <meta name="description" content="{{site.description}}">
+    <meta name="author" content="{{site.author}}">
+    <meta name="keywords" content="{{site.keywords}}">
+    <link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.baseurl}}">
+  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" type="text/css">
     <link rel="stylesheet" href="assets/font-awesome/css/fontawesome-all.min.css">
@@ -11,6 +13,8 @@
     <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
     <link rel="stylesheet" href="assets/css/style1.css">
 
-	<title>Preus</title>
-
+    <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
+    {% if site.favicon %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}{{site.favicon}}">
+  {% endif %}
 </head>

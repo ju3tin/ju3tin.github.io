@@ -11,8 +11,20 @@
        {% include brand1.html %}
 
       {% include navigation1.html %}
-    <section id="post" class="container content-section text-center">
-      <div class="row">
+     <div class="ts-content">
+        
+          <header id="ts-hero" class="ts-block">
+
+            <div class="container pt-2 pt-sm-5 pt-lg-0">
+                <div class="ts-title mb-0">
+                    <h1>{{ page.title }}</h1>
+                </div>
+            </div>
+
+        </header>
+
+         
+    <div class="row">
         <div class="col-md-10 col-md-offset-1">
 
           {% include swipe-instructions.html %}
@@ -56,7 +68,7 @@
           {% endif%}
         </div>
       </div>
-    </section>
+    </div>
       </div>
 
     {% include footer1.html %}

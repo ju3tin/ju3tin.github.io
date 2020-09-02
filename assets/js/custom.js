@@ -461,3 +461,12 @@ function initOwl(){
         });
     }
 }
+////////////
+//
+// date
+//
+///////////
+
+var d = new Date();
+var n = d.getFullYear();
+document.getElementById("thisyear").innerHTML = n;

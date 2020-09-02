@@ -66,7 +66,7 @@
                 </div>
             </div>{% endfor %}
             <!--end Blog post thumbnail-->
-
+{% for post in site.posts offset:2 limit:1 %}
             <div class="col-md-4">
                 <div class="ts-blog-thumb">
                     <a href="blog__detail.html" class="ts-blog-image">
@@ -74,9 +74,9 @@
                             <img src="/assets/img/img__blog__thumb--03.jpg" alt="">
                         </div>
                     </a>
-                    <h6>17-04-2019</h6>
+                    <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                     <h4>
-                        <a href="blog__detail.html">Start your day well!</a>
+                        <a href="blog__detail.html">{{ post.title }}</a>
                     </h4>
                     <p>
                         Vestibulum eu ex sed nibh condimentum tristique eu finibus lorem.  Nullam sed eleifend
@@ -93,7 +93,7 @@
                         </a>
                     </footer>
                 </div>
-            </div>
+            </div>{% endfor %}
             <!--end Blog post thumbnail-->
 
         </div>

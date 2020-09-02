@@ -18,7 +18,7 @@
                     <h4>
                         <a href="blog__detail.html">
 {{ post.title }}
-{% endfor %}</a>
+</a>
                     </h4>
                     <p>
                         Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum
@@ -35,9 +35,9 @@
                         </a>
                     </footer>
                 </div>
-            </div>
+            </div>{% endfor %}
             <!--end Blog post thumbnail-->
-
+{% for post in site.posts offset:1 limit:1 %}
             <div class="col-md-4">
                 <div class="ts-blog-thumb">
                     <a href="blog__detail.html" class="ts-blog-image">
@@ -45,9 +45,9 @@
                             <img src="/assets/img/img__blog__thumb--02.jpg" alt="">
                         </div>
                     </a>
-                    <h6>24-04-2019</h6>
+                    <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                     <h4>
-                        <a href="blog__detail.html">How to be more creative</a>
+                        <a href="blog__detail.html">{{ post.title }}</a>
                     </h4>
                     <p>
                         Quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum tristique eu finibus
@@ -64,7 +64,7 @@
                         </a>
                     </footer>
                 </div>
-            </div>
+            </div>{% endfor %}
             <!--end Blog post thumbnail-->
 
             <div class="col-md-4">

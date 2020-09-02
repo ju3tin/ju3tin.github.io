@@ -21,8 +21,7 @@
 </a>
                     </h4>
                     <p>
-                        Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum
-                        Test123 eu finibus lorem.
+                        {{ post.content | truncatewords: 120 }}
                     </p>
                     <footer>
                         <a href="#" class="mr-3">
@@ -50,8 +49,7 @@
                         <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a>
                     </h4>
                     <p>
-                        Quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum tristique eu finibus
-                        lorem. Nullam sed eleifend massa.
+                        {{ post.content | truncatewords: 120 }}
                     </p>
                     <footer>
                         <a href="#" class="mr-3">
@@ -79,8 +77,7 @@
                         <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a>
                     </h4>
                     <p>
-                        Vestibulum eu ex sed nibh condimentum tristique eu finibus lorem.  Nullam sed eleifend
-                        massa. Morbi nulla turpis
+                        {{ post.content | truncatewords: 120 }}
                     </p>
                     <footer>
                         <a href="#" class="mr-3">

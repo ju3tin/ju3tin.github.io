@@ -76,14 +76,16 @@
 
                                 <div class="ts-circle__sm float-left mr-4">
                                     <div class="ts-img-into-bg">
-                                        <img src="assets/img/img__man-hat.jpg" alt="">
+                                        <img src="{% if page.author_tinyimage %}{{ page.author_tinyimage }}{% else %}{{ site.author_tinyimage }}{% endif %}" alt="">
                                     </div>
                                 </div>
 
                                 <div class="wrapper">
                                     <header>{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</header>
-                                    <p class="mb-0">Phasellus metus ipsum, sollicitudin lacinia turpis in, pellentesque pulvinar diam.
-                                        Cras ultricies augue sapien, aliquam hendrerit mi suscipit at. Suspendisse vulputate felis eget
+                                    <p class="mb-0">
+                                    
+                                        {% if page.author_blurb %}{{ page.author_blurb }}{% else %}{{ site.author_blurb }}{% endif %}
+                                    
                                     </p>
                                 </div>
 

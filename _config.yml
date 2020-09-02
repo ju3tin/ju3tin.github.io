@@ -158,6 +158,7 @@ email: "ju3tin@hotmail.co.uk"
 # if the author_blurb is not set, then this feature is skipped
 author_blurb: "Justin Grierson is an awesome person. He lives in England, where he works on projects. In his spare time, Justin likes to eat pizza."
 author_blurb_image: "/img/author.png"
+author_tinyimage: "/img/tinyauthor.jpg"
 
 ##################
 # Social Buttons #

@@ -25,9 +25,28 @@
 
      <main id="ts-content">    
     <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-9 col-sm-9">
 
-      
+                <section>
+
+                            <article class="blog-post">
+                                <a href="blog__detail.html" class="blog-post-header-image">
+                                    <div class="bg-transfer"><img src="assets/img/bg__photographer.jpg" alt=""></div>
+                                </a>
+                                <figure class="meta">
+                                    <a href="#" class="link-icon"><i class="fa fa-user"></i>Admin</a>
+                                    <a href="#" class="link-icon"><i class="fa fa-calendar"></i>06/04/2014</a>
+                                    <div class="tags">
+                                        <a href="#" class="tag article">Architecture</a>
+                                        <a href="#" class="tag article">Design</a>
+                                        <a href="#" class="tag article">Trend</a>
+                                    </div>
+                                </figure>
+                               {{ page.content | markdownify }}
+                            </article>
+
+                        </section>
+
 
          
             <strong>{{ page.date | date_to_string }}</strong>

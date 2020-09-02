@@ -16,11 +16,13 @@
                     </a>
                     <h6>02-05-2019</h6>
                     <h4>
-                        <a href="blog__detail.html">10 best design books</a>
+                        <a href="blog__detail.html">{% for post in site.posts limit:1 %}
+{{ post.title }}
+{% endfor %}</a>
                     </h4>
                     <p>
                         Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum
-                        tristique eu finibus lorem.
+                        Test123 eu finibus lorem.
                     </p>
                     <footer>
                         <a href="#" class="mr-3">

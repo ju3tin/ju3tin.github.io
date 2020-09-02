@@ -54,7 +54,7 @@
                                     <div class="bg-transfer"><img src="assets/img/bg__photographer.jpg" alt=""></div>
                                 </a>
                                 <figure class="meta">
-                                    <a href="#" class="link-icon"><i class="fa fa-user"></i>Admin</a>
+                                    <a href="#" class="link-icon"><i class="fa fa-user"></i> {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
                                     <a href="#" class="link-icon"><i class="fa fa-calendar"></i>06/04/2014</a>
                                     <div class="tags">
                                        

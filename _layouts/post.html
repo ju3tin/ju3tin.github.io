@@ -81,7 +81,7 @@
                                 </div>
 
                                 <div class="wrapper">
-                                    <header>John Doe</header>
+                                    <header>{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</header>
                                     <p class="mb-0">Phasellus metus ipsum, sollicitudin lacinia turpis in, pellentesque pulvinar diam.
                                         Cras ultricies augue sapien, aliquam hendrerit mi suscipit at. Suspendisse vulputate felis eget
                                     </p>

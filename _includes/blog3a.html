@@ -6,7 +6,7 @@
         </div>
 
         <div class="row">
-
+{% for post in site.posts limit:1 %}
             <div class="col-md-4">
                 <div class="ts-blog-thumb">
                     <a href="blog__detail.html" class="ts-blog-image ts-background">
@@ -14,9 +14,9 @@
                             <img src="/assets/img/img__blog__thumb--01.jpg" alt="">
                         </div>
                     </a>
-                    <h6>02-05-2019</h6>
+                    <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                     <h4>
-                        <a href="blog__detail.html">{% for post in site.posts limit:1 %}
+                        <a href="blog__detail.html">
 {{ post.title }}
 {% endfor %}</a>
                     </h4>

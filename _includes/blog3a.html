@@ -16,7 +16,7 @@
                     </a>
                     <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                     <h4>
-                        <a href="blog__detail.html">
+                        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
 {{ post.title }}
 </a>
                     </h4>
@@ -47,7 +47,7 @@
                     </a>
                     <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                     <h4>
-                        <a href="blog__detail.html">{{ post.title }}</a>
+                        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a>
                     </h4>
                     <p>
                         Quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum tristique eu finibus
@@ -76,7 +76,7 @@
                     </a>
                     <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                     <h4>
-                        <a href="blog__detail.html">{{ post.title }}</a>
+                        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a>
                     </h4>
                     <p>
                         Vestibulum eu ex sed nibh condimentum tristique eu finibus lorem.  Nullam sed eleifend

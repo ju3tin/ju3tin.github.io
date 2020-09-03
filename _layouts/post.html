@@ -250,13 +250,13 @@ document.getElementById("demo500").innerHTML = text;
                                 fruitsi =  ["dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
                                     fLen = fruits.length;
 
-texti = "<ul>";
+texti = "<!--<ul>";
 for (ii = 0; ii < 8; ii++) {
   texti += "<li><a href=\"archive_monthly/" + fruits[ii] + "\" >" + fruits[ii] + "</a></li>";
 }
-text += "</ul>";
+text += "</ul>-->";
 
-document.getElementById("demo501").innerHTML = texti;
+//document.getElementById("demo501").innerHTML = texti;
                                     
                                 </script>
                                 <ul class="list-links list-unstyled">
@@ -267,7 +267,7 @@ document.getElementById("demo501").innerHTML = texti;
             <li><a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category }}">{{ category }}</a></li>
         {% endfor %}
     {% else %}
-        {% for category in category_list  limit:8 %}
+        {% for category in category_list  limit:8    %}
             <li><a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category[0] }}">{{ category[0] }}</a></li>
         {% endfor %}
     {% endif %}

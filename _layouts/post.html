@@ -248,13 +248,13 @@ document.getElementById("demo500").innerHTML = text;
                                 <script>
                                 var fruitsi, texti, fLeni, ii;
                                 fruitsi =  [
-                                    {% assign 1category_list2 = site.categories %}
-                                    {% if 1category_list2.first[0] == null %}
-                                    {% for category in 1category_list2 %}
-                                    "{{ category }}"
+                                    {% assign category_list = site.categories %}
+    {% if category_list.first[0] == null %}
+        {% for category in category_list %}
+                                    "{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category }}{{ category }}"
                                      {% endfor %}
                                     {% endif %}
-                                    {% assign 1category_list2 = nil %},"dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
+                                    {% assign category_list = nil %},"dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
                                 
 
 texti = "<ul class=\"list-links list-unstyled\">";
@@ -267,9 +267,7 @@ document.getElementById("demo501").innerHTML = texti;
                                     
                                 </script>
                                 <ul class="list-links list-unstyled">
-                                  {% assign category_list = site.categories %}
-    {% if category_list.first[0] == null %}
-        {% for category in category_list %}
+                                  
             <li><a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category }}">{{ category }}</a></li>
         {% endfor %}
     {% else %}

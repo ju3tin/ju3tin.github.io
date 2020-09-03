@@ -247,30 +247,26 @@ document.getElementById("demo500").innerHTML = text;
                                 <p id="demo501"></p>
                                 <script>
                                 var fruitsi, texti, fLeni, ii;
-                                fruitsi =  [{% for category in site.categories %}
-        "{{ category | first }}"{% unless forloop.last %},{% endunless %}
-        {% endfor %}];
+                                fruitsi =  ["dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
                                     fLen = fruits.length;
 
 texti = "<ul>";
 for (ii = 0; ii < 8; ii++) {
-  texti += "<li><a href=\"archive_monthly/" + fruits[i] + "\" >" + fruits[i] + "</a></li>";
+  texti += "<li><a href=\"archive_monthly/" + fruits[ii] + "\" >" + fruits[ii] + "</a></li>";
 }
 text += "</ul>";
 
 document.getElementById("demo501").innerHTML = texti;
                                     
                                 </script>
+                                <ul class="list-links list-unstyled">
                                  
-        {% for category in category_list %}
+        {% for category in category_list limit: 8 %}
+                                    <script>
             {{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category[0] }}{{ category[0] }}
         {% endfor %}
     {% endif %}
     {% assign category_list = nil %}
-                                
-                                
-                                  <ul class="list-links list-unstyled">
-                              
                                 </ul>
                             </aside>
 

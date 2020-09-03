@@ -247,18 +247,17 @@ document.getElementById("demo500").innerHTML = text;
                                 <p id="demo501"></p>
                                 <script>
                                 var fruitsi, texti, fLeni, ii;
+                                fruitsi =  [
+                                    {% assign 1category_list2 = site.categories %}
+                                    {% if 1category_list2.first[0] == null %}
+                                    {% for category in 1category_list2 %}
+                                    "{{ category }}"
+                                     {% endfor %}
+                                    {% endif %}
+                                    {% assign 1category_list2 = nil %},"dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
                                 
-                                fruitsi = [ 
-  {% for category in site.categories %}
-    {% unless category.next %}"{{ category }}"    {% else %}
-        {% capture monthi %}{{ category }{% endcapture %}
-        {% capture nmonthi %}{{ category }{% endcapture %}
-        {% if monthi != nmonthi %}, "{{ category }"  {% endif %}
-    {% endunless %}
-    
-  {% endfor %}];
 
-texti = "<ul>";
+texti = "<ul class=\"list-links list-unstyled\">";
 for (ii = 0; ii < 8; ii++) {
   texti += "<li><a href=\"archive_monthly/" + fruitsi[ii] + "\" >" + fruitsi[ii] + "</a></li>";
 }

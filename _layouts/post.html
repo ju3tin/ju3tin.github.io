@@ -247,7 +247,9 @@ document.getElementById("demo500").innerHTML = text;
                                 <p id="demo501"></p>
                                 <script>
                                 var fruitsi, texti, fLeni, ii;
-                                fruitsi =  ["dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
+                                fruitsi =  [{% for category in site.categories %}
+        "{{ category | first }}"{% unless forloop.last %},{% endunless %}
+        {% endfor %}];
                                     fLen = fruits.length;
 
 texti = "<ul>";
@@ -265,6 +267,8 @@ document.getElementById("demo501").innerHTML = texti;
         {% endfor %}
     {% endif %}
     {% assign category_list = nil %}
+                                
+                                
                                   <ul class="list-links list-unstyled">
                               
                                 </ul>

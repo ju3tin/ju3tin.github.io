@@ -217,7 +217,13 @@
 var fruits, text, fLen, i;
 fruits = [ 
   {% for post in site.posts %}
-    {% unless post.next %}"{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}", "Orange", "Apple", "Mango"];
+    {% unless post.next %}"{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}"    {% else %}
+        {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
+        {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
+        {% if month != nmonth %}, "{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}"  {% endif %}
+    {% endunless %}
+    
+  {% endfor %}];
 fLen = fruits.length;
 
 text = "<ul>";
@@ -230,17 +236,9 @@ document.getElementById("demo500").innerHTML = text;
 </script>
                                     
  
-    <h5><a href="/monthly_archive/{{ post.date | date: '%B' }}/{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}</a></h5>
-    {% else %}
-        {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
-        {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
-        {% if month != nmonth %}
+
             
-            <h5><a href="/monthly_archive/{{ post.date | date: '%B' }}/{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}</a></h5>
-        {% endif %}
-    {% endunless %}
-    
-  {% endfor %}
+       
 </div>
                             </aside>
 

@@ -210,7 +210,8 @@
                             <aside id="post-archive">
                                 <header><h3>Post Archive</h3></header>
                                 <div class="archive">
-   
+   {% assign i = 0 %}
+{% assign counts_month = counts | split: ', ' | reverse %}
   {% for post in site.posts %}
     {% unless post.next %}
     <h5><a href="{{ forloop.index0 }}/monthly_archive/{{ post.date | date: '%B' }}/{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}</a></h5>
@@ -218,8 +219,9 @@
         {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
         {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
         {% if month != nmonth %}
-             {% assign amount = 0 %}
-            <h5><a href="{% assign amount = amount | plus:1 %}/monthly_archive/{{ post.date | date: '%B' }}/{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}</a></h5>
+            
+            <h5><a href="{{counts_month[i]}}/monthly_archive/{{ post.date | date: '%B' }}/{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}</a></h5>
+        {% assign i = i | plus: 1 %}
         {% endif %}
     {% endunless %}
     

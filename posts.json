@@ -3,7 +3,7 @@ layout: null
 ---
 {
     "posts": [
-        {% for post in site.posts %}
+        {% for post in page.posts %}
         {
             "title": "{{ post.title | xml_escape }}",
             "url": "{{ site.url }}{{ post.url }}",

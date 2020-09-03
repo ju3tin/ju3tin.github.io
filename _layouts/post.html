@@ -217,7 +217,7 @@
 var fruits, text, fLen, i;
 fruits = [ 
   {% for post in site.posts %}
-    {% unless post.next %}"Banana", "Orange", "Apple", "Mango"];
+    {% unless post.next %}"{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}", "Orange", "Apple", "Mango"];
 fLen = fruits.length;
 
 text = "<ul>";

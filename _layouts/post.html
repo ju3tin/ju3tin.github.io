@@ -209,16 +209,20 @@
 
                             <aside id="post-archive">
                                 <header><h3>Post Archive</h3></header>
-                                <ul class="list-links list-unstyled">
-                                    <li><a href="#">June 2014</a></li>
-                                    <li><a href="#">May 2014</a></li>
-                                    <li><a href="#">April 2014</a></li>
-                                    <li><a href="#">March 2014</a></li>
-                                    <li><a href="#">January 2014</a></li>
-                                    <li><a href="#">December 2013</a></li>
-                                    <li><a href="#">November 2013</a></li>
-                                    <li><a href="#">August 2013</a></li>
-                                </ul>
+                                <ul class="archive">
+  {% for post in site.posts %}
+    {% unless post.next %}
+        <h5>{{ post.date | date: '%B' }}</h5>
+    {% else %}
+        {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
+        {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
+        {% if month != nmonth %}
+            <h5>{{ post.date | date: '%B' }}</h5>
+        {% endif %}
+    {% endunless %}
+    <li><span class="date">{{ post.date | date:"%d." }}</span> <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
                             </aside>
 
                             <aside id="categories">

@@ -20,9 +20,8 @@
 {{ post.title }}
 </a>
                     </h4>
-                    <p>
-                        {{ post.content | truncatewords: 30 }}
-                    </p>
+                    <p>{{ post.content | strip_html | strip | truncate: 440 }}&#x02026;</p>
+              <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>
                     <footer>
                         <a href="#" class="mr-3">
                             <i class="fa fa-comment"></i>
@@ -48,9 +47,8 @@
                     <h4>
                         <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a>
                     </h4>
-                    <p>
-                        {{ post.content | truncatewords: 30 }}
-                    </p>
+                   <p>{{ post.content | strip_html | strip | truncate: 440 }}&#x02026;</p>
+              <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>
                     <footer>
                         <a href="#" class="mr-3">
                             <i class="fa fa-comment"></i>
@@ -76,9 +74,8 @@
                     <h4>
                         <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a>
                     </h4>
-                    <p>
-                        {{ post.content | truncatewords: 30 }}
-                    </p>
+                   <p>{{ post.content | strip_html | strip | truncate: 440 }}&#x02026;</p>
+              <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>
                     <footer>
                         <a href="#" class="mr-3">
                             <i class="fa fa-comment"></i>

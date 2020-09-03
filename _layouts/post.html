@@ -224,13 +224,17 @@
                             <aside id="categories">
                                 <header><h3>Categories</h3></header>
                                 <ul class="list-links list-unstyled">
-                                    <li><a href="#">Architecture</a></li>
-                                    <li><a href="#">Apartments</a></li>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Do it yourself</a></li>
-                                    <li><a href="#">Housing</a></li>
-                                    <li><a href="#">Interior</a></li>
-                                    <li><a href="#">Trends</a></li>
+                                  {% assign category_list = site.categories %}
+    {% if category_list.first[0] == null %}
+        {% for category in category_list %}
+            <li><a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category }}">{{ category }}</a></li>
+        {% endfor %}
+    {% else %}
+        {% for category in category_list %}
+            <li><a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category[0] }}">{{ category[0] }}</a></li>
+        {% endfor %}
+    {% endif %}
+    {% assign category_list = nil %}
                                 </ul>
                             </aside>
 

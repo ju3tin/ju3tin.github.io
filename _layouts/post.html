@@ -212,12 +212,12 @@
                                 <ul class="archive">
   {% for post in site.posts %}
     {% unless post.next %}
-        <h5>{{ post.date | date: '%B' }}</h5>
+        <h5>{{ post.date | date: '%B' | limit: 8}}</h5>
     {% else %}
         {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
         {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
         {% if month != nmonth %}
-            <h5>{{ post.date | date: '%B' | limit: 8 }}</h5>
+            <h5><a href="">{{ post.date | date: '%B' | limit: 8 }}</a></h5>
         {% endif %}
     {% endunless %}
     

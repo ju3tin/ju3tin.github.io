@@ -247,7 +247,12 @@ document.getElementById("demo500").innerHTML = text;
                                 <p id="demo501"></p>
                                 <script>
                                 var fruitsi, texti, fLeni, ii;
-                                fruitsi =  ["fg","dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
+                                fruitsi =  [
+                                    {% assign 1category_list2 = site.categories %}
+                                    {% if 1category_list2.first[0] == null %}
+                                    "fg"
+                                    {% endif %}
+                                    {% assign 1category_list2 = nil %},"dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
                                     fLeni = fruitsi.length;
 
 texti = "<ul>";

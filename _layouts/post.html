@@ -246,8 +246,18 @@ document.getElementById("demo500").innerHTML = text;
                                 <header><h3>Categories</h3></header>
                                 <p id="demo501"></p>
                                 <script>
-                                
-                                
+                                var fruitsi, texti, fLeni, ii;
+                                fruitsi =  ["fg","dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
+                                    fLeni = fruitsi.length;
+
+texti = "<ul>";
+for (ii = 0; ii < 8; ii++) {
+  texti += "<li><a href=\"archive_monthly/" + fruits[ii] + "\" >" + fruits[ii] + "</a></li>";
+}
+texti += "</ul>";
+
+document.getElementById("demo501").innerHTML = texti;
+                                    
                                 </script>
                                 <ul class="list-links list-unstyled">
                                   {% assign category_list = site.categories %}

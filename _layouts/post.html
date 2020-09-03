@@ -220,7 +220,7 @@
             <h5>{{ post.date | date: '%B' }}</h5>
         {% endif %}
     {% endunless %}
-    <li><span class="date">{{ post.date | date:"%d." }}</span> <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a></li>
+    
   {% endfor %}
 </ul>
                             </aside>

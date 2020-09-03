@@ -9,7 +9,7 @@
 {% for post in site.posts limit:1 %}
             <div class="col-md-4">
                 <div class="ts-blog-thumb">
-                    <a href="blog__detail.html" class="ts-blog-image ts-background">
+                    <a href="{{ post.url }}" class="ts-blog-image ts-background">
                         <div class="ts-background-image ts-img-into-bg">
                             <img src="/assets/img/img__blog__thumb--01.jpg" alt="">
                         </div>
@@ -38,7 +38,7 @@
 {% for post in site.posts offset:1 limit:1 %}
             <div class="col-md-4">
                 <div class="ts-blog-thumb">
-                    <a href="blog__detail.html" class="ts-blog-image">
+                    <a href="{{ post.url }}" class="ts-blog-image">
                         <div class="ts-background-image ts-img-into-bg">
                             <img src="/assets/img/img__blog__thumb--02.jpg" alt="">
                         </div>
@@ -65,7 +65,7 @@
 {% for post in site.posts offset:2 limit:1 %}
             <div class="col-md-4">
                 <div class="ts-blog-thumb">
-                    <a href="blog__detail.html" class="ts-blog-image">
+                    <a href="{{ post.url }}" class="ts-blog-image">
                         <div class="ts-background-image ts-img-into-bg">
                             <img src="/assets/img/img__blog__thumb--03.jpg" alt="">
                         </div>

@@ -267,7 +267,8 @@ document.getElementById("demo501").innerHTML = texti;
                                     
                                 </script>
                                 <ul class="list-links list-unstyled">
-                                  
+              
+                                    
             <li><a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category }}">{{ category }}</a></li>
         {% endfor %}
     {% else %}
@@ -277,6 +278,13 @@ document.getElementById("demo501").innerHTML = texti;
     {% endif %}
     {% assign category_list = nil %}
                                 </ul>
+                                
+                                <ul>
+{% for category in site.categories %}
+<li><a href="{{ site.url }}/path-to-category-index/{{ category | slugify }}/index.html">{{ category }}</a></li>
+{% endfor %}
+</ul>
+                                
                             </aside>
 
                         </section>

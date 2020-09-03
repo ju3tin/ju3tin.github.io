@@ -40,7 +40,7 @@
                 <div class="ts-blog-thumb">
                     <a href="{{ post.url }}" class="ts-blog-image">
                         <div class="ts-background-image ts-img-into-bg">
-                            <img src="/assets/img/img__blog__thumb--02.jpg" alt="">
+                            <img src=" {% if post.featimg %}{{ post.featimg }}{% else %}/assets/img/img__blog__thumb--02.jpg {% endif %}" alt="">
                         </div>
                     </a>
                     <h6>{{ post.date | date: '%B %d, %Y' }}</h6>

@@ -213,12 +213,12 @@
     {% assign amount = 0 %}
   {% for post in site.posts %}
     {% unless post.next %}
-    <h5><a href="{% assign amount = amount | plus:1 %}/monthly_archive/{{ post.date | date: '%B' }}/{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}</a></h5>
+    <h5><a href="{{ forloop.index0 }}/monthly_archive/{{ post.date | date: '%B' }}/{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}</a></h5>
     {% else %}
         {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
         {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
         {% if month != nmonth %}
-            <h5><a href="{% assign amount = amount | plus:1 %}/monthly_archive/{{ post.date | date: '%B' }}/{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}</a></h5>
+            <h5><a href="{{ forloop.index1 }}/monthly_archive/{{ post.date | date: '%B' }}/{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}</a></h5>
         {% endif %}
     {% endunless %}
     

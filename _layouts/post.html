@@ -263,7 +263,7 @@ document.getElementById("demo501").innerHTML = texti;
                                  
         {% for category in category_list limit: 8 %}
                                     <script>
-            {{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category[0] }}{{ category[0] }}
+            {{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category }}
         {% endfor %}
     {% endif %}
     {% assign category_list = nil %}

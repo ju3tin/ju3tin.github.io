@@ -216,8 +216,8 @@
     {% else %}
         {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
         {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
-        {% if month != nmonth limit:8 %}
-            <h5>{{ post.date | date: '%B' }}</h5>
+        {% if month != nmonth %}
+            <h5>{{ post.date | date: '%B' | limit: 8 }}</h5>
         {% endif %}
     {% endunless %}
     

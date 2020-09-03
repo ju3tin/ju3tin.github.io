@@ -9,27 +9,25 @@
 {% for post in site.posts limit:1 %}
             <div class="col-md-4">
                 <div class="ts-blog-thumb">
-                    <a href="{{ post.url }}" class="ts-blog-image ts-background">
+                    <a href="{{ post.url }}" class="ts-blog-image">
                         <div class="ts-background-image ts-img-into-bg">
-                            <img src="/assets/img/img__blog__thumb--01.jpg" alt="">
+                            <img src=" {% if post.featimg %}{{ post.featimg }}{% else %}/assets/img/img__blog__thumb--02.jpg {% endif %}" alt="">
                         </div>
                     </a>
                     <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                     <h4>
-                        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">
-{{ post.title }}
-</a>
+                        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a>
                     </h4>
-                    <p>{{ post.content | strip_html | strip | truncate: 140 }}&#x02026;</p>
+                   <p>{{ post.content | strip_html | strip | truncate: 140 }}&#x02026;</p>
               <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>
                     <footer>
                         <a href="#" class="mr-3">
                             <i class="fa fa-comment"></i>
-                            20
+                            42
                         </a>
                         <a href="#">
                             <i class="fa fa-heart"></i>
-                            46
+                            38
                         </a>
                     </footer>
                 </div>
@@ -67,7 +65,7 @@
                 <div class="ts-blog-thumb">
                     <a href="{{ post.url }}" class="ts-blog-image">
                         <div class="ts-background-image ts-img-into-bg">
-                            <img src="/assets/img/img__blog__thumb--03.jpg" alt="">
+                            <img src=" {% if post.featimg %}{{ post.featimg }}{% else %}/assets/img/img__blog__thumb--02.jpg {% endif %}" alt="">
                         </div>
                     </a>
                     <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
@@ -79,11 +77,11 @@
                     <footer>
                         <a href="#" class="mr-3">
                             <i class="fa fa-comment"></i>
-                            18
+                            42
                         </a>
                         <a href="#">
                             <i class="fa fa-heart"></i>
-                            51
+                            38
                         </a>
                     </footer>
                 </div>

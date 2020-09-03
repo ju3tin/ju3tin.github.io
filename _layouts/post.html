@@ -259,13 +259,14 @@ text += "</ul>";
 document.getElementById("demo501").innerHTML = texti;
                                     
                                 </script>
-                                <ul class="list-links list-unstyled">
                                  
         {% for category in category_list %}
-            <li><a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category[0] }}">{{ category[0] }}</a></li>
+            {{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category[0] }}{{ category[0] }}
         {% endfor %}
     {% endif %}
     {% assign category_list = nil %}
+                                  <ul class="list-links list-unstyled">
+                              
                                 </ul>
                             </aside>
 

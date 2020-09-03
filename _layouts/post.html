@@ -244,6 +244,20 @@ document.getElementById("demo500").innerHTML = text;
 
                             <aside id="categories">
                                 <header><h3>Categories</h3></header>
+                                <p id="demo501"></p>
+                                <script>
+                                var fruits1, text1, fLen1, ii;
+                                fruits1 = ["Bananda","Brirds","wer"];
+                                fLen1 = fruits1.length;
+
+text1 = "<ul>";
+for (ii = 0; ii < 8; ii++) {
+  text1 += "<li><a href=\"archive_monthly/" + fruits1[ii] + "\" >" + fruits1[ii] + "</a></li>";
+}
+text1 += "</ul>";
+
+document.getElementById("demo501").innerHTML = text1;
+                                </script>
                                 <ul class="list-links list-unstyled">
                                   {% assign category_list = site.categories %}
     {% if category_list.first[0] == null %}

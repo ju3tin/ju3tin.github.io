@@ -4,10 +4,7 @@ layout: null
 {
     "posts": [
         {% for post in page.posts %}
-        {
-            "title": "{{ post.title | xml_escape }}",
-            "url": "{{ site.url }}{{ post.url }}",
-            "date": "{{ post.date | date_to_xmlschema }}"
-        }{% unless forloop.last %},{% endunless %}
+        "{{ post | first }}"{% unless forloop.last %},{% endunless %}
         {% endfor %}
     ]
+}

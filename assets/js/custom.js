@@ -137,7 +137,7 @@ $(function() {
     });
 
     if( $("#ts-particles").length ){
-        particlesJS.load("ts-particles", "assets/json/particles.json");
+        particlesJS.load("ts-particles", "/assets/json/particles.json");
     }
 
 //  Parallax Background Image

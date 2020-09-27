@@ -334,6 +334,7 @@ $('#response').html("<b>Loading response...</b>");
 $.ajax({
 type: 'POST',
 crossDomain: true,
+dataType: 'jsonp',
 url: 'https://west123z.herokuapp.com/mail5.php', 
 data: $(this).serialize()
 })

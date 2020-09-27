@@ -357,7 +357,53 @@ return false;
 });
 });
 </script>
-                            <!--end form-contact -->
+ 
+<!-- testing button ajax cross domain-->				
+<script type="text/javascript">
+$(document).ready(function (){
+    $("#btn392").click(function(){                
+        var url = "http://www.pureexample.com/backend/ajax_crossdomain.aspx";
+        
+        var success = function(data){
+            var html = [];
+            /* parse JSON */
+            data = $.parseJSON(data);
+            /* loop through array */
+            $.each(data, function(index, d){            
+                html.push("Manufacturer : ", d.Manufacturer, ", ",
+                          "Sold : ", d.Sold, ", ", 
+                          "Month : ", d.Month, "<br>");
+            });
+
+            $("#div391").html(html.join('')).css("background-color", "orange");
+        };
+        
+        $.ajax({
+          type: 'GET',    
+          url: url,
+          data:{todo:"jsonp"},
+          dataType: "jsonp",
+          crossDomain: true,          
+          cache:false, 
+          success: success,
+          error:function(jqXHR, textStatus, errorThrown){
+            alert(errorThrown);
+          }
+        });
+    });
+});
+</script>
+
+<!-- HTML -->
+<a name="#jsonp-ajax"></a>
+<div id="example-section39">    
+    <div>Car sale report</div>
+    <div id="div391"></div>
+    <button id="btn392" type="button">Click </button>
+</div>
+<!--end of test -->				
+				
+				<!--end form-contact -->
                         </div>
 
                     </div>

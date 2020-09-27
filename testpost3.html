@@ -1,7 +1,22 @@
 <html>
 <head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
 </head>
 <body>
-Hello World
+Hello World<br>
+<form id='userForm'>
+<input type='text' name='name' placeholder='name' size='40' /><br><br>
+<input type='email' name='email' placeholder='email' size='40' /><br><br>
+<input type='subject' name='subject' placeholder='subject' size='40' /><br><br>
+<textarea name='message' rows='8' cols='39'></textarea><br><br>
+<input type='submit' name='submit' value='submit' /><br><br>
+<div class="g-recaptcha" data-sitekey="6LdXxtAZAAAAAMFSVn1d0tfLEBYByo6sa2bPXjoo"></div>
+</form>
+ 
+<input id="getdata" type="button"  value="Send X GET"/>
+<input id="postdata" type="button" value="Send X POST" />
+ 
 </body>
 </html>

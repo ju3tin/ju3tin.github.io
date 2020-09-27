@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+ 
+</head>
+<body>
+ 
+<input id="getdata" type="button"  value="Send X GET"/>
+<input id="postdata" type="button" value="Send X POST" />
+ 
+<script>
+$(document).ready(function()
+{
+    var contentType ="application/x-www-form-urlencoded; charset=utf-8";
+ 
+    if(window.XDomainRequest)
+        contentType = "text/plain";
+ 
+    $("#postdata").click(function()
+    {
+        $.ajax({
+         url:"https://west123z.herokuapp.com/mail4.php",
+         data:"name=Ravi&email=ju3tin@hotmail.co.uk&subject=123&message=I'm here leaving",
+         type:"POST",
+         dataType:"json",   
+         contentType:contentType,    
+         success:function(data)
+         {
+            alert("Data from Server"+JSON.stringify(data));
+         },
+         error:function(jqXHR,textStatus,errorThrown)
+         {
+            alert("You can not send Cross Domain AJAX requests: "+errorThrown);
+         }
+        });
+ 
+    });
+ 
+    $("#getdata").click(function()
+    {
+        $.ajax(
+        {
+         url:"https://west123z.herokuapp.com/get.php?name=Ravi&age=32",
+         dataType:"json",
+         contentType:contentType,
+         success:function(data)
+         {
+            alert("Data from Server"+JSON.stringify(data));
+         },
+         error:function(jqXHR,textStatus,errorThrown)
+         {
+            alert("You can not send Cross Domain AJAX requests : "+errorThrown);
+         }
+        });
+ 
+    });
+ 
+});
+</script>
+</body>
+</html>

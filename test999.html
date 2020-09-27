@@ -333,6 +333,7 @@ $('#response').html("<b>Loading response...</b>");
 */
 $.ajax({
 type: 'POST',
+crossDomain: true,
 url: 'https://west123z.herokuapp.com/mail5.php', 
 data: $(this).serialize()
 })

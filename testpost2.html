@@ -7,7 +7,14 @@
  
 </head>
 <body>
- 
+ <form id='userForm'>
+<input type='text' name='name' placeholder='name' size='40' /><br><br>
+<input type='email' name='email' placeholder='email' size='40' /><br><br>
+<input type='subject' name='subject' placeholder='subject' size='40' /><br><br>
+<textarea name='message' rows='8' cols='39'></textarea><br><br>
+<input type='submit' name='submit' value='submit' /><br><br>
+<div class="g-recaptcha" data-sitekey="6LdXxtAZAAAAAMFSVn1d0tfLEBYByo6sa2bPXjoo"></div>
+</form>
 <input id="getdata" type="button"  value="Send X GET"/>
 <input id="postdata" type="button" value="Send X POST" />
  
@@ -19,44 +26,38 @@ $(document).ready(function()
     if(window.XDomainRequest)
         contentType = "text/plain";
  
-    $("#postdata").click(function()
-    {
-        $.ajax({
-         url:"https://west123z.herokuapp.com/mail4.php",
-         data:"name=Ravi&email=ju3tin@hotmail.co.uk&subject=123&message=I'm here leaving",
-         type:"POST",
-         dataType:"json",   
-         contentType:contentType,    
-         success:function(data)
-         {
-            alert("Data from Server"+JSON.stringify(data));
-         },
-         error:function(jqXHR,textStatus,errorThrown)
-         {
-            alert("You can not send Cross Domain AJAX requests: "+errorThrown);
-         }
-        });
- 
-    });
- 
-    $("#getdata").click(function()
-    {
-        $.ajax(
-        {
-         url:"https://west123z.herokuapp.com/get.php?name=Ravi&age=32",
-         dataType:"json",
-         contentType:contentType,
-         success:function(data)
-         {
-            alert("Data from Server"+JSON.stringify(data));
-         },
-         error:function(jqXHR,textStatus,errorThrown)
-         {
-            alert("You can not send Cross Domain AJAX requests : "+errorThrown);
-         }
-        });
- 
-    });
+   $('#userForm').submit(function(){
+
+// show that something is loading
+$('#response').html("<b>Loading response...</b>");
+
+/*
+* 'post_receiver.php' - where you will pass the form data
+* $(this).serialize() - to easily read form data
+* function(data){... - data contains the response from post_receiver.php
+*/
+$.ajax({
+type: 'POST',
+url: 'http://west123z.herokuapp.com/mail5.php', 
+data: $(this).serialize()
+})
+.done(function(data){
+
+// show the response
+$('#response').html(data);
+
+})
+.fail(function() {
+
+// just in case posting your form failed
+alert( "Posting failed." );
+
+});
+
+// to prevent refreshing the whole page page
+return false;
+
+});
  
 });
 </script>

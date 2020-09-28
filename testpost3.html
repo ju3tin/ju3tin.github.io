@@ -37,19 +37,24 @@ $(document).ready(function()
         $.ajax({
          url:"https://west123z.herokuapp.com/mail5.php",
          data: $(this).serialize(),
-         type:"POST",
-         dataType:"json",   
-         contentType:contentType,    
-         success:function(data)
-         {
-            alert("Data from Server"+JSON.stringify(data));
-         },
-         error:function(jqXHR,textStatus,errorThrown)
-         {
-            alert("You can not send Cross Domain AJAX requests: "+errorThrown);
-         }
-        });
- 
+         type:"POST",  
+         contentType:contentType
+        })
+ .done(function(data){
+
+// show the response
+$('#response').html(data);
+
+})
+.fail(function() {
+
+// just in case posting your form failed
+alert( "Posting failed." );
+
+});
+
+// to prevent refreshing the whole page page
+return false;
     });
  
    

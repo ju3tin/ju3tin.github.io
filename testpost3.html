@@ -35,7 +35,7 @@ $(document).ready(function()
     {
         $.ajax({
          url:"https://west123z.herokuapp.com/mail4.php",
-         data:"name=Ravi&email=ju3tin@hotmail.co.uk&subject=123&message=I'm here leaving",
+         data: $(this).serialize(),
          type:"POST",
          dataType:"json",   
          contentType:contentType,    

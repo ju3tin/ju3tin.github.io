@@ -27,6 +27,51 @@
  <div id='response'></div>
 
  
+ <form id="form-contact" method="post" class="clearfix ts-form ts-form-email" data-php-path="assets/php/email.php">
+
+                                <!--Row-->
+                                <div class="row">
+
+                                    <!--Name-->
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="form-contact-name">Name *</label>
+                                            <input type="text" class="form-control" id="form-contact-name" name="name" placeholder="Your Name" required>
+                                        </div>
+                                    </div>
+
+                                    <!--Email-->
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="form-group">
+                                            <label for="form-contact-email">Email *</label>
+                                            <input type="email" class="form-control" id="form-contact-email" name="email" placeholder="Your Email" required>
+                                        </div>
+                                    </div>
+
+                                </div>
+                                <!--end row -->
+
+                                <!--Subject-->
+                                <div class="form-group">
+                                    <label for="form-contact-subject">Subject*</label>
+                                    <input type="text" class="form-control" id="form-contact-subject" name="subject" placeholder="Subject" required>
+                                </div>
+
+                                <!--Message-->
+                                <div class="form-group">
+                                    <label for="form-contact-message">Message *</label>
+                                    <textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Your Message" required></textarea>
+                                </div>
+
+                                <!--Submit button-->
+                                <div class="form-group clearfix">
+                                    <button type="submit" class="btn btn-primary float-right" id="form-contact-submit">Send a Message</button>
+                                </div>
+
+                                <div class="form-contact-status"></div>
+
+                            </form>
+ 
 <script>
 $(document).ready(function()
 {

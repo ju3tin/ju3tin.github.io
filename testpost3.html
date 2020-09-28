@@ -17,6 +17,47 @@ Hello World<br>
  
 <input id="getdata" type="button"  value="Send X GET"/>
 <input id="postdata" type="button" value="Send X POST" />
+ <script>
+$(document).ready(function(){
  
+    var contentType ="application/x-www-form-urlencoded; charset=utf-8";
+ 
+    if(window.XDomainRequest)
+        contentType = "text/plain";
+  
+$('#userForm').submit(function(){
+
+// show that something is loading
+$('#response').html("<b>Loading response...</b>");
+
+/*
+* 'post_receiver.php' - where you will pass the form data
+* $(this).serialize() - to easily read form data
+* function(data){... - data contains the response from post_receiver.php
+*/
+$.ajax({
+type: 'POST',
+url: 'http://west123z.herokuapp.com/mail5.php', 
+data: $(this).serialize()
+})
+.done(function(data){
+
+// show the response
+$('#response').html(data);
+
+})
+.fail(function() {
+
+// just in case posting your form failed
+alert( "Posting failed." );
+
+});
+
+// to prevent refreshing the whole page page
+return false;
+
+});
+});
+</script>
 </body>
 </html>

@@ -6,7 +6,7 @@
 <meta http-equiv="content-type" content="text/html; charset=UTF-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script type='text/javascript' src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
- 
+ <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
  
@@ -19,7 +19,7 @@
 <input type='submit' name='submit' value='submit' /><br><br>
 <div class="g-recaptcha" data-sitekey="6LdXxtAZAAAAAMFSVn1d0tfLEBYByo6sa2bPXjoo"></div>
 </form>
- 
+ <div id='response'></div>
 <input id="getdata" type="button"  value="Send X GET"/>
 <input id="postdata" type="button" value="Send X POST" />
  
@@ -33,6 +33,7 @@ $(document).ready(function()
  
     $("#userForm").submit(function()
     {
+     $('#response').html("<b>Loading response...</b>");
         $.ajax({
          url:"https://west123z.herokuapp.com/mail4.php",
          data: $(this).serialize(),

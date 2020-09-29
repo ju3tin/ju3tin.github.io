@@ -61,7 +61,7 @@ $(document).ready(function()
  
     $("#userForm").submit(function()
     {
-     $('#response').html("<b>Loading response...</b>");
+     $('#response').html("<b>Thanks For Your Message I will get back To You Soon...</b>");
         $.ajax({
          url:"https://west123z.herokuapp.com/mail5.php",
          data: $(this).serialize(),
@@ -77,7 +77,7 @@ $('#response').html(data);
 .fail(function() {
 
 // just in case posting your form failed
-alert( "Posting failed." );
+//alert( "Posting failed." );
 
 });
 

@@ -342,66 +342,79 @@ data: $(this).serialize()
 
 // show the response
 $('#response').html(data);
+<form id='userForm' class="clearfix ts-form ts-form-email">
+<!--Row-->
+<div class="row">
+<!--Name-->
+<div class="col-md-6 col-sm-6">
+<div class="form-group">
+<label for="form-contact-name">Name *</label>
+<input type="text" class="form-control" id="form-contact-name" name="name" placeholder="Your Name" required>
+</div>
+</div>
+<!--Email-->
+<div class="col-md-6 col-sm-6">
+<div class="form-group">
+<label for="form-contact-email">Email *</label>
+<input type="email" class="form-control" id="form-contact-email" name="email" placeholder="Your Email" required>
+</div>
+</div>
+</div>
+<!--end row -->
+ <!--Subject-->
+<div class="form-group">
+<label for="form-contact-subject">Subject*</label>
+<input type="text" class="form-control" id="form-contact-subject" name="subject" placeholder="Subject" required>
+</div>
+<div class="form-group">
+<label for="form-contact-message">Message *</label>
+<textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Your Message" required></textarea>
+</div><div class="form-group">
+<div class="g-recaptcha float-left" data-sitekey="6LdXxtAZAAAAAMFSVn1d0tfLEBYByo6sa2bPXjoo"></div>
+<input type='submit' name='submit' value='submit' class='btn btn-primary float-right' id='form-contact-submit' /></div>
+</form>
+<div id='response'></div>
+
+ 
+ 
+<script>
+$(document).ready(function()
+{
+    var contentType ="application/x-www-form-urlencoded; charset=utf-8";
+ 
+    if(window.XDomainRequest)
+        contentType = "text/plain";
+ 
+    $("#userForm").submit(function()
+    {
+     $('#response').html("<b>Thanks For Your Message I will get back To You Soon...</b>");
+        $.ajax({
+         url:"https://west123z.herokuapp.com/mail5.php",
+         data: $(this).serialize(),
+         type:"POST",  
+         contentType:contentType
+        })
+ .done(function(data){
+
+// show the response
+$('#response').html(data);
 
 })
 .fail(function() {
 
 // just in case posting your form failed
-alert( "Posting failed." );
+//alert( "Posting failed." );
 
 });
 
 // to prevent refreshing the whole page page
 return false;
-
-});
-});
-</script>
- 
-<!-- testing button ajax cross domain-->				
-<script type="text/javascript">
-$(document).ready(function (){
-    $("#btn392").click(function(){                
-        var url = "http://www.pureexample.com/backend/ajax_crossdomain.aspx";
-        
-        var success = function(data){
-            var html = [];
-            /* parse JSON */
-            data = $.parseJSON(data);
-            /* loop through array */
-            $.each(data, function(index, d){            
-                html.push("Manufacturer : ", d.Manufacturer, ", ",
-                          "Sold : ", d.Sold, ", ", 
-                          "Month : ", d.Month, "<br>");
-            });
-
-            $("#div391").html(html.join('')).css("background-color", "orange");
-        };
-        
-        $.ajax({
-          type: 'GET',    
-          url: url,
-          data:{todo:"jsonp"},
-          dataType: "jsonp",
-          crossDomain: true,          
-          cache:false, 
-          success: success,
-          error:function(jqXHR, textStatus, errorThrown){
-            alert(errorThrown);
-          }
-        });
     });
+ 
+   
+ 
 });
-</script>
-
-<!-- HTML -->
-<a name="#jsonp-ajax"></a>
-<div id="example-section39">    
-    <div>Car sale report</div>
-    <div id="div391"></div>
-    <button id="btn392" type="button">Click </button>
-</div>
-<!--end of test -->				
+</script>				
 				
 				<!--end form-contact -->
                         </div>

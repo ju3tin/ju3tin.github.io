@@ -320,7 +320,7 @@
 <label for="form-contact-message">Message *</label>
 <textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Your Message" required></textarea>
 </div><div class="form-group">
-<div class="g-recaptcha float-left" data-sitekey="6LdXxtAZAAAAAMFSVn1d0tfLEBYByo6sa2bPXjoo"></div>
+<!--<div class="g-recaptcha float-left" data-sitekey="6LdXxtAZAAAAAMFSVn1d0tfLEBYByo6sa2bPXjoo"></div>-->
 <input type='submit' name='submit' value='submit' class='btn btn-primary float-right' id='form-contact-submit' /></div>
 <div id='response'></div>
 </form>
@@ -340,7 +340,7 @@ $(document).ready(function()
     {
      $('#response').html("<b>Thanks For Your Message I will get back To You Soon...</b>");
         $.ajax({
-         url:"https://west123z.herokuapp.com/mail5.php",
+         url:"https://west123z.herokuapp.com/mail4.php",
          data: $(this).serialize(),
          type:"POST",  
          contentType:contentType

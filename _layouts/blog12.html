@@ -292,50 +292,79 @@
                             <div class="ts-title mb-5">
                                 <h2>Write Us</h2>
                             </div>
-                            <form id="form-contact" method="post" class="clearfix ts-form ts-form-email" data-php-path="assets/php/email.php">
+                            <form id='userForm' class="clearfix ts-form ts-form-email">
+<!--Row-->
+<div class="row">
+<!--Name-->
+<div class="col-md-6 col-sm-6">
+<div class="form-group">
+<label for="form-contact-name">Name *</label>
+<input type="text" class="form-control" id="form-contact-name" name="name" placeholder="Your Name" required>
+</div>
+</div>
+<!--Email-->
+<div class="col-md-6 col-sm-6">
+<div class="form-group">
+<label for="form-contact-email">Email *</label>
+<input type="email" class="form-control" id="form-contact-email" name="email" placeholder="Your Email" required>
+</div>
+</div>
+</div>
+<!--end row -->
+ <!--Subject-->
+<div class="form-group">
+<label for="form-contact-subject">Subject*</label>
+<input type="text" class="form-control" id="form-contact-subject" name="subject" placeholder="Subject" required>
+</div>
+<div class="form-group">
+<label for="form-contact-message">Message *</label>
+<textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Your Message" required></textarea>
+</div><div class="form-group">
+<div class="g-recaptcha float-left" data-sitekey="6LdXxtAZAAAAAMFSVn1d0tfLEBYByo6sa2bPXjoo"></div>
+<input type='submit' name='submit' value='submit' class='btn btn-primary float-right' id='form-contact-submit' /></div>
+</form>
+<div id='response'></div>
 
-                                <!--Row-->
-                                <div class="row">
+ 
+ 
+<script>
+$(document).ready(function()
+{
+    var contentType ="application/x-www-form-urlencoded; charset=utf-8";
+ 
+    if(window.XDomainRequest)
+        contentType = "text/plain";
+ 
+    $("#userForm").submit(function()
+    {
+     $('#response').html("<b>Thanks For Your Message I will get back To You Soon...</b>");
+        $.ajax({
+         url:"https://west123z.herokuapp.com/mail5.php",
+         data: $(this).serialize(),
+         type:"POST",  
+         contentType:contentType
+        })
+ .done(function(data){
 
-                                    <!--Name-->
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="form-group">
-                                            <label for="form-contact-name">Name *</label>
-                                            <input type="text" class="form-control" id="form-contact-name" name="name" placeholder="Your Name" required>
-                                        </div>
-                                    </div>
+// show the response
+$('#response').html(data);
 
-                                    <!--Email-->
-                                    <div class="col-md-6 col-sm-6">
-                                        <div class="form-group">
-                                            <label for="form-contact-email">Email *</label>
-                                            <input type="email" class="form-control" id="form-contact-email" name="email" placeholder="Your Email" required>
-                                        </div>
-                                    </div>
+})
+.fail(function() {
 
-                                </div>
-                                <!--end row -->
+// just in case posting your form failed
+//alert( "Posting failed." );
 
-                                <!--Subject-->
-                                <div class="form-group">
-                                    <label for="form-contact-subject">Subject*</label>
-                                    <input type="text" class="form-control" id="form-contact-subject" name="subject" placeholder="Subject" required>
-                                </div>
+});
 
-                                <!--Message-->
-                                <div class="form-group">
-                                    <label for="form-contact-message">Message *</label>
-                                    <textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Your Message" required></textarea>
-                                </div>
-
-                                <!--Submit button-->
-                                <div class="form-group clearfix">
-                                    <button type="submit" class="btn btn-primary float-right" id="form-contact-submit">Send a Message</button>
-                                </div>
-
-                                <div class="form-contact-status"></div>
-
-                            </form>
+// to prevent refreshing the whole page page
+return false;
+    });
+ 
+   
+ 
+});
+</script>
                             <!--end form-contact -->
                         </div>
 

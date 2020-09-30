@@ -321,7 +321,7 @@
 <textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Your Message" required></textarea>
 </div><div class="form-group">
 <div class="g-recaptcha float-left" data-sitekey="6LdXxtAZAAAAAMFSVn1d0tfLEBYByo6sa2bPXjoo"></div>
-<input onclick="disableBtn()" type='submit' name='submit' value='submit' class='btn btn-primary float-right' id='form-contact-submit' /></div>
+<input type='submit' name='submit' value='submit' class='btn btn-primary float-right' id='form-contact-submit' /></div>
 <div id='response'></div>
 </form>
 
@@ -359,7 +359,7 @@ $('#response').html(data);
 
 // just in case posting your form failed
 //alert( "Posting failed." );
-
+//document.getElementById("form-contact-submit").disabled = true;
 });
 
 // to prevent refreshing the whole page page
@@ -371,11 +371,7 @@ return false;
     
                             </script>
                             
-                   <script>
-function myFunction() {
-  document.getElementById("form-contact-submit").disabled = true;
-}
-</script>
+                  
                             <!--end form-contact -->
                         </div>
 

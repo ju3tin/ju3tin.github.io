@@ -18,6 +18,13 @@
     {% if site.favicon %}
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}{{site.favicon}}">
   {% endif %}
-     <script src="/js/Chart.min.js"></script> 
-     <script src="/js/utils.js"></script>
+    <meta property="og:url" content="{% if page.url %}{{page.url}}{% else %}{{baseurl}}{% endif %}" />
+    <meta property="og:type" content="{% if page.type %}{{page.type}}{% else %}{{site.type}}{% endif %}" />
+    <meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}" />
+    <meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}" />
+    <meta property="og:image" content="{% if page.featimg %}{{page.featimg}}{% else %}{{site.siteimage}}{% endif %}" />
+   <script src="/js/Chart.min.js"></script> 
+   <script src="/js/utils.js"></script>
 </head>
+
+

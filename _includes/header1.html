@@ -18,11 +18,24 @@
     {% if site.favicon %}
     <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}{{site.favicon}}">
   {% endif %}
-    <meta property="og:url" content="{{site.baseurl}}{% if page.url %}{{page.url}}{% endif %}" /> 
-    <meta property="og:type" content="{% if page.type %}{{page.type}}{% else %}{{site.type}}{% endif %}" />
-    <meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}" />
-    <meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}" />
-    <meta property="og:image" content="{% if page.featimg %}{{site.baseurl}}{{page.featimg}}{% else %}{{site.baseurl}}{{site.siteimage}}{% endif %}" />
+<meta property="og:locale" content="{{site.locale}}" />
+<meta property="og:type" content="{% if page.type %}{{page.type}}{% else %}{{site.type}}{% endif %}" />
+<meta property="og:title" content="{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}" />
+<meta property="og:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}" />
+<meta property="og:url" content="{{site.baseurl}}{% if page.url %}{{page.url}}{% endif %}" />
+<meta property="og:site_name" content="{{site.name}}" />
+<meta property="article:section" content="Uncategorised" />
+<meta property="article:published_time" content="" />
+<meta property="article:modified_time" content="" />
+<meta property="og:updated_time" content="" />
+<meta property="og:image" content="{% if page.featimg %}{{site.baseurl}}{{page.featimg}}{% else %}{{site.baseurl}}{{site.siteimage}}{% endif %}" />
+<meta property="og:image:secure_url" content="{% if page.featimg %}{{site.baseurl}}{{page.featimg}}{% else %}{{site.baseurl}}{{site.siteimage}}{% endif %}" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="800" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}" />
+<meta name="twitter:title" content="{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}" />
+<meta name="twitter:image" content="{% if page.featimg %}{{site.baseurl}}{{page.featimg}}{% else %}{{site.baseurl}}{{site.siteimage}}{% endif %}" />
    <script src="/js/Chart.min.js"></script> 
    <script src="/js/utils.js"></script>
 </head>

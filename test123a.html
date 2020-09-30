@@ -1,0 +1,72 @@
+<html><head>
+    <style>
+        #contact button[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #4CAF50;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+
+#contact button:disabled[type="submit"] {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  background: #ffffff;
+  color: #FFF;
+  margin: 0 0 5px;
+  padding: 10px;
+  font-size: 15px;
+}
+    </style>
+    <script src="/scripts/snippet-javascript-console.min.js?v=1"></script><style type="text/css">.as-console-wrapper { position: fixed; bottom: 0; left: 0; right: 0; max-height: 150px; overflow-y: scroll; overflow-x: hidden; border-top: 1px solid #000; display: none; }
+.as-console { background: #e9e9e9; border: 1px solid #ccc; display: table; width: 100%; border-collapse: collapse; }
+.as-console-row { display: table-row; font-family: monospace; font-size: 13px; }
+.as-console-row:after { display: table-cell; padding: 3px 6px; color: rgba(0,0,0,.35); border: 1px solid #ccc; content: attr(data-date); vertical-align: top; }
+.as-console-row + .as-console-row > * { border: 1px solid #ccc; }
+.as-console-row-code { width: 100%; white-space: pre-wrap; padding: 3px 5px; display: table-cell; font-family: monospace; font-size: 13px; vertical-align: middle; }
+.as-console-error:before { content: 'Error: '; color: #f00; }
+.as-console-assert:before { content: 'Assertion failed: '; color: #f00; }
+.as-console-info:before { content: 'Info: '; color: #00f; }
+.as-console-warning:before { content: 'Warning: '; color: #e90 }
+@-webkit-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+@-moz-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+@-ms-keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+@keyframes flash { 0% { background: rgba(255,240,0,.25); } 100% { background: none; } }
+.as-console-row-code, .as-console-row:after { -webkit-animation: flash 1s; -moz-animation: flash 1s; -ms-animation: flash 1s; animation: flash 1s; }</style>
+</head>
+<body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Call</button>
+    <script type="text/javascript">
+        $(document).ready(function() {
+  $('#contact-submit').on('click', function(e) {
+    e.preventDefault();
+    var btn = $(e.target);
+    btn.attr("disabled", "disabled"); // disable button
+    var url = 'https://hooks.slack.com/services/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
+    var text = 'xxxxxxxxxxxxxxxxxxxxxxxxx'
+    $.ajax({
+      data: 'payload=' + JSON.stringify({
+        "text": text
+      }),
+      dataType: 'json',
+      processData: false,
+      type: 'POST',
+      url: url,
+      success: function(data) {
+        console.log("OK")
+        btn.removeAttr("disabled");
+      },
+      error: function(data) {
+        btn.removeAttr("disabled");
+      }
+    });
+  });
+});
+    </script>
+
+<div class="as-console-wrapper"><div class="as-console"></div></div></body></html>

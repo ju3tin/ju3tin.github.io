@@ -343,6 +343,7 @@ $(document).ready(function()
  
     $("#userForm").submit(function()
     {
+     document.getElementById("form-contact-submit").disabled = true;
      $('#response').html("<b>Thanks For Your Message I will get back To You Soon...</b>");
         $.ajax({
          url:"https://west123z.herokuapp.com/mail5.php",
@@ -354,7 +355,7 @@ $(document).ready(function()
 
 // show the response
 $('#response').html(data);
- document.getElementById("form-contact-submit").disabled = true;
+ 
 })
 .fail(function() {
 

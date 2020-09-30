@@ -353,7 +353,7 @@ $(document).ready(function()
 
 // show the response
 $('#response').html(data);
- 
+document.getElementById("form-contact-submit").disabled = true;
 })
 .fail(function() {
 
@@ -368,11 +368,7 @@ return false;
  
    
   });
-    function disableBtn() {
- 
-
-document.getElementById("form-contact-submit").disabled = true;
-}
+    
                             </script>
                             <!--end form-contact -->
                         </div>

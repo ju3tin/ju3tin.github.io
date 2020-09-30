@@ -330,7 +330,7 @@
  
 <script>
     function disableBtn() {
-  document.getElementById("form-contact-submit").disabled = true;
+ 
 }
 
 $(document).ready(function()
@@ -354,7 +354,7 @@ $(document).ready(function()
 
 // show the response
 $('#response').html(data);
-
+ document.getElementById("form-contact-submit").disabled = true;
 })
 .fail(function() {
 

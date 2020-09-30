@@ -353,7 +353,7 @@ $(document).ready(function()
 
 // show the response
 $('#response').html(data);
-document.getElementById("form-contact-submit").disabled = true;
+
 })
 .fail(function() {
 
@@ -364,6 +364,7 @@ document.getElementById("form-contact-submit").disabled = true;
 
 // to prevent refreshing the whole page page
 return false;
+document.getElementById("form-contact-submit").disabled = true;
     });
  
    

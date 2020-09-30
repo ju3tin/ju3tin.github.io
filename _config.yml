@@ -234,7 +234,7 @@ compress_html:
 
 # Site Settings
 title: Justin Grierson
-description: A Jekyll Based Shopping Cart Built with simpleCart(js)
+description: Blog and website of Justin Grierson, blogging mainly for tech. Opinions expressed are mine.
 url:
 
 # Jekyll Configuration

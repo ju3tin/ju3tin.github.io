@@ -329,9 +329,7 @@
  
  
 <script>
-    function disableBtn() {
- 
-}
+    
 
 $(document).ready(function()
 {
@@ -343,7 +341,7 @@ $(document).ready(function()
  
     $("#userForm").submit(function()
     {
-     document.getElementById("form-contact-submit").disabled = true;
+     
      $('#response').html("<b>Thanks For Your Message I will get back To You Soon...</b>");
         $.ajax({
          url:"https://west123z.herokuapp.com/mail5.php",
@@ -370,8 +368,12 @@ return false;
  
    
   });
+    function disableBtn() {
+ 
 
-</script>
+document.getElementById("form-contact-submit").disabled = true;
+}
+                            </script>
                             <!--end form-contact -->
                         </div>
 

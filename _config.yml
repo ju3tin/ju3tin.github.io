@@ -151,7 +151,7 @@ email: "ju3tin@hotmail.co.uk"
 ################
 # Author Blurb #
 ################
-
+type: "article"
 # The author blurb goes underneath blog posts.
 # This works best when your author blurb image has a transparent background, or matches your site background color.
 
@@ -159,7 +159,7 @@ email: "ju3tin@hotmail.co.uk"
 author_blurb: "Justin Grierson is an awesome person. He lives in England, where he works on projects. In his spare time, Justin likes to eat pizza."
 author_blurb_image: "/img/author.png"
 author_tinyimage: "/img/tinyauthor.jpg"
-
+siteimage: "/assets/img/bg-office1.jpg"
 ##################
 # Social Buttons #
 ##################

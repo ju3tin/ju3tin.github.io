@@ -36,8 +36,7 @@
 <meta name="twitter:description" content="{% if page.description %}{{page.description}}{% else %}{{site.description}}{% endif %}" />
 <meta name="twitter:title" content="{% if page.title %}{{page.title}}{% else %}{{site.title}}{% endif %}" />
 <meta name="twitter:image" content="{% if page.featimg %}{{site.baseurl}}{{page.featimg}}{% else %}{{site.baseurl}}{{site.siteimage}}{% endif %}" />
-
-<meta property="og:image" content="https://ju3tin.github.io/img/tinyauthor1.jpg" />
+<meta property="og:image" content="{% if page.smallimage %}{{site.baseurl}}{{page.smallimage}}{% else %}{{site.baseurl}}{{site.smallimage}}{% endif %}" />
 <meta property="og:image:type" content="image/jpg" />
 <meta property="og:image:width" content="400" />
 <meta property="og:image:height" content="400" />

@@ -1,0 +1,468 @@
+[ 
+	
+  { "id": "revo_1776",
+	"title" : "Revolutionary War",
+	"description" : "",
+	"focus_date" : "1776-7-04 12:00:00",
+	"initial_zoom" : "30",
+	"size_importance" : "1",
+	"load_more_from_src":"json/revo.json",
+	"events" : [
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806179",
+"title" :        "Seige of Boston",
+"startdate" :    "1775-04-19 17:00",
+"enddate" :      "1776-03-17 17:00",
+"date_display" :   "da",
+"description" :  "",
+"link" :         "",
+"icon" :         "square_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "45",
+"y_position" : 0,
+"image" :    ""
+},
+
+{
+"id" :           "revo_knox_expedition",
+"title" :        "Knox Expedition",
+"startdate" :    "1775-11-17 17:00",
+"enddate" :    "1776-01-27 17:00",
+"date_display" :   "da",
+"description" :  "The noble train of artillery, also known as the Knox Expedition, was an expedition led by Continental Army Colonel Henry Knox to transport heavy weaponry that had been captured at Fort Ticonderoga to the Continental Army camps outside Boston, Massachusetts during the winter of 1775–1776.",
+"link" :         "",
+"icon" :         "star_green.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "40",
+"y_position" : 0,
+"image" :    ""
+},
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806202",
+"title" :        "Burning of Norfolk",
+"startdate" :    "1776-01-01 17:00",
+"date_display" :   "da",
+"link" :         "http://en.m.wikipedia.org/wiki/Burning_of_Norfolk",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "32",
+"modal_type":"link-iframe"
+},
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b805748",
+"title" :        "Benedict Arnold made Brigadier General in American Army.",
+"startdate" :    "1776-01-10 12:00",
+"enddate" :      "1776-01-10 12:00",
+"date_display" :   "da",
+"description" :  "Benedict Arnold made Brigadier General in American Army.",
+"link" :         "",
+"icon" :         "square_blue.png",
+"low_threshold" :"1",
+"high_threshold":"38",
+"importance" :   "30",
+"y_position" : 0,
+"image" :    ""
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806203",
+"title" :        "Battle of Moore's Creek Bridge",
+"startdate" :    "1776-02-27 17:00",
+"date_display" :   "da",
+"description" :  "",
+"link" :         "http://en.m.wikipedia.org/wiki/Battle_of_Moore's_Creek_Bridge",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "23",
+"modal_type":"link-iframe"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806204",
+"title" :        "Battle of the Rice Boats",
+"startdate" :    "1776-03-02 17:00",
+"enddate" :      "1776-03-03 17:00",
+"date_display" :   "da",
+"description" :  "",
+"link" :         "http://en.m.wikipedia.org/wiki/Battle_of_the_Rice_Boats",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "25",
+"modal_type":"link-iframe"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806205",
+"title" :        "Battle of Nassau, Bahamas",
+"startdate" :    "1776-03-03 17:00",
+"enddate" :      "1776-03-04 17:00",
+"date_display" :   "da",
+"description" :  "",
+"link" :         "",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "29",
+"y_position" : 0,
+"image" :    ""
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806212",
+"title" :        "Fortification of Dorchester Heights",
+"startdate" :    "1776-03-14 17:00",
+"date_display" :   "da",
+"link" :         "http://en.m.wikipedia.org/wiki/Fortification_of_Dorchester_Heights",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "40",
+"modal_type":"link-iframe"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b805750",
+"title" :        "British Gen. Gage evacuates Boston",
+"startdate" :    "1776-03-17 12:00",
+"enddate" :      "1776-03-17 12:00",
+"date_display" :   "da",
+"description" :  "British Gen. Gage evacuates Boston.",
+"link" :         "",
+"icon" :         "square_blue.png",
+"low_threshold" :"1",
+"high_threshold":"38",
+"importance" :   "30"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806213",
+"title" :        "Battle of Saint-Pierre",
+"startdate" :    "1776-03-25 17:00",
+"enddate" :      "1776-03-25 17:00",
+"date_display" :   "da",
+"link" :         "http://en.m.wikipedia.org/wiki/Battle_of_Saint-Pierre",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "25",
+"modal_type":"link-iframe"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b805751",
+"title" :        "Congress opens ports to all but Great Britain.",
+"startdate" :    "1776-04-06 12:00",
+"date_display" :   "da",
+"description" :  "Congress opens ports to all nations except Great Britain.",
+"link" :         "",
+"icon" :         "star_blue.png",
+"low_threshold" :"1",
+"high_threshold":"38",
+"importance" :   "30"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806214",
+"title" :        "Battle of Block Island",
+"startdate" :    "1776-04-06 17:00",
+"date_display" :   "da",
+"description" :  "",
+"link" :         "http://en.m.wikipedia.org/wiki/Battle_of_Block_Island",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "26",
+"modal_type":"link-iframe"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b805752",
+"title" :        "France sends arms to American Army",
+"startdate" :    "1776-05-02 12:00",
+"enddate" :      "1776-05-02 12:00",
+"date_display" :   "da",
+"description" :  "Louis XVI of France sends arms and ammunition to American Army.",
+"link" :         "",
+"icon" :         "square_blue.png",
+"low_threshold" :"1",
+"high_threshold":"38",
+"importance" :   "30"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806215",
+"title" :        "Battle of The Cedars",
+"startdate" :    "1776-05-18 17:00",
+"enddate" :      "1776-05-27 17:00",
+"date_display" :   "da",
+"description" :  "",
+"link" :         "http://en.m.wikipedia.org/wiki/Battle_of_The_Cedars",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "29",
+"modal_type":"link-iframe"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806216",
+"title" :        "Battle of Trois-Rivières",
+"startdate" :    "1776-06-08 17:00",
+"enddate" :      "1776-06-08 17:00",
+"date_display" :   "da",
+"description" :  "",
+"link" :         "",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "29"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806218",
+"title" :        "Battle of Sullivan's Island",
+"startdate" :    "1776-06-28 17:00",
+"enddate" :      "1776-06-28 17:00",
+"date_display" :   "da",
+"description" :  "",
+"link" :         "",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "29"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b805754",
+"title" :        "British forces arrive in NY.",
+"startdate" :    "1776-07-02 12:00",
+"enddate" :      "1776-07-02 12:00",
+"date_display" :   "da",
+"description" :  "British forces arrive in NY.",
+"link" :         "",
+"icon" :         "square_blue.png",
+"low_threshold" :"1",
+"high_threshold":"38",
+"importance" :   "30"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b806219",
+"title" :        "Battle of Lindley's Fort ",
+"startdate" :    "1776-07-15 17:00",
+"enddate" :      "1776-07-15 17:00",
+"date_display" :   "da",
+"description" :  "",
+"link" :         "http://en.m.wikipedia.org/wiki/Battle_of_Lindley's_Fort",
+"icon" :         "flag_red.png",
+"low_threshold" :"0",
+"high_threshold":"60",
+"importance" :   "25",
+"modal_type":"link-iframe"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b805756",
+"title" :        "First submarine,  Turtle, is used in Battle of New York Harbor.",
+"startdate" :    "1776-09-06 12:00",
+"date_display" :   "da",
+"description" :  "First submarine,  Turtle, is used in Battle of New York Harbor.<br><br>",
+"link" :         "",
+"icon" :         "halfcircle_red.png",
+"low_threshold" :"1",
+"high_threshold":"38",
+"importance" :   "30"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b805757",
+"title" :        "Benedict Arnold clashes with British on Lake Champlain",
+"startdate" :    "1776-10-11 12:00",
+"date_display" :   "da",
+"description" :  "Benedict Arnold clashes with British fleet in defense of Lake Champlain. Both parties retreat, no clear victor.",
+"link" :         "",
+"icon" :         "star_red.png",
+"low_threshold" :"1",
+"high_threshold":"38",
+"importance" :   "30",
+"y_position" : 0,
+"image" :    ""
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b805758",
+"title" :        "British capture Ft. Washington",
+"startdate" :    "1776-11-16 12:00",
+"date_display" :   "da",
+"link" :         "http://en.m.wikipedia.org/wiki/Fort_Washington_(New_York)",
+"icon" :         "flag_red.png",
+"low_threshold" :"1",
+"high_threshold":"60",
+"importance" :   "40",
+"modal_type":"link-iframe"
+}
+,
+{
+"id" :           "tg_line_1cc5f389f7c02f5cc1488f47c3adfb8b805759",
+"title" :        "Thomas Paine publishes  The American Crisis.",
+"startdate" :    "1776-12-19 12:00",
+"date_display" :   "da",
+"description" :  "Thomas Paine publishes  The American Crisis.",
+"link" :         "",
+"icon" :         "triangle_blue.png",
+"low_threshold" :"1",
+"high_threshold":"38",
+"importance" :   "30",
+"y_position" : 0,
+"image" :    ""
+},        
+    {
+        "id": "revo_battles_1",
+        "title": "Battle of Brooklyn",
+        "startdate": "1776-08-27",
+        "enddate": "1776-08-27",
+        "link": "http://en.m.wikipedia.org/wiki/Battle_of_Long_Island",
+        "icon": "flag_red.png",
+        "importance":42,
+        "click_callback": "va.eventTester",
+        "bad_headaches":"yes"
+    },
+    {
+        "id": "revo_battles_2",
+        "title": "Landing at Kip's Bay",
+        "startdate": "1776-09-15",
+        "enddate": "1776-09-15",
+        "link": "http://en.m.wikipedia.org/wiki/Landing_at_Kip%27s_Bay",
+        "icon": "flag_red.png",
+        "importance": 25,
+        "modal_type": "link-iframe"
+    },
+    {
+        "id": "revo_battles_3",
+        "title": "Battle of Harlem Heights",
+        "startdate": "1776-09-16",
+        "enddate": "1776-09-16",
+        "link": "http://en.m.wikipedia.org/wiki/Battle_of_Harlem_Heights",
+        "icon": "flag_red.png",
+        "importance": 25,
+        "modal_type": "link-iframe"
+    },
+    
+       {
+        "id": "declaration",
+        "title": "Signing of the Declaration of Independence",
+        "startdate": "1776-07-04",
+        "icon": "star_green.png",
+        "importance": 45,
+        "modal_type": "link-iframe"
+    },
+
+    {
+        "id": "revo_battles_4",
+        "title": "Battle of Valcour Island (sea)",
+        "startdate": "1776-10-11",
+        "enddate": "1776-10-11",
+        "link": "http://en.m.wikipedia.org/wiki/Battle_of_Valcour_Island",
+        "icon": "flag_red.png",
+        "importance": 25,
+        "modal_type": "link-iframe"
+    },
+    {
+        "id": "revo_battles_5",
+        "title": "Battle of White Plains",
+        "startdate": "1776-10-28",
+        "enddate": "1776-10-28",
+        "link": "http://en.m.wikipedia.org/wiki/Battle_of_White_Plains",
+        "icon": "flag_red.png",
+        "importance": 25,
+        "modal_type": "link-iframe"
+    },
+    {
+        "id": "revo_battles_6",
+        "title": "Battle of Fort Cumberland",
+        "startdate": "1776-11-10",
+        "enddate": "1776-11-29",
+        "link": "http://en.m.wikipedia.org/wiki/Battle_of_Fort_Cumberland",
+        "icon": "flag_red.png",
+        "importance": 25,
+        "modal_type": "link-iframe"
+    },
+    {
+        "id": "revo_battles_7",
+        "title": "Battle of Fort Washington",
+        "startdate": "1776-11-16",
+        "enddate": "1776-11-16",
+        "link": "http://en.m.wikipedia.org/wiki/Battle_of_Fort_Washington",
+        "icon": "flag_red.png",
+        "importance": 25,
+        "modal_type": "link-iframe"
+    },
+    {
+        "id": "revo_battles_8",
+        "title": "Ambush of Geary",
+        "startdate": "1776-12-14",
+        "enddate": "1776-12-14",
+        "link": "http://en.m.wikipedia.org/wiki/Ambush_of_Geary",
+        "icon": "flag_red.png",
+        "importance": 25,
+        "modal_type": "link-iframe"
+    },
+    {
+        "id": "revo_battles_9",
+        "title": "Battle of Iron Works Hill",
+        "startdate": "1776-12-22",
+        "enddate": "1776-12-23",
+        "link": "http://en.m.wikipedia.org/wiki/Battle_of_Iron_Works_Hill",
+        "icon": "flag_red.png",
+        "importance": 25,
+        "modal_type": "link-iframe"
+    },
+    {
+        "id": "revo_battles_washington_crosses",
+        "title": "Washington Crosses the Delaware",
+        "startdate": "1776-12-25",
+        "enddate": "1776-12-26",
+        "link": "http://en.m.wikipedia.org/wiki/Washington%27s_crossing_of_the_Delaware_River",
+        "icon": "star_green.png",
+        "importance":35,
+        "modal_type": "link-iframe"
+    },
+    {
+        "id": "revo_battles_10",
+        "title": "Battle of Trenton",
+        "startdate": "1776-12-26",
+        "enddate": "1776-12-26",
+        "link": "http://en.m.wikipedia.org/wiki/Battle_of_Trenton",
+        "icon": "flag_red.png",
+        "importance":45,
+        "modal_type": "link-iframe"
+    }], "legend" : [
+		  
+		  {
+	       "icon" : "flag_red.png",
+           "title" : "battle"
+          },
+          {
+	       "icon" : "star_blue.png",
+           "title" : "Congress"
+          }
+		  ,{
+	       "icon" : "square_blue.png",
+           "title" : "British"
+          }
+		  ,{
+	       "icon" : "halfcircle_red.png",
+           "title" : "technology+advance"
+          }
+		  ,{
+	       "icon" : "star_red.png",
+           "title" : "attack/incident"
+          }
+		  ]
+    }
+	]

@@ -13,29 +13,22 @@ So I can make changes to the look and feel anyways hope you like it
 
 
 
-	
-	
-
-	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/backbone-min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/jquery.tmpl.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/ba-debug.min.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/ba-tinyPubSub.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/jquery.ui.ipad.js" type="text/javascript" charset="utf-8"></script>
-	<script src="js/globalize.js" type="text/javascript" charset="utf-8"></script>	
-		
-	<script src="timeglider/TG_Date.js" type="text/javascript" charset="utf-8"></script>
-	<script src="timeglider/TG_Org.js" type="text/javascript" charset="utf-8"></script>
-	<script src="timeglider/TG_Timeline.js" type="text/javascript" charset="utf-8"></script> 
-	<script src="timeglider/TG_TimelineView.js" type="text/javascript" charset="utf-8"></script>
-	<script src="timeglider/TG_Mediator.js" type="text/javascript" charset="utf-8"></script> 
-	<script src="timeglider/timeglider.timeline.widget.js" type="text/javascript"></script>
-	
-	<script src="timeglider/timeglider.datepicker.js" type="text/javascript"></script>
-
-	
-	<script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.tmpl.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ba-debug.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/ba-tinyPubSub.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.ui.ipad.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/globalize.js" type="text/javascript" charset="utf-8"></script>			
+<script src="timeglider/TG_Date.js" type="text/javascript" charset="utf-8"></script>
+<script src="timeglider/TG_Org.js" type="text/javascript" charset="utf-8"></script>
+<script src="timeglider/TG_Timeline.js" type="text/javascript" charset="utf-8"></script> 
+<script src="timeglider/TG_TimelineView.js" type="text/javascript" charset="utf-8"></script>
+<script src="timeglider/TG_Mediator.js" type="text/javascript" charset="utf-8"></script> 
+<script src="timeglider/timeglider.timeline.widget.js" type="text/javascript"></script>
+<script src="timeglider/timeglider.datepicker.js" type="text/javascript"></script>
+<script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
 
 <script>
 	

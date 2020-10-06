@@ -15,6 +15,8 @@ custom_code: <link rel="stylesheet" href="css/jquery-ui-1.8.5.custom.css" type="
 This is a timeline about important and remberal things that have happened in my life I used the <a href="http://timeglider.com/widget/index.php">timeglider</a>. 
 I was going to use <a href="https://timeline.knightlab.com">timelinejs</a>, But I dont like to use iframes and also it doesn't allow you to make changes to the css.
 So I can make changes to the look and feel anyways hope you like it
+
+<div class='page-content group'>
 <div id='demo-placement' style="clear:both;margin-top:18px;"></div>
 
 
@@ -51,3 +53,5 @@ var tg1 = $("#demo-placement").timeline({
 });
 });
 </script>
+
+</div>

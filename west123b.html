@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Timeglider jQuery Plugin/Widget</title>
+
+
+	<link rel="stylesheet" href="css/jquery-ui-1.8.5.custom.css" type="text/css">
+
+    <link rel="stylesheet" href="timeglider/Timeglider.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+	<link rel="stylesheet" href="docs-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+
+
+	<script type="text/javascript" src="https://use.typekit.com/hjz1sud.js"></script>
+	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
+	<script src="js/json2.js" type="text/javascript" charset="utf-8"></script>
+
+	<script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript" charset="utf-8"></script>
+
+
+	<script src="js/jquery.qtip.js" type="text/javascript" charset="utf-8"></script>
+
+
+
+
+</head>
+
+
+<body>
+
+
+
+<div class='nav'>
+<h1><a href='/widget'><img src='img/tg_logo.jpg' alt='Timeglider JS Widget'></h1>
+<ul>
+<li id="intro"><a href="?p=intro">intro</a></li><li id="install"><a href="?p=install">install</a></li><li id="json"><a href="?p=json">json</a></li><li id="api"><a href="?p=api">api</a></li><li id="download"><a href="?p=download">download</a></li><li id="license"><a href="https://timeglider.com/widget/?p=license">license</a></li><li id="demo"><a href="kitchen_sink.html">demo</a></li></ul>
+</div>
+
+
+<div class='page-content group'>
+<h2>Welcome.</h2>
+
+<p>Timeglider JS is a zooming, panning data-driven timeline widget written in Javascript. This widget is the core of <a href="http://timeglider.com">our our timeline authoring and publishing app</a>, and can be integrated into any HTML application environment.</p>
+
+<!-- 
+<div class='caseStudy'>
+<h3>Case Study: Cancer Research UK</h3>
+<a href="http://aboutus.cancerresearchuk.org/what-we-do/"><img src='img/cancer-research-uk.jpg' style='float:right;margin-left:12px;margin-bottom:12px;border:none' /></a>Having just completed ten years of groundbreaking cancer research, the team at Cancer Research UK decided to create a timeline to explore the milestones of their work. <a href='http://aboutus.cancerresearchuk.org/what-we-do'> Check it out here.</a></div>
+-->
+
+<p>Timelines can be zoomed by dragging the vertical slider at right: up for zooming in (less time shown) and down for zooming out (more time shown). The mousewheel also works as a zoom controller. Any white area on the "stage" of the timeline can be dragged left and right, as can the blue "ruler" which marks out different units of time. Clicking on an event brings up a small modal window with a description and links if any are provided in the data. Briefly:</p>
+
+<ul>
+<li>Timeglider works well on iOS and Android touch devices; Windows Surface devices are still problematic. We're working on a mobile list view for the phone-portrait experience.</li>
+<li>Data is imported into the widget with a straightforward JSON format, but data can also come from JavaScript objects (that you can create) existing on the page already.</li>
+<li>This code is <em>not Open Source</em>: Using the widget is free for non-commercial use; for commercial applications, we have a couple <a href='?p=license'>licensing options</a>. If you plan to do a commercial implementation, you are welcome to experiment locally or at test-scale as much as you'd like with the entire code base.</li>
+<li>We no longer have our code on Github, and are going to do our best to provide complete code reference <a href="/widget/?p=download">here on our site</a>.</li>
+
+</ul>
+
+
+<div id='demo-placement' style="clear:both;margin-top:18px;"></div>
+
+
+<p><a href="kitchen_sink.html">Click here for a "kitchen sink" demo, demonstrating a number of public methods</a>
+</p>
+
+	
+	
+
+	<script src="js/underscore-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/backbone-min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.tmpl.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/ba-debug.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/ba-tinyPubSub.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.mousewheel.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/jquery.ui.ipad.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/globalize.js" type="text/javascript" charset="utf-8"></script>	
+		
+	<script src="timeglider/TG_Date.js" type="text/javascript" charset="utf-8"></script>
+	<script src="timeglider/TG_Org.js" type="text/javascript" charset="utf-8"></script>
+	<script src="timeglider/TG_Timeline.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="timeglider/TG_TimelineView.js" type="text/javascript" charset="utf-8"></script>
+	<script src="timeglider/TG_Mediator.js" type="text/javascript" charset="utf-8"></script> 
+	<script src="timeglider/timeglider.timeline.widget.js" type="text/javascript"></script>
+	
+	<script src="timeglider/timeglider.datepicker.js" type="text/javascript"></script>
+
+	
+	<script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
+
+<script>
+	
+	$(function () {
+	
+		var tg1 = $("#demo-placement").timeline({
+				"timezone":"-07:00",
+				"icon_folder":"timeglider/icons/",
+				"min_zoom":20, 
+				"max_zoom":52, 
+				"show_centerline":true,
+				"data_source":"json/js_history.json",
+				"show_footer":true,
+				"constrain_to_data":true,
+				"display_zoom_level":true
+		});
+					
+					
+	});
+
+</script>
+</div>
+
+
+
+<!-- 3rd party libs -->
+
+
+
+
+<script type='text/javascript'>
+	$(document).ready(function () {
+		$("li#intro").addClass("nav-active");
+	});
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-8964270-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+
+</script>
+
+
+</body>
+</html>

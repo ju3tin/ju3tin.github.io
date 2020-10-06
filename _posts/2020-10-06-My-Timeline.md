@@ -4,9 +4,24 @@ section-type: post
 title: This is a timeline about me
 category: tech
 tags: [ 'tutorial' ]
+custom_css:
+- css/custom.css
+- css/custom1.css
+custom_js:
+- dude.js
+custom_code:
+- <link rel="stylesheet" href="css/jquery-ui-1.8.5.custom.css" type="text/css">
+- <link rel="stylesheet" href="timeglider/Timeglider.css" type="text/css" media="screen" title="no title" charset="utf-8">
+- <link rel="stylesheet" href="docs-style.css" type="text/css" media="screen" title="no title" charset="utf-8">
+- <script type="text/javascript" src="https://use.typekit.com/hjz1sud.js"></script>
+- <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+- <script src="js/json2.js" type="text/javascript" charset="utf-8"></script>
+- <script src="js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+- <script src="js/jquery-ui-1.10.3.custom.min.js" type="text/javascript" charset="utf-8"></script>
+- <script src="js/jquery.qtip.js" type="text/javascript" charset="utf-8"></script>
 ---
 
-THis is a timeline about important and remberal things that have happened in my life I used the <a href="http://timeglider.com/widget/index.php">timeglider</a>. 
+This is a timeline about important and remberal things that have happened in my life I used the <a href="http://timeglider.com/widget/index.php">timeglider</a>. 
 I was going to use <a href="https://timeline.knightlab.com">timelinejs</a>, But I dont like to use iframes and also it doesn't allow you to make changes to the css.
 So I can make changes to the look and feel anyways hope you like it
 <div id='demo-placement' style="clear:both;margin-top:18px;"></div>

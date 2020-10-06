@@ -37,7 +37,7 @@ So I can make changes to the look and feel anyways hope you like it
 <script src="js/jquery.jscrollpane.min.js" type="text/javascript"></script>
 
 <script>
-$(function () {
+jQuery(document).ready(function(){
 var tg1 = $("#demo-placement").timeline({
 "timezone":"-07:00",
 "icon_folder":"timeglider/icons/",
@@ -49,5 +49,5 @@ var tg1 = $("#demo-placement").timeline({
 "constrain_to_data":true,
 "display_zoom_level":true
 });
-});
+})(jQuery);
 </script>

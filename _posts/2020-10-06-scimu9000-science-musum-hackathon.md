@@ -14,7 +14,7 @@ tags: [ 'tutorial' ]
         
     <!--     <div style="z-index:100; height:150%; width:100px position:fixed" align="center"><iframe align="middle" style="z-index:100" frameborder="0" src="https://devimages.eu-gb.mybluemix.net/images/sci-mu-landscape-2.svg"></iframe></div>-->
 <svg id="svg_canvas" viewBox="0 0 1024 704" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
-<img src="https://devimages.eu-gb.mybluemix.net/images/sci-mu-landscape-2.svg" alt="Kiwi standing on oval">
+<img src="images/sci-mu-9000.svg" alt="Kiwi standing on oval">
        <!-- <div id="svg_size">
             <svg id="svg_canvas" viewBox="0 0 1024 704" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
         </div>-->

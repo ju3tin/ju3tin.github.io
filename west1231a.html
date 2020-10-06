@@ -1,0 +1,1010 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Text to Speech with Javascript</title>
+<meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<meta name="description" content="Text to speech can be achieved in Javascript using SpeechSynthesis API" />
+<meta property="og:site_name" content="UsefulAngle" />
+<meta property="og:url" content="https://usefulangle.com/post/98/javascript-text-to-speech" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Text to Speech with Javascript" />
+<meta property="og:description" content="Text to speech can be achieved in Javascript using SpeechSynthesis API" />
+<meta property="og:image" content="https://usefulangle.com/img/thumb/javascript.png" />
+<meta property="fb:app_id" content="1390894274278567" />
+<meta name="theme-color" content="#003BDE" />
+<link rel="shortcut icon" href="https://usefulangle.com/img/favicon.ico" type="image/x-icon" />
+<link rel="icon" href="https://usefulangle.com/img/favicon.ico" type="image/x-icon" />
+<link href="https://usefulangle.com/sitecss/header-footer.css" rel="stylesheet" type="text/css" />
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<style type="text/css">
+
+#main-container {
+
+}
+
+#post-header-container {
+	padding: 50px 20px;
+	border-bottom: 1px solid #CDD2D4;
+}
+
+#post-header {
+	max-width: 1208px;
+	margin: 0 auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+#post-header-left {
+	margin: 0 20px 0 0;
+}
+
+#post-header-left h1 {
+	font-size: 44px;
+	font-weight: 700;
+	line-height: 1.6;
+	margin: 0 0 15px 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+#post-category-container {
+	text-transform: uppercase;
+	margin: 0 0 30px 0;
+	font-size: 14px;
+	font-weight: 700;
+	font-family: "Montserrat", sans-serif;
+}
+
+#post-time-container {
+
+}
+
+#post-time-container time {
+	display: block;
+	margin: 0 0 10px 0;
+	font-size: 18px;
+}
+
+#post-time-container span {
+	display: block;
+	font-size: 14px;
+	color: #666666;
+}
+
+#post-header-right {
+
+}
+
+#post-header-right img {
+	width: 400px;
+}
+
+#page-middle-content {
+	margin: 80px auto 0 auto;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1208px;
+	padding: 0 20px;
+}
+
+#page-middle-content-left {
+	width: 788px;
+}
+
+article {
+	line-height: 2;
+	font-size: 20px;
+}
+
+#post-content-html {
+
+}
+
+#article-use-cases-container {
+	background-color: #c7ecee;
+    margin: 0 0 40px 0;
+    padding: 20px 30px;
+}
+
+#article-use-cases-container h4 {
+	margin-top: 0 !important;
+	font-size: 20px;
+	font-family: "Montserrat", sans-serif;
+}
+
+#article-use-cases-container ul {
+	margin: 0 !important;
+}
+
+#article-introduction {
+	font-size: 26px;
+	padding: 0 0 20px 0;
+	border-bottom: 1px dashed#ccc;
+	margin: 0 0 60px 0;
+	color: #555555;
+}
+
+#article-introduction p:last-child {
+	margin: 0;
+}
+
+#series-container {
+	margin: 0 0 40px 0;
+	padding: 10px;
+	font-style: italic;
+	font-size: 15px;
+	border: 2px dashed #cccccc;
+}
+
+#series-container h4 {
+	margin-top: 0px !important;
+	font-size: 16px;
+}
+
+#series-container ul {
+	margin: 0 !important;
+}
+
+#post-content-html h4:first-child {
+	margin-top: 0;
+}
+
+.article-image {
+	display: block;
+	max-width: 100%;
+	margin: 0 auto 20px auto;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+
+.italic-content {
+	font-style: italic;
+}
+
+article h4 {
+	font-size: 25px;
+	margin: 90px 0 7px 0;
+	line-height: 1.7;
+	font-family: "Montserrat", sans-serif;
+}
+
+article p {
+	margin: 0 0 20px 0;
+}
+
+article ul, article ol {
+	margin: 0 0 20px 0;
+	padding: 0 0 0 20px;
+}
+
+article li {
+	margin: 0 0 5px 0;
+}
+
+article a {
+	color: #003BDE;
+	text-decoration: none;
+}
+
+article a:hover {
+	text-decoration: underline;
+}
+
+.image-caption {
+	color: #999999;
+	text-align: center;
+	font-size: 12px;
+	margin: 5px 0 0 0;
+}
+
+.code-section {
+	margin: 0 0 20px 0;
+}
+
+.code-section span {
+	text-transform: uppercase;
+	margin: 0 0 7px 0;
+	font-size: 13px;
+	font-weight: 700;
+	display: block;
+}
+
+article pre {
+	overflow: visible !important;
+	padding: 0 !important;
+}
+
+article code {
+	display: block;
+	overflow: auto;
+	white-space: pre;
+	font-size: 16px;
+	padding: 20px 20px;
+	background-color: #f8f8f8;
+	line-height: 1.5;
+	margin: 0 0 20px 0;
+	tab-size: 4;
+	-moz-tab-size: 4;
+}
+
+.special-text {
+	background-color: #e9e9e9;
+	padding: 1px 4px;
+}
+
+details {
+	margin: 0 0 10px 0;
+}
+
+summary {
+	font-weight: 700;
+	cursor: pointer;
+	font-family: "Montserrat", sans-serif;
+}
+
+details p {
+	margin: 0 0 10px 0;
+}
+
+.faq-answer {
+	margin: 0 0 0 20px;
+}
+
+#post-related-container {
+	margin: 120px 0 0 0;
+}
+
+#post-related-header {
+	border-bottom: 3px solid #111111;
+	margin: 0 0 30px 0;
+}
+
+#post-related-header h5 {
+	margin: 0;
+	text-transform: uppercase;
+	font-family: Montserrat;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+.post-related {
+	background-color: #fcfcfc;
+	display: table;
+	margin: 0 0 40px 0;
+}
+
+.post-related:last-child {
+	margin: 0 !important;
+}
+
+.post-related-image {
+	display: table-cell;
+	width: 18%;
+	vertical-align: top;
+}
+
+.post-related img {
+	width: 100%;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.post-related-text {
+	display: table-cell;
+	width: 82%;
+	padding: 20px;
+	border: 2px solid #e6e6e6;
+	box-sizing: border-box;
+	border-left: none;
+	color: inherit;
+	font-family: Montserrat;
+	font-weight: 700;
+}
+
+#comments-container {
+	margin: 120px 0 0 0;
+}
+
+#comments-container-header {
+	border-bottom: 3px solid #111111;
+	margin: 0 0 30px 0;
+}
+
+#comments-container-header h5 {
+	margin: 0;
+	text-transform: uppercase;
+	font-family: Montserrat;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+#disqus_thread {
+	/*background-color: #1e272e;
+	padding: 20px;*/
+}
+
+#disqus_thread_loader {
+	line-height: 100px;
+	text-align: center;
+	padding: 30px;
+	border: 1px solid rgba(0,0,0,0.1);
+}
+
+#page-middle-content-right {
+	width: 300px;
+}
+
+#sidebar-ads {
+
+}
+
+.sidebar-ad {
+	margin: 0 auto 60px auto;
+}
+
+.sidebar-ad:last-child {
+	margin: 0 auto 0 auto !important;
+}
+
+#carbon-ad {
+	position: fixed;
+	top: 10px;
+	margin: 20px 0 0 0;
+	transition: 0.3s;
+	display: none;
+}
+
+/* Carbon */
+#carbonads {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu,Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+#carbonads {
+	display: flex;
+	max-width: 330px;
+	background-color: hsl(0, 0%, 98%);
+}
+
+#carbonads a {
+	color: inherit;
+	text-decoration: none;
+}
+
+#carbonads a:hover {
+	color: inherit;
+}
+
+#carbonads span {
+	position: relative;
+	display: block;
+	overflow: hidden;
+}
+
+#carbonads .carbon-wrap {
+ 	display: flex;
+}
+
+.carbon-img {
+	display: block;
+	margin: 0;
+	line-height: 1;
+}
+
+.carbon-img img {
+	display: block;
+}
+
+.carbon-text {
+	font-size: 13px;
+	padding: 10px;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.carbon-poweredby {
+	display: block;
+	padding: 8px 10px;
+	background: repeating-linear-gradient(-45deg, transparent, transparent 5px, hsla(0, 0%, 0%, .025) 5px, hsla(0, 0%, 0%, .025) 10px) hsla(203, 11%, 95%, .4);
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	font-weight: 600;
+	font-size: 9px;
+	line-height: 1;
+}
+
+@media screen and (min-width: 300px) and (max-width: 600px) { 
+	#post-header-container {
+		padding: 0 0 50px 0;
+	}
+
+	#post-header {
+		flex-direction: column;
+	}
+
+	#post-header-right {
+		order: 1;
+	}
+
+	#post-header-left {
+		order: 2;
+		padding: 0 20px;
+		margin: 15px 0 0 0;
+	}
+
+	#post-header-right img {
+		width: 100%;
+		display: inline-block;
+		vertical-align: middle;
+		height: 250px;
+		object-fit: cover;
+	}
+
+	#post-header-left h1 {
+		font-size: 32px;
+	}
+
+	#post-category-container {
+		margin: 0 0 15px 0;
+	}
+
+	#page-middle-content {
+		flex-direction: column;
+		margin-top: 40px;
+	}
+
+	#page-middle-content-left {
+		width: 100%;
+	}
+
+	article {
+		font-size: 18px;
+		line-height: 1.7;
+	}
+
+	article h4 {
+		font-size: 20px;
+	}
+
+	.post-related-image {
+		width: 25%;
+		padding: 10px;
+		border: 2px solid #e6e6e6;
+		border-right: none;
+	}
+
+	.post-related-text {
+		padding: 10px;
+	}
+
+	#page-middle-content-right {
+		margin: 50px auto 0 auto;
+		width: 100%;
+	}
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+	#post-header-container {
+		padding: 35px 20px 50px 20px;
+	}
+
+	#post-header-right img {
+		width: 25vw;
+	}
+
+	#post-header-left h1 {
+		font-size: 30px;
+	}
+
+	#page-middle-content {
+		flex-direction: column;
+		margin-top: 40px;
+	}
+
+	#page-middle-content-left {
+		width: 100%;
+	}
+
+	#page-middle-content-right {
+		margin: 50px auto 0 auto;
+	}
+} 
+
+@media screen and (min-width: 1025px) and (max-width: 1207px) {
+	#post-header-right img {
+		width: 30vw;
+	}
+
+	#page-middle-content-right {
+		margin-left: 100px;
+	}
+}
+
+#support-container {
+	background-color: #44bd32;
+	padding: 20px;
+	color: white;
+	font-weight: 700;
+	font-family: Montserrat,sans-serif;
+	margin: 90px 0 0 0;
+}
+
+#support-container a {
+	color: inherit;
+	text-decoration: underline;
+}
+
+</style>
+<style type="text/css">#demo-container {
+	margin: 20px 0;
+}
+
+#demo-container select {
+	display: inline-block;
+	vertical-align: middle;
+	font-size: inherit;
+	font-family: inherit;
+	border: 1px solid #cccccc;
+	padding: 10px;
+	background-color: white;
+	width: 30%;
+	box-sizing: border-box;
+}
+
+#demo-container input {
+	font-size: inherit;
+	font-family: inherit;
+	border: 1px solid #cccccc;
+	padding: 10px;
+	width: 50%;
+	margin: 0 2.5%;
+	box-sizing: border-box;
+}
+
+#demo-container button {
+	font-size: inherit;
+	font-family: inherit;
+	border: 1px solid #cccccc;
+	padding: 10px;
+	background-color: #2980b9;
+	color: white;
+	border: none;
+	cursor: pointer;
+	width: 15%;
+	box-sizing: border-box;
+}</style></head>
+
+<body>
+
+<div id="desktop-header">
+	<div id="desktop-header-inner">
+		<div id="logo-container">
+			<a id="logo-link" href="https://usefulangle.com"><img src="https://usefulangle.com/img/logo2.svg" /></a>
+			<form id="search-container" action="https://usefulangle.com/search">
+				<input type="text" id="search-term" placeholder="Search" name="q" />
+				<button id="search-button"><img src="https://usefulangle.com/img/search-icon.svg" /></button>
+			</form>
+		</div>
+		<nav id="menu-container">
+			<ul>
+				<li><a href="https://usefulangle.com/web-updates">Web Development Updates</a></li>
+				<li><a href="https://usefulangle.com/javascript">Javascript</a></li>
+				<li><a href="https://usefulangle.com/css">CSS</a></li>
+				<li><a href="https://usefulangle.com/ui-ux">UI / UX</a></li>
+				<li><a href="https://usefulangle.com/nodejs">Node.js</a></li>
+				<li><a href="https://usefulangle.com/php">PHP</a></li>
+				<li><a href="https://usefulangle.com/cloud">Cloud</a></li>
+				<li><a href="https://usefulangle.com/videos">Videos</a></li>
+			</ul>
+		</nav>
+	</div>
+</div>
+
+<div id="mobile-header">
+	<div id="mobile-logo-container">
+		<button id="mobile-menu-open"><img src="https://usefulangle.com/img/mob-menu-icon.svg" /></button>
+		<a id="mobile-logo-link" href="https://usefulangle.com"><img src="https://usefulangle.s3.amazonaws.com/assets/logo2.svg" /></a>
+		<button id="mobile-search"><img src="https://usefulangle.com/img/mob-search-icon.svg" /></button>
+	</div>
+	<form id="mobile-search-container">
+		<input type="text" id="mobile-search-term" placeholder="Search" />
+		<button id="mobile-search-button"><img src="https://usefulangle.com/img/search-icon.svg" /></button>
+	</form>
+	<div id="mobile-menu-container">
+		<div id="mobile-menu-container-inner">
+			<div id="mobile-menu-close"><button id="mobile-menu-close-button">x</button></div>
+			<ul>
+				<li><a href="https://usefulangle.com/web-updates">Web Development Updates</a></li>
+				<li><a href="https://usefulangle.com/javascript">Javascript</a></li>
+				<li><a href="https://usefulangle.com/css">CSS</a></li>
+				<li><a href="https://usefulangle.com/ui-ux">UI / UX</a></li>
+				<li><a href="https://usefulangle.com/nodejs">Node.js</a></li>
+				<li><a href="https://usefulangle.com/php">PHP</a></li>
+				<li><a href="https://usefulangle.com/cloud">Cloud</a></li>
+				<li><a href="https://usefulangle.com/videos">Videos</a></li>
+			</ul>
+		</div>
+	</div>
+</div>
+<div id="main-container">
+	<div id="post-header-container">
+		<div id="post-header">
+			<div id="post-header-left">
+				<h1>Text to Speech with Javascript</h1>
+				<div id="post-category-container" class="tutorial-category" data-category="javascript">javascript</div>
+				<div id="post-time-container">
+		        	<time datetime="2019-07-23">Updated on July 23, 2019</time>
+		        	<span>Published on December 6, 2018</span>
+		    	</div>
+		    </div>
+		    <div id="post-header-right">
+		    	<img src="https://usefulangle.com/img/thumb/javascript.png" />
+		    </div>
+		</div>
+	</div>
+	<div id="page-middle-content">
+		<div id="page-middle-content-left">
+			<article id="post-content-container">
+            	<div id="post-content-html"><p>In modern browsers text to speech feature is built natively in them. This means that you don't need external plugins or APIs to convert text to speech !</p>
+
+<h4>Example &mdash; Text to Speech</h4>
+<div id="demo-container">
+	<select id="chosen-voice"></select><input type="text" id="speak-text" placeholder="Enter text to speak" /><button id="speak-button">Speak</button>
+</div>
+
+<h4>Concepts and Methods Involved</h4>
+<ul>
+	<li><strong>SpeechSynthesis API</strong> &mdash; SpeechSynthesis API is the API that performs text to speech service in the browser. This is exposed through <span class="special-text">window.speechSynthesis</span></li>
+</ul>
+
+<h4>SpeechSynthesis API</h4>
+<p>SpeechSynthesis API is a part of the Web Speech API, that is responsible for speech service. The global <span class="special-text">window.speechSynthesis</span> object implements the SpeechSynthesis API.</p>
+<pre class="language-javascript"><code>var synth = window.speechSynthesis;</code></pre>
+<p>The important methods defined in it are :</p>
+<ul>
+	<li><p><strong>getVoices()</strong> : This method will give a list of available voices that can be played. They will come in different languages, and you can set a language of your preference to speak. Each voice has few properties, some of them are <span class="special-text">name</span>, <span class="special-text">lang</span> etc.</p>
+		<p>Important : <strong>The list of voices may be loaded asynchronously in the browser</strong> &mdash; some browsers (like Chrome) make a server request to get the voice list, while some (like Firefox) have the list loaded into them. So in order for the <span class="special-text">getVoices()</span> method to work, you may need to wait for the list of languages to be loaded (otherwise list of voices may be returned empty). This can be done by listening to the <span class="special-text">voiceschanged</span> event fired by <span class="special-text">window.speechSynthesis</span>.</p>
+		<p>A simple check that can be performed is to get the voice list initially. If empty, then listen to the <span class="special-text">voiceschanged</span> event.</p>
+<pre class="language-javascript"><code>var available_voices;
+
+// list of languages is probably not loaded, wait for it
+if(window.speechSynthesis.getVoices().length == 0) {
+	window.speechSynthesis.addEventListener('voiceschanged', function() {
+		available_voices = window.speechSynthesis.getVoices();
+	});
+}
+else {
+	available_voices = window.speechSynthesis.getVoices();
+}
+</code></pre>
+	</li>
+	<li><strong>speak()</strong> : This method will add a speech (or an utterance) to a queue called utterance queue. This speech will be spoken after all speeches in the queue before it have been spoken.</li>
+</ul>
+<p>Here are the <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesis">complete APIs for the SpeechSynthesis object</a>.</p>
+
+<h4>SpeechSynthesisUtterance API</h4>
+<p>Whenever you want a speech to be spoken, you will need to create a <span class="special-text">SpeechSynthesisUtterance</span> object.</p>
+<pre class="language-javascript"><code>var utter = new SpeechSynthesisUtterance();</code></pre>
+<p>This object contains properties that affect various factors defining a speech :</p>
+<ul>
+	<li><strong>lang</strong> : Language of the speech</li>
+	<li><strong>pitch</strong> : Pitch of the speech</li>
+	<li><strong>rate</strong> : Speed at which speech will be spoken</li>
+	<li><strong>text</strong> : Text of the speech</li>
+	<li><strong>voice</strong> : Voice of speech. This will be one of the voices returned by <span class="special-text">window.speechSynthesis.getVoices()</span> method</li>
+	<li><strong>volume</strong> : Volume of the speech</li>
+</ul>
+<p>In addition there are several events that are fired along the way of a speech, some of them are :</p>
+<ul>
+	<li><strong>onstart</strong> : Fired when speech has begun to be spoken</li>
+	<li><strong>onend</strong> : Fired when speech has finished</li>
+	<li><strong>onboundary</strong> : Fired when speech reaches a word or sentence boundary</li>
+</ul>
+<p>Here are the <a href="https://developer.mozilla.org/en-US/docs/Web/API/SpeechSynthesisUtterance">complete APIs for the SpeechSynthesisUtterance object</a>.</p>
+
+<h4>Sample Javascript Code</h4>
+<pre class="language-javascript"><code>// list of languages is probably not loaded, wait for it
+if(window.speechSynthesis.getVoices().length == 0) {
+	window.speechSynthesis.addEventListener('voiceschanged', function() {
+		textToSpeech();
+	});
+}
+else {
+	// languages list available, no need to wait
+	textToSpeech()
+}
+
+function textToSpeech() {
+	// get all voices that browser offers
+	var available_voices = window.speechSynthesis.getVoices();
+
+	// this will hold an english voice
+	var english_voice = '';
+
+	// find voice by language locale "en-US"
+	// if not then select the first voice
+	for(var i=0; i&lt;available_voices.length; i++) {
+		if(available_voices[i].lang === 'en-US') {
+			english_voice = available_voices[i];
+			break;
+		}
+	}
+	if(english_voice === '')
+		english_voice = available_voices[0];
+
+	// new SpeechSynthesisUtterance object
+	var utter = new SpeechSynthesisUtterance();
+	utter.rate = 1;
+	utter.pitch = 0.5;
+	utter.text = 'Hello World';
+	utter.voice = english_voice;
+
+	// event after text has been spoken
+	utter.onend = function() {
+		alert('Speech has finished');
+	}
+
+	// speak
+	window.speechSynthesis.speak(utter);
+}
+</code></pre>
+
+<h4>Browser Compatibility</h4>
+<p>SpeechSynthesis API is availabe in all current versions of Firefox, Chrome, Edge & Safari.</p>
+
+<h4>Don't Autoplay a Speech</h4>
+<p>Some sites start a speech upon the page being loaded. To prevent such autoplay behaviour, it is now required to have some user interaction before  speech synthesis API will work. <strong>Otherwise it will throw an error</strong>.</p>
+<p>Find more about <a href="https://developers.google.com/web/updates/2018/11/web-audio-autoplay">autoplay policies on the web</a>.</p></div>
+            	<div id="support-container"></div>
+            	            	<div id="comments-container">
+            		<div id="comments-container-header"><h5>Comments</h5></div>
+            		<div id="disqus_thread">
+	            		<div id="disqus_thread_loader">Loading Comments</div>
+	            	</div>
+            	</div>
+            </article>
+		</div>
+		<div id="page-middle-content-right"><div id="sidebar-ads">
+	<div class="sidebar-ad" id="sidebar-ad-1">
+		<!-- Sidebar 300 * 250 # 1 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4717244378500455" data-ad-slot="3298736282"></ins>
+	</div>
+	<div class="sidebar-ad" id="sidebar-ad-2">
+		<!-- Sidebar 300 * 250 # 2 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4717244378500455" data-ad-slot="9242339864"></ins>
+	</div>
+	<div class="sidebar-ad" id="sidebar-ad-3">
+		<!-- Sidebar 300 * 250 # 3 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4717244378500455" data-ad-slot="1100912928"></ins>
+	</div>
+	<div class="sidebar-ad" id="sidebar-ad-4">
+		<!-- Sidebar 300 * 250 # 4 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4717244378500455" data-ad-slot="7063686042"></ins>
+	</div>
+	<div class="sidebar-ad" id="sidebar-ad-5">
+		<!-- Sidebar 300 * 250 # 5 -->
+		<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-4717244378500455" data-ad-slot="3066847001"></ins>
+	</div>
+</div>
+<div id="carbon-ad"></div>
+
+<script>
+
+var _CARBON_LOADED = 0;
+
+if('IntersectionObserver' in window) {
+	var sidebar_ads_observer = new IntersectionObserver(function(entries) {
+								for(var i=0; i<entries.length; i++) {
+									switch(entries[i]['target'].id) {
+										case 'sidebar-ad-1':
+											if(entries[i]['isIntersecting']) {
+												(adsbygoogle = window.adsbygoogle || []).push({});
+												sidebar_ads_observer.unobserve(document.querySelector("#sidebar-ad-1"));
+											}
+
+											break;
+
+										case 'sidebar-ad-2':
+											if(entries[i]['isIntersecting']) {
+												(adsbygoogle = window.adsbygoogle || []).push({});
+												sidebar_ads_observer.unobserve(document.querySelector("#sidebar-ad-2"));
+											}
+
+											break;
+
+										case 'sidebar-ad-3':
+											if(entries[i]['isIntersecting']) {
+												(adsbygoogle = window.adsbygoogle || []).push({});
+												sidebar_ads_observer.unobserve(document.querySelector("#sidebar-ad-3"));
+											}
+
+											break;
+
+										case 'sidebar-ad-4':
+											if(entries[i]['isIntersecting']) {
+												(adsbygoogle = window.adsbygoogle || []).push({});
+												sidebar_ads_observer.unobserve(document.querySelector("#sidebar-ad-4"));
+											}
+
+											break;
+
+										case 'sidebar-ad-5':
+											if(entries[i]['isIntersecting']) {
+												(adsbygoogle = window.adsbygoogle || []).push({});
+												sidebar_ads_observer.unobserve(document.querySelector("#sidebar-ad-5"));
+											}
+
+											break;
+
+										case 'sidebar-ads':
+											if(entries[i]['isIntersecting']) {
+												document.querySelector("#carbon-ad").style.display = 'none';
+												document.querySelector("#carbon-ad").style.opacity = '0';
+												console.log('Hide carbon ad');
+											}
+											else {
+												if(_CARBON_LOADED == 0) {
+													var carbonScript = document.createElement("script");
+												    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CE7DP2JY&placement=usefulanglecom";
+												    carbonScript.id = "_carbonads_js";
+												    carbonScript.async = 1;
+												    document.querySelector("#carbon-ad").appendChild(carbonScript);
+
+												    _CARBON_LOADED = 1;
+												}
+												
+												document.querySelector("#carbon-ad").style.display = 'block';
+												document.querySelector("#carbon-ad").style.opacity = '1';
+												console.log('Show carbon ad');
+											}
+									
+											break;
+									}
+								}
+							}, { threshold: [0] });
+	sidebar_ads_observer.observe(document.querySelector("#sidebar-ad-1"));
+	sidebar_ads_observer.observe(document.querySelector("#sidebar-ad-2"));
+	sidebar_ads_observer.observe(document.querySelector("#sidebar-ad-3"));
+	sidebar_ads_observer.observe(document.querySelector("#sidebar-ad-4"));
+	sidebar_ads_observer.observe(document.querySelector("#sidebar-ad-5"));
+	if(window.matchMedia('screen and (min-width:1024px)').matches)
+		sidebar_ads_observer.observe(document.querySelector("#sidebar-ads"));
+}
+else {
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	(adsbygoogle = window.adsbygoogle || []).push({});
+	(adsbygoogle = window.adsbygoogle || []).push({});
+
+	ga('send', 'event', 'No IntersectionObserver', 'query');
+}
+
+</script></div>
+	</div>
+</div>
+
+<div id="footer-container">
+	<div id="footer-inner">
+		<div class="footer-col" id="footer-col-1">
+			<a href="https://usefulangle.com/contact">Email / Contact</a>
+			<a href="https://usefulangle.com/contact">Advertise</a>
+			<a href="https://usefulangle.com/privacy">Privacy</a>
+		</div>
+		<div class="footer-col" id="footer-col-2">
+			<a href="https://twitter.com/usefulangle">UsefulAngle on Twitter</a>
+			<a href="https://www.facebook.com/usefulangle">UsefulAngle on Facebook</a>
+		</div>
+	</div>
+	<div id="footer-copyright">&copy; UsefulAngle.com 2016 - 2020. All code MIT license.</div>
+</div>
+
+<script>
+
+document.querySelector("#mobile-menu-open").addEventListener('click', function() {
+	document.querySelector("#mobile-menu-container").style.transform = 'translateX(0)';
+});
+
+document.querySelector("#mobile-menu-close-button").addEventListener('click', function() {
+	document.querySelector("#mobile-menu-container").style.transform = 'translateX(-100vw)';
+});
+
+document.querySelector("#mobile-search").addEventListener('click', function() {
+	document.querySelector("#mobile-search-container").style.display = 'block';
+});
+
+document.querySelector("#search-container").addEventListener('submit', function(e) {
+	if(document.querySelector("#search-term").value.trim == '') {
+		e.preventDefault();
+	}
+});
+
+</script>
+
+<link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+<script src="https://usefulangle.com/sitejs/prism.js" defer></script>
+<link href="https://usefulangle.com/sitecss/prism.css" rel="stylesheet" type="text/css" />
+
+<script>var available_voices;
+
+if(window.speechSynthesis.getVoices().length == 0) {
+	window.speechSynthesis.addEventListener('voiceschanged', function() {
+		getVoiceList();
+	});
+}
+else {
+	getVoiceList();
+}
+
+function getVoiceList() {
+	available_voices = window.speechSynthesis.getVoices();
+	
+	var select_html = '';
+	// find the default voice
+	for(var i=0; i<available_voices.length; i++) {
+		select_html += '<option value="' + i + '">' + available_voices[i].name + (available_voices[i].default == true ? ' (Default)' : '') + '</option>';
+	}
+	document.querySelector("#chosen-voice").innerHTML = select_html;
+}
+
+document.querySelector("#speak-button").addEventListener('click', function() {
+	if(document.querySelector("#speak-text").value.trim() != '') {
+		var utter = new SpeechSynthesisUtterance();
+		utter.text = document.querySelector("#speak-text").value;
+		utter.rate = 0.8;
+		utter.pitch = 0.5;
+		utter.voice = available_voices[document.querySelector("#chosen-voice").value];
+
+		window.speechSynthesis.speak(utter);
+	}
+});</script>
+<script>
+
+/* google analytics */
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-87261718-1', 'auto');
+ga('send', 'pageview');
+/* google analytics */
+
+document.addEventListener('DOMContentLoaded', function() {
+    /* load disqus */
+    var disqus_observer = new IntersectionObserver(function(entries) {
+								if(entries[0].isIntersecting) {
+								    var disqus_config = function () {
+									this.page.url = "https://usefulangle.com/post/98/javascript-text-to-speech";
+									this.page.identifier = 98;
+									};
+
+									(function() {
+									var d = document, s = d.createElement('script');
+									s.src = '//useful-angle.disqus.com/embed.js';
+									s.setAttribute('data-timestamp', +new Date());
+									(d.head || d.body).appendChild(s);
+									})();
+									/* disqus */
+
+									disqus_observer.disconnect();
+								}
+							}, { threshold: [0] });
+	disqus_observer.observe(document.querySelector("#disqus_thread"));
+
+	/* download links */
+	document.querySelectorAll(".download-link").forEach(function(element) {
+		element.addEventListener('click', function() {
+			var page_title = document.querySelector("#post-header h1").innerHTML;
+			ga('send', 'event', 'Download Link', 'click', page_title);
+		});
+	});
+
+	/* contact */
+	document.querySelector("#support-container").innerHTML = 'Need programming support for this tutorial ? <a href="https://usefulangle.com/contact">Email with your details</a>. Prices start $50.';
+});
+
+</script>
+
+</body>
+</html>

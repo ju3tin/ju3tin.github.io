@@ -1,7 +1,7 @@
 ---
 layout: post
 section-type: post
-title: This is my first post
+title: Science Museum Hackathon
 category: tech
 tags: [ 'tutorial' ]
 ---

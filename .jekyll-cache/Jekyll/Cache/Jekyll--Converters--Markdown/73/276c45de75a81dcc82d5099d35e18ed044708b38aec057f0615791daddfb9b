@@ -1,4 +1,4 @@
-I"ê<p>//
+I"£<p>//
 // IMPORTS
 //</p>
 
@@ -227,7 +227,7 @@
     font-weight: 300;
     letter-spacing: 1px;</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@include mobile {
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@include mobile {
   margin: 0 10px;
   color: $blue;
 }   } }

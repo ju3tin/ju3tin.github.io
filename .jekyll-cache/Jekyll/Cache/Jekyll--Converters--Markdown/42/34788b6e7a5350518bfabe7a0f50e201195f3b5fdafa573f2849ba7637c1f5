@@ -1,4 +1,4 @@
-I"<p>The intro part of the index page (Header) is consisted of four elements:</p>
+I"I<p>The intro part of the index page (Header) is consisted of four elements:</p>
 
 <ol>
   <li>A black favicon</li>
@@ -54,7 +54,7 @@ me-img: "/img/jetpacktocat.png"
 </code></pre>
 
 <p>If you want to connect your Facebook profile image then you can use the following.               <br />
-Replace <code class="highlighter-rouge">user_id</code> with your facebook user id. Facebook user id can be found by clicking
+Replace <code class="language-plaintext highlighter-rouge">user_id</code> with your facebook user id. Facebook user id can be found by clicking
 on your profile pic and the large number in the end of the url just before ‘&amp;type’ is your user id.         <br />
 Note: fbid is not the same as user id and user id only contains numbers.</p>
 
@@ -63,14 +63,14 @@ me-img: "https://graph.facebook.com/user_id/picture?type=large&amp;width=500&amp
 </code></pre>
 
 <p>If you want to connect your Github profile image then you can use the following.            <br />
-Replace <code class="highlighter-rouge">user_name</code> with your Github user name.</p>
+Replace <code class="language-plaintext highlighter-rouge">user_name</code> with your Github user name.</p>
 
 <pre><code data-trim="" class="yaml">
 me-img: "https://github.com/user_name.png?size=500"
 </code></pre>
 
 <p>If you want to connect your Gravatar profile image then you can use the following.            <br />
-Replace <code class="highlighter-rouge">email_hash</code> with your Gravatar profile email hash.                    <br />
+Replace <code class="language-plaintext highlighter-rouge">email_hash</code> with your Gravatar profile email hash.                    <br />
 You can create the email hash by using an online tool like <a href="http://www.md5hashgenerator.com/">md5hashgenerator</a>,
 just enter your email and it will generate the hash.</p>
 

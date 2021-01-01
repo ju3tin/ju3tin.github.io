@@ -11,9 +11,9 @@ layout: null
         "link":"{{ post.url }}",
         "created":"{{ post.date | date: '%B %d, %Y' }}",
         "lastmodified":"",
-        "tags":"[{% if post.tags %}{{ post.tags }},{% else %}{% endif %}]",
+        "tags":[{% if post.tags %}{{ post.tags }},{% else %}{% endif %}],
         "mincontent":"{{ post.mincontent }}",
-        "categories":"[{{ post.categories }}]"
+        "categories":[{{ post.categories }}]
         }{% unless forloop.last %},{% endunless %}
         {% endfor %}
         ]}

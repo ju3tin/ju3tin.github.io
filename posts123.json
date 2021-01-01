@@ -1,0 +1,20 @@
+---
+layout: null
+---
+{
+    "success":{"data" : [{% for post in site.posts %}
+        {"id":"{% increment var %}",
+        "firstname":"",
+        "lastname":"",
+        "title":"{{ post.title }}",
+        "image":"{% if post.featimg %}{{ post.featimg }}{% else %}/assets/img/bg__photographer.jpg{% endif %}",
+        "link":"{{ post.url }}",
+        "created":"{{ post.date | date: '%B %d, %Y' }}",
+        "lastmodified":"",
+        "tags":"[{% if post.tags %}{{ post.tags }},{% else %}{% endif %}]",
+        "mincontent":"{{ post.mincontent }}",
+        "categories":"[{{ post.categories }}]"
+        }{% unless forloop.last %},{% endunless %}
+        {% endfor %}
+        ]}
+    }

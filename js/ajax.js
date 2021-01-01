@@ -27,7 +27,7 @@ $(function(){
 	function fetchData() {
 		// ajax() method to make api calls
 		$.ajax({
-			url: "/blogq.json",
+			url: "/posts123.json",
 			type: "GET",
 			data: {
 				page: page,

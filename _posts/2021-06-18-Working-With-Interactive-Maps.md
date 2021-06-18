@@ -1,3 +1,11 @@
+ ---
+layout: post
+section-type: post
+title: Working With Maps
+category: tech
+tags: [ 'games' ]
+---
+
  <link
       rel="stylesheet"
       href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"

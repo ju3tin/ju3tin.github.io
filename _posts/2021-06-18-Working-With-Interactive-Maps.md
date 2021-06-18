@@ -1,10 +1,27 @@
+ <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha384-VzLXTJGPSyTLX6d96AxgkKvE/LRb7ECGyTxuwtpjHnVWVZs2gp5RDjeM/tgBnVdM"
+      crossorigin="anonymous"
+    />
+
+   <script
+      src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js"
+      integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha384-RFZC58YeKApoNsIbBxf4z6JJXmh+geBSgkCQXFyh+4tiFSJmJBt+2FbjxW7Ar16M"
+      crossorigin="anonymous"
+    ></script>
  <h1>Leaflet Example</h1>
 
-    <p>Here's an interactive map indicating the countries I've either lived in or travelled through for a month or more.
+   <p>Here's an interactive map indicating the countries I've either lived in or travelled through for a month or more.
 
-    <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
+   <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
 
-    <div>
+   <div>
       <p>An example of how to use <a href="https://leafletjs.com/" target="_blank">Leaflet</a>.
       <p>From the article <a href="https://asmaloney.com/2014/01/code/creating-an-interactive-map-with-leaflet-and-openstreetmap" target="_blank">Creating An Interactive Map With Leaflet and OpenStreetMap</a>
       <p>Andy Maloney // <a href="https://asmaloney.com" target="_blank">asmaloney.com</a>

@@ -1,7 +1,7 @@
 ---
 layout: post
 section-type: post
-title: React Native Is It Taking Over
+title: Rock Paper Scissors
 category: tech
 tags: [ 'games' ]
 ---

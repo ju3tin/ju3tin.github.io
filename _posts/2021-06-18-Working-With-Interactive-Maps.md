@@ -10,8 +10,8 @@
 
  <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
 
-  <!--<script type='text/javascript' src='maps/markers.js'></script>
-   <script type='text/javascript' src='maps/leaf-demo.js'></script>
+  <script type='text/javascript' src='maps/markers.js'></script>
+   <!--<script type='text/javascript' src='maps/leaf-demo.js'></script>
    --><script type="text/javascript" src="us-states.js"></script>
    
  <script type='text/javascript'>

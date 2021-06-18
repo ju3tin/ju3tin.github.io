@@ -77,3 +77,4 @@ tags: [ 'games' ]
                 </p>
             </div>
         </div>
+ <script src="./scripts.js"></script>

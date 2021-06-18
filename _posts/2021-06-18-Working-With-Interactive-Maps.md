@@ -5,13 +5,10 @@
       crossorigin="anonymous"
     />
 
-<script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-RFZC58YeKApoNsIbBxf4z6JJXmh+geBSgkCQXFyh+4tiFSJmJBt+2FbjxW7Ar16M" crossorigin="anonymous"></script>
- <h1>Leaflet Example</h1>
+<script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script><script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-RFZC58YeKApoNsIbBxf4z6JJXmh+geBSgkCQXFyh+4tiFSJmJBt+2FbjxW7Ar16M" crossorigin="anonymous"></script>
 
-   <p>Here's an interactive map indicating the countries I've either lived in or travelled through for a month or more.
 
-   <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
+ <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
 
   <script type='text/javascript' src='maps/markers.js'></script>
-    <script type='text/javascript' src='maps/leaf-demo.js'></script>
+   <script type='text/javascript' src='maps/leaf-demo.js'></script>

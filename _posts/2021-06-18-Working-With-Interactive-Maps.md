@@ -1,4 +1,4 @@
- ---
+---
 layout: post
 section-type: post
 title: Working With Maps

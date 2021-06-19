@@ -34,6 +34,9 @@ tags: [ 'games' ]
 		tileSize: 512,
 		zoomOffset: -1
 	}).addTo(map);
+	
+		L.marker([37.8, -96]).addTo(mymap)
+		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 
 	// get color depending on population density value
 	function getColor(d) {

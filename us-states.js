@@ -68,7 +68,10 @@ var statesData = {"type":"FeatureCollection","features":[
             {
                 "geometry": {
                     "type": "Point",
-                    "coordinates": [32.576225,-86.680735]
+                    "coordinates": [
+                        32.576225,
+                        -86.680735
+                    ]
                 },
                 "type": "Feature",
                 "properties": {

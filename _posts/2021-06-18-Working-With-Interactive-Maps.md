@@ -39,7 +39,7 @@ tags: [ 'games' ]
 	}).addTo(map);
 
 	L.marker([37.8, -96]).bindPopup("All The Time").addTo(map);
-	L.marker([47.273015,-120.88227499999999).bindPopup("Washington").addTo(map);
+	L.marker([47.273015,-120.88227499999999]).bindPopup("Washington").addTo(map);
 	
 	// control that shows state info on hover
 	var info = L.control();

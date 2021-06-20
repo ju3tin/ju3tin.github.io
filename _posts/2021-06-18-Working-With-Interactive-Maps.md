@@ -89,7 +89,7 @@ tags: [ 'games' ]
 	L.marker([47.273015,-120.88227499999999]).bindPopup("West Virginia").addTo(map);
 	L.marker([47.273015,-120.88227499999999]).bindPopup("Wisconsin").addTo(map);
 	L.marker([47.273015,-120.88227499999999]).bindPopup("Wyoming").addTo(map);
-    L.marker([47.273015,-120.88227499999999]).bindPopup("Puerto Rico").addTo(map);
+    	L.marker([47.273015,-120.88227499999999]).bindPopup("Puerto Rico").addTo(map);
 	
 	// control that shows state info on hover
 	var info = L.control();

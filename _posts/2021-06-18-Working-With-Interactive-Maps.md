@@ -60,7 +60,7 @@ tags: [ 'games' ]
 	L.marker([41.6500201,-72.7342163]).bindPopup("Connecticut").addTo(map);
 	L.marker([38.6920451,-75.4013315]).bindPopup("Delaware").addTo(map);
 	L.marker([38.8937936,-76.9879976]).bindPopup("District of Columbia").addTo(map);
-	L.marker([27.7567667,-81.4639835]).bindPopup("Florida <button>Click me!</button>").addTo(map);
+	L.marker([27.7567667,-81.4639835]).bindPopup("Florida <button class="mklbItem demo" data-video-src="www.jqueryscript.net/dummy/1.mp4">Click me!</button>").addTo(map);
 	L.marker([32.3293809,-83.1137366]).bindPopup("Georgia").addTo(map);
 	L.marker([47.2868352,-120.212613]).bindPopup("Washington").addTo(map);
 	L.marker([19.5872677,-155.4268897]).bindPopup("Hawaii").addTo(map);

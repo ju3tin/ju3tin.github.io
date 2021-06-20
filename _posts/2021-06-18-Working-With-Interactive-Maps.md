@@ -196,7 +196,7 @@ tags: [ 'games' ]
 		layer.bindPopup(popupContent);
 	}
 
-	L.geoJSON([bicycleRental, campus], {
+	L.geoJSON(bicycleRental, {
 
 		style: function (feature) {
 			return feature.properties && feature.properties.style;

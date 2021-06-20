@@ -85,7 +85,7 @@ tags: [ 'games' ]
 	L.marker([39.4225192,-111.714358]).bindPopup("Utah").addTo(map);
 	L.marker([44.5990718,-72.5002608]).bindPopup("Vermont").addTo(map);
 	L.marker([37.1232245,-78.4927721]).bindPopup("Virginia").addTo(map);
-	L.marker([38.8950368,-77.0365427]).bindPopup("Washington").openPopup().addTo(map);
+	L.marker([38.8950368,-77.0365427]).bindPopup("Washington").addTo(map);
 	L.marker([38.4758406,-80.8408415]).bindPopup("West Virginia").addTo(map);
 	L.marker([44.4308975,-89.6884637]).bindPopup("Wisconsin").addTo(map);
 	L.marker([43.1700264,-107.568534]).bindPopup("Wyoming").addTo(map);
@@ -109,7 +109,16 @@ tags: [ 'games' ]
 
 	info.addTo(map);
 
+    function onEachFeature(feature, layer) {
+		var popupContent = "<p>I started out as a GeoJSON " +
+				feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
 
+		if (feature.properties && feature.properties.popupContent) {
+			popupContent += feature.properties.popupContent;
+		}
+
+		layer.bindPopup(popupContent);
+	}
 	// get color depending on population density value
 	function getColor(d) {
 		return d > 1000 ? '#800026' :

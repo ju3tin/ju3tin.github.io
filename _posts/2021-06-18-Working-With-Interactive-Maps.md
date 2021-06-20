@@ -48,8 +48,8 @@ tags: [ 'games' ]
 	L.marker([38.6920451,-75.4013315]).bindPopup("Delaware").addTo(map);
 	L.marker([38.8937936,-76.9879976]).bindPopup("District of Columbia").addTo(map);
 	L.marker([27.7567667,-81.4639835]).bindPopup("Florida").addTo(map);
-	L.marker([41.6809707,-44.0287382]).bindPopup("Georgia").addTo(map);
-	L.marker([41.6809707,44.0287382]).bindPopup("Georgia1").addTo(map);
+	L.marker([32.3293809,-83.1137366]).bindPopup("Georgia").addTo(map);
+	L.marker([47.2868352,-120.212613]).bindPopup("Washington").addTo(map);
 	L.marker([19.5872677,-155.4268897]).bindPopup("Hawaii").addTo(map);
 	L.marker([43.6447642,-114.015407]).bindPopup("Idaho").addTo(map);
 	L.marker([40.0796606,-89.4337288]).bindPopup("Illinois").addTo(map);

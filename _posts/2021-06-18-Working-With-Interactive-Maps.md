@@ -27,6 +27,7 @@ tags: [ 'games' ]
 <script type="text/javascript">
 
 	var map = L.map('map').setView([37.8, -96], 4);
+	
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
 		maxZoom: 18,
@@ -38,7 +39,8 @@ tags: [ 'games' ]
 	}).addTo(map);
 
 	L.marker([37.8, -96]).bindPopup("All The Time").addTo(map);
-
+	L.marker([47.273015,-120.88227499999999).bindPopup("Washington").addTo(map);
+	
 	// control that shows state info on hover
 	var info = L.control();
 

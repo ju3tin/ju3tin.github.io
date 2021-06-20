@@ -22,8 +22,9 @@ tags: [ 'games' ]
   <script type='text/javascript' src='maps/markers.js'></script>
    <!--<script type='text/javascript' src='maps/leaf-demo.js'></script>
    --><script type="text/javascript" src="us-states.js"></script>
-   
- <script type='text/javascript'> 
+
+<script type="text/javascript">
+
 	var map = L.map('map').setView([37.8, -96], 4);
 
 	L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
@@ -34,8 +35,8 @@ tags: [ 'games' ]
 		tileSize: 512,
 		zoomOffset: -1
 	}).addTo(map);
-	
-	
+
+
 	// control that shows state info on hover
 	var info = L.control();
 
@@ -53,9 +54,6 @@ tags: [ 'games' ]
 
 	info.addTo(map);
 
-	
-		L.marker([37.8, -96]).addTo(map)
-		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 
 	// get color depending on population density value
 	function getColor(d) {
@@ -79,7 +77,7 @@ tags: [ 'games' ]
 			fillColor: getColor(feature.properties.density)
 		};
 	}
-	
+
 	function highlightFeature(e) {
 		var layer = e.target;
 
@@ -116,27 +114,36 @@ tags: [ 'games' ]
 		});
 	}
 
-	var LeafIcon = L.Icon.extend({
-		options: {
-			shadowUrl: 'leaf-shadow.png',
-			iconSize:     [38, 95],
-			shadowSize:   [50, 64],
-			iconAnchor:   [22, 94],
-			shadowAnchor: [4, 62],
-			popupAnchor:  [-3, -76]
-		}
-	});
-
-	var greenIcon = new LeafIcon({iconUrl: 'leaf-green.png'}),
-		redIcon = new LeafIcon({iconUrl: 'leaf-red.png'}),
-		orangeIcon = new LeafIcon({iconUrl: 'leaf-orange.png'});
-
-	L.marker([51.5, -0.09], {icon: greenIcon}).bindPopup("I am a green leaf.").addTo(map);
-	L.marker([51.495, -0.083], {icon: redIcon}).bindPopup("I am a red leaf.").addTo(map);
-	L.marker([51.49, -0.1], {icon: orangeIcon}).bindPopup("I am an orange leaf.").addTo(map);
-	
-	var geojson = L.geoJson(statesData, {
+	geojson = L.geoJson(statesData, {
 		style: style,
+		onEachFeature: onEachFeature
 	}).addTo(map);
 
- </script>
+	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
+
+
+	var legend = L.control({position: 'bottomright'});
+
+	legend.onAdd = function (map) {
+
+		var div = L.DomUtil.create('div', 'info legend'),
+			grades = [0, 10, 20, 50, 100, 200, 500, 1000],
+			labels = [],
+			from, to;
+
+		for (var i = 0; i < grades.length; i++) {
+			from = grades[i];
+			to = grades[i + 1];
+
+			labels.push(
+				'<i style="background:' + getColor(from + 1) + '"></i> ' +
+				from + (to ? '&ndash;' + to : '+'));
+		}
+
+		div.innerHTML = labels.join('<br>');
+		return div;
+	};
+
+	legend.addTo(map);
+
+</script>

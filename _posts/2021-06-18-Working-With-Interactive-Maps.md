@@ -19,11 +19,6 @@ tags: [ 'games' ]
 {% raw %}
 <div class="container">
     <h1>MK Lightbox Image & Video Lightbox Examples</h1>
-<div style="margin:30px auto">
-  
-<!-- CSSScript Demo Page -->
-
-</div>
 <p class="lead">A dead-simple JavaScript library to display your images and videos in a lightbox popup or a navigatable gallery lightbox without having to write any JS code.</p>
     <h2>Image Lightbox</h2>
     <img class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" />
@@ -33,7 +28,7 @@ tags: [ 'games' ]
     <img class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" data-gallery="gallery1" />
     <img class="mklbItem demo" src="https://source.unsplash.com/8CucspHlerY/600x450" data-gallery="gallery1" />
     <img class="mklbItem demo" src="https://source.unsplash.com/cylcICfV7Bs/600x450" data-gallery="gallery1" />
-  </div>
+</div>
 {% endraw %}
 <script src="https://www.cssscript.com/demo/gallery-lightbox-mk/mklb/js/mklb.js"></script>
  <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>

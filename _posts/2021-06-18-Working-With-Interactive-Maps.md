@@ -17,6 +17,23 @@ tags: [ 'games' ]
 
 <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script><script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-RFZC58YeKApoNsIbBxf4z6JJXmh+geBSgkCQXFyh+4tiFSJmJBt+2FbjxW7Ar16M" crossorigin="anonymous"></script>
 
+ <div class="container">
+    <h1>MK Lightbox Image & Video Lightbox Examples</h1>
+<!-- CSSScript Demo Page -->
+
+</div>
+<p class="lead">A dead-simple JavaScript library to display your images and videos in a lightbox popup or a navigatable gallery lightbox without having to write any JS code.</p>
+    <h2>Image Lightbox</h2>
+    <img class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" />
+    <h2>Video Lightbox</h2>
+    <img class="mklbItem demo" src="https://source.unsplash.com/8CucspHlerY/600x450" data-video-src="https://www.jqueryscript.net/dummy/1.mp4" />
+    <h2>Gallery Lightbox</h2>
+    <img class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" data-gallery="gallery1" />
+    <img class="mklbItem demo" src="https://source.unsplash.com/8CucspHlerY/600x450" data-gallery="gallery1" />
+    <img class="mklbItem demo" src="https://source.unsplash.com/cylcICfV7Bs/600x450" data-gallery="gallery1" />
+  </div>
+<script src="https://www.cssscript.com/demo/gallery-lightbox-mk/mklb/js/mklb.js"></script>
+
 
  <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
 

@@ -185,7 +185,7 @@ tags: [ 'games' ]
 
 	map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');
 
-	function onEachFeature(feature, layer) {
+/*	function onEachFeature(feature, layer) {
 		var popupContent = "<p>I started out as a GeoJSON " +
 				feature.geometry.type + ", but now I'm a Leaflet vector!</p>";
 
@@ -195,7 +195,7 @@ tags: [ 'games' ]
 
 		layer.bindPopup(popupContent);
 	}
-
+*/
 	L.geoJSON(bicycleRental, {
 
 		style: function (feature) {

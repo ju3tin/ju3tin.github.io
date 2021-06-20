@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/assets/css/odometer-theme-default.css">
     <link rel="stylesheet" href="/assets/css/style1.css">
   {% if page.custom_code %}{{page.custom_code}}{% endif %}
+  {% if page.custom_code_file %}{% include {{ page.custom_code_file }} %}{% endif %}
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

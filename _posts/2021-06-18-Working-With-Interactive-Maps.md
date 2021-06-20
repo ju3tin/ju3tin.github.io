@@ -37,6 +37,7 @@ tags: [ 'games' ]
 		zoomOffset: -1
 	}).addTo(map);
 
+	L.marker([37.8, -96]).addTo(map);
 
 	// control that shows state info on hover
 	var info = L.control();

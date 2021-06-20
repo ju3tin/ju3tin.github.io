@@ -35,6 +35,25 @@ tags: [ 'games' ]
 		zoomOffset: -1
 	}).addTo(map);
 	
+	
+	// control that shows state info on hover
+	var info = L.control();
+
+	info.onAdd = function (map) {
+		this._div = L.DomUtil.create('div', 'info');
+		this.update();
+		return this._div;
+	};
+
+	info.update = function (props) {
+		this._div.innerHTML = '<h4>US Population Density</h4>' +  (props ?
+			'<b>' + props.name + '</b><br />' + props.density + ' people / mi<sup>2</sup>'
+			: 'Hover over a state');
+	};
+
+	info.addTo(map);
+
+	
 		L.marker([37.8, -96]).addTo(map)
 		.bindPopup("<b>Hello world!</b><br />I am a popup.").openPopup();
 

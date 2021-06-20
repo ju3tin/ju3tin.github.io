@@ -22,7 +22,7 @@ tags: [ 'games' ]
 <p class="lead">A dead-simple JavaScript library to display your images and videos in a lightbox popup or a navigatable gallery lightbox without having to write any JS code.</p>
     <h2>Image Lightbox</h2>
     <img class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" />
-    <h2>Video Lightbox</h2>
+    <h2 class="mklbItem demo" data-video-src="https://www.jqueryscript.net/dummy/1.mp4">Video Lightbox</h2>
     <img class="mklbItem demo" src="https://source.unsplash.com/8CucspHlerY/600x450" data-video-src="https://www.jqueryscript.net/dummy/1.mp4" />
     <h2>Gallery Lightbox</h2>
     <img class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" data-gallery="gallery1" />

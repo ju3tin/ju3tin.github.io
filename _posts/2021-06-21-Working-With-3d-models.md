@@ -13,6 +13,10 @@ tags: [ 'games' ]
 		</div>
 <div id="canvas"></div>
 
+
+<div id="scene3d"></canvas>
+
+
 <script type="module">
 
 			import * as THREE from '../build/three.module.js';

@@ -12,7 +12,7 @@ tags: [ 'games' ]
 			<a href="http://3mf.io" target="_blank" rel="noopener">3MF</a> file with materials
 		</div>
 
-		<script type="module">
+<script type="module">
 
 			import * as THREE from '../build/three.module.js';
 

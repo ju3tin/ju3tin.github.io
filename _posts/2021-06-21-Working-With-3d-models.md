@@ -11,6 +11,7 @@ tags: [ 'games' ]
 			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> -
 			<a href="http://3mf.io" target="_blank" rel="noopener">3MF</a> file with materials
 		</div>
+<div id="canvas"></div>
 
 <script type="module">
 

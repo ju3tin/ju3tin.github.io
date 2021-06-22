@@ -7,10 +7,11 @@ custom_code: <link rel="stylesheet" href="https://www.cssscript.com/demo/gallery
 custom_code_file : leafletcss.html
 tags: [ 'games' ]
 ---
+
 <div id="info">
-			<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> -
-			<a href="http://3mf.io" target="_blank" rel="noopener">3MF</a> file with materials
-		</div>
+<a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> -
+<a href="http://3mf.io" target="_blank" rel="noopener">3MF</a> file with materials
+</div>
 <div id="canvas"></div>
 
 <script src="../build/three.js"></script>
@@ -18,8 +19,6 @@ tags: [ 'games' ]
 <div id="scene3d" style="width:300px; height:300px; background:red"></div>
 
 <script>
-
-
 var scene3d = document.getElementById("scene3d");
 var CANVAS_WIDTH = 300;
 var CANVAS_HEIGHT = 300;
@@ -28,7 +27,7 @@ var CANVAS_HEIGHT = 300;
 
 scene = new THREE.Scene();
 
-// CAMERA 
+// CAMERA
 
 camera = new THREE.PerspectiveCamera(45, CANVAS_WIDTH / CANVAS_HEIGHT, 0.1, 100);
 camera.position.x = 17;
@@ -75,126 +74,124 @@ scene.add(spot1);
 scene3d.appendChild(renderer.domElement);
 renderer.render(scene, camera);
 
-
 </script>
 
 <script type="module">
+import * as THREE from '../build/three.module.js';
 
-			import * as THREE from '../build/three.module.js';
+import { OrbitControls } from './jsm/controls/OrbitControls.js';
+import { ThreeMFLoader } from './jsm/loaders/3MFLoader.js';
 
-			import { OrbitControls } from './jsm/controls/OrbitControls.js';
-			import { ThreeMFLoader } from './jsm/loaders/3MFLoader.js';
+let camera, scene, renderer;
 
-			let camera, scene, renderer;
+init();
 
-			init();
+function init() {
 
-			function init() {
+scene = new THREE.Scene();
+scene.background = new THREE.Color( 0xa0a0a0 );
+scene.fog = new THREE.Fog( 0xa0a0a0, 10, 500 );
 
-				scene = new THREE.Scene();
-				scene.background = new THREE.Color( 0xa0a0a0 );
-				scene.fog = new THREE.Fog( 0xa0a0a0, 10, 500 );
+camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 500 );
+camera.position.set( - 50, 40, 50 );
+scene.add( camera );
 
-				camera = new THREE.PerspectiveCamera( 35, window.innerWidth / window.innerHeight, 1, 500 );
-				camera.position.set( - 50, 40, 50 );
-				scene.add( camera );
+//
 
-				//
+const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x444444 );
+hemiLight.position.set( 0, 100, 0 );
+scene.add( hemiLight );
 
-				const hemiLight = new THREE.HemisphereLight( 0xffffff, 0x444444 );
-				hemiLight.position.set( 0, 100, 0 );
-				scene.add( hemiLight );
+const dirLight = new THREE.DirectionalLight( 0xffffff );
+dirLight.position.set( - 0, 40, 50 );
+dirLight.castShadow = true;
+dirLight.shadow.camera.top = 50;
+dirLight.shadow.camera.bottom = - 25;
+dirLight.shadow.camera.left = - 25;
+dirLight.shadow.camera.right = 25;
+dirLight.shadow.camera.near = 0.1;
+dirLight.shadow.camera.far = 200;
+dirLight.shadow.mapSize.set( 1024, 1024 );
+scene.add( dirLight );
 
-				const dirLight = new THREE.DirectionalLight( 0xffffff );
-				dirLight.position.set( - 0, 40, 50 );
-				dirLight.castShadow = true;
-				dirLight.shadow.camera.top = 50;
-				dirLight.shadow.camera.bottom = - 25;
-				dirLight.shadow.camera.left = - 25;
-				dirLight.shadow.camera.right = 25;
-				dirLight.shadow.camera.near = 0.1;
-				dirLight.shadow.camera.far = 200;
-				dirLight.shadow.mapSize.set( 1024, 1024 );
-				scene.add( dirLight );
+// scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
 
-				// scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
+//
 
-				//
+const manager = new THREE.LoadingManager();
 
-				const manager = new THREE.LoadingManager();
+const loader = new ThreeMFLoader( manager );
+loader.load( './models/3mf/truck.3mf', function ( object ) {
 
-				const loader = new ThreeMFLoader( manager );
-				loader.load( './models/3mf/truck.3mf', function ( object ) {
+object.quaternion.setFromEuler( new THREE.Euler( - Math.PI / 2, 0, 0 ) ); 	// z-up conversion
 
-					object.quaternion.setFromEuler( new THREE.Euler( - Math.PI / 2, 0, 0 ) ); 	// z-up conversion
+object.traverse( function ( child ) {
 
-					object.traverse( function ( child ) {
+child.castShadow = true;
 
-						child.castShadow = true;
+} );
 
-					} );
+scene.add( object );
 
-					scene.add( object );
+} );
 
-				} );
+//
 
-				//
+manager.onLoad = function () {
 
-				manager.onLoad = function () {
+render();
 
-					render();
+};
 
-				};
+//
 
-				//
+const ground = new THREE.Mesh( new THREE.PlaneGeometry( 1000, 1000 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
+ground.rotation.x = - Math.PI / 2;
+ground.position.y = 11;
+ground.receiveShadow = true;
+scene.add( ground );
 
-				const ground = new THREE.Mesh( new THREE.PlaneGeometry( 1000, 1000 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
-				ground.rotation.x = - Math.PI / 2;
-				ground.position.y = 11;
-				ground.receiveShadow = true;
-				scene.add( ground );
+//
 
-				//
+renderer = new THREE.WebGLRenderer( { antialias: true } );
+renderer.setPixelRatio( window.devicePixelRatio );
+renderer.setSize( window.innerWidth, window.innerHeight );
+renderer.outputEncoding = THREE.sRGBEncoding;
+renderer.shadowMap.enabled = true;
+renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+document.body.appendChild( renderer.domElement );
 
-				renderer = new THREE.WebGLRenderer( { antialias: true } );
-				renderer.setPixelRatio( window.devicePixelRatio );
-				renderer.setSize( window.innerWidth, window.innerHeight );
-				renderer.outputEncoding = THREE.sRGBEncoding;
-				renderer.shadowMap.enabled = true;
-				renderer.shadowMap.type = THREE.PCFSoftShadowMap;
-				document.body.appendChild( renderer.domElement );
+//
 
-				//
+const controls = new OrbitControls( camera, renderer.domElement );
+controls.addEventListener( 'change', render );
+controls.minDistance = 50;
+controls.maxDistance = 200;
+controls.enablePan = false;
+controls.target.set( 0, 20, 0 );
+controls.update();
 
-				const controls = new OrbitControls( camera, renderer.domElement );
-				controls.addEventListener( 'change', render );
-				controls.minDistance = 50;
-				controls.maxDistance = 200;
-				controls.enablePan = false;
-				controls.target.set( 0, 20, 0 );
-				controls.update();
+window.addEventListener( 'resize', onWindowResize );
 
-				window.addEventListener( 'resize', onWindowResize );
+render();
 
-				render();
+}
 
-			}
+function onWindowResize() {
 
-			function onWindowResize() {
+camera.aspect = window.innerWidth / window.innerHeight;
+camera.updateProjectionMatrix();
 
-				camera.aspect = window.innerWidth / window.innerHeight;
-				camera.updateProjectionMatrix();
+renderer.setSize( window.innerWidth, window.innerHeight );
 
-				renderer.setSize( window.innerWidth, window.innerHeight );
+render();
 
-				render();
+}
 
-			}
+function render() {
 
-			function render() {
+renderer.render( scene, camera );
 
-				renderer.render( scene, camera );
+}
 
-			}
-
-		</script>
+</script>

@@ -123,7 +123,8 @@ const manager = new THREE.LoadingManager();
 const loader = new ThreeMFLoader( manager );
 loader.load( './models/3mf/truck.3mf', function ( object ) {
 
-object.quaternion.setFromEuler( new THREE.Euler( - Math.PI / 2, 0, 0 ) ); 	// z-up conversion
+object.quaternion.setFromEuler( new THREE.Euler( - Math.PI / 2, 0, 0 ) );
+// z-up conversion
 
 object.traverse( function ( child ) {
 

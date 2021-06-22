@@ -18,7 +18,7 @@ tags: [ 'games' ]
 
 <script>
 
-import * as THREE from '../build/three.module.js';
+import * as THREE from '../build/three.js';
 
 var scene3d = document.getElementById("scene3d");
 var CANVAS_WIDTH = 300;

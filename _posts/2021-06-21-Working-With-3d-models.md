@@ -13,12 +13,12 @@ tags: [ 'games' ]
 		</div>
 <div id="canvas"></div>
 
+<script src="../build/three.js"></script>
 
 <div id="scene3d" style="width:300px; height:300px; background:red"></div>
 
 <script>
 
-import * as THREE from '../build/three.js';
 
 var scene3d = document.getElementById("scene3d");
 var CANVAS_WIDTH = 300;

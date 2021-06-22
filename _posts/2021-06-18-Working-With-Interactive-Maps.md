@@ -99,8 +99,8 @@ zoomOffset: -1
 var StateIcon = L.Icon.extend({
 options: {
 //iconSize:     [38, 95],
-iconAnchor:   [22, 94],
-popupAnchor:  [-3, -76]
+//iconAnchor:   [22, 94],
+//popupAnchor:  [-3, -76]
 }
 });
 

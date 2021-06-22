@@ -160,7 +160,7 @@ L.marker([38.8950368,-77.0365427]).bindPopup("Washington").addTo(map);
 L.marker([38.4758406,-80.8408415]).bindPopup("West Virginia").addTo(map);
 L.marker([44.4308975,-89.6884637]).bindPopup("Wisconsin").addTo(map);
 L.marker([43.1700264,-107.568534]).bindPopup("Wyoming").addTo(map);
-L.marker([18.2214149,-66.4132818]).bindPopup("Puerto Rico").addTo(map), {icon: puertoricoIcon}).bindPopup("Florida <button onclick=\"imageclicktest()\">Click me!</button><h2 class=\"mklbItem demo\" data-video-src=\"https:\/\/www.jqueryscript.net\/dummy\/1.mp4\">Video Lightbox</h2>").addTo(map);;
+L.marker([18.2214149,-66.4132818], {icon: puertoricoIcon}).bindPopup("Puerto Rico <button onclick=\"imageclicktest()\">Click me!</button><h2 class=\"mklbItem demo\" data-video-src=\"https:\/\/www.jqueryscript.net\/dummy\/1.mp4\">Video Lightbox</h2>").addTo(map);
 
 
 // control that shows state info on hover

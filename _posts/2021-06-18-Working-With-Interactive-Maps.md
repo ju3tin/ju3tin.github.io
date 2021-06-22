@@ -105,6 +105,9 @@ options: {
 });
 
 var greenIcon = new StateIcon({iconUrl: 'leaf-green.png'}),
+alabamaIcon = new StateIcon({iconUrl: './images/florida.png'}),
+alaskaIcon = new StateIcon({iconUrl: './images/florida.png'}),
+arizonaIcon = new StateIcon({iconUrl: './images/florida.png'}),
 floridaIcon = new StateIcon({iconUrl: './images/florida.png'}),
 puertoricoIcon = new StateIcon({iconUrl: './images/puertorico.png'});
 

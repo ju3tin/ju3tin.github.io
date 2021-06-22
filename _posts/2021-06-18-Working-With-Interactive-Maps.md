@@ -20,7 +20,7 @@ crossorigin="anonymous"
 {% raw %}
 <!-- The day of the -->
 
-<a class="group1" href="https://source.unsplash.com/p9t7g5ORALs/600x450" title="Me and my grandfather on the Ohoopee.">Grouped Photo 1</a>
+<a class="group1" href="./assets/img/bg__photographer.jpg" title="Me and my grandfather on the Ohoopee.">Grouped Photo 1</a>
 
 <div class="container">
 <h1>MK Lightbox Image & Video Lightbox Examples</h1>

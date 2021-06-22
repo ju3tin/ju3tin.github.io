@@ -98,7 +98,7 @@ zoomOffset: -1
 //script for icons
 var StateIcon = L.Icon.extend({
 options: {
-iconSize:     [38, 95],
+//iconSize:     [38, 95],
 iconAnchor:   [22, 94],
 popupAnchor:  [-3, -76]
 }

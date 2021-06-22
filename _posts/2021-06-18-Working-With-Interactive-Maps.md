@@ -106,7 +106,7 @@ options: {
 
 var greenIcon = new StateIcon({iconUrl: 'leaf-green.png'}),
 floridaIcon = new StateIcon({iconUrl: './images/florida.png'}),
-orangeIcon = new StateIcon({iconUrl: 'leaf-orange.png'});
+puertoricoIcon = new StateIcon({iconUrl: './images/puertorico.png'});
 
 L.marker([32.576225,-86.680735]).bindPopup("Alabama").addTo(map);
 L.marker([64.4459613,-149.680909]).bindPopup("Alaska").addTo(map);
@@ -160,7 +160,7 @@ L.marker([38.8950368,-77.0365427]).bindPopup("Washington").addTo(map);
 L.marker([38.4758406,-80.8408415]).bindPopup("West Virginia").addTo(map);
 L.marker([44.4308975,-89.6884637]).bindPopup("Wisconsin").addTo(map);
 L.marker([43.1700264,-107.568534]).bindPopup("Wyoming").addTo(map);
-L.marker([18.2214149,-66.4132818]).bindPopup("Puerto Rico").addTo(map);
+L.marker([18.2214149,-66.4132818]).bindPopup("Puerto Rico").addTo(map), {icon: puertoricoIcon}).bindPopup("Florida <button onclick=\"imageclicktest()\">Click me!</button><h2 class=\"mklbItem demo\" data-video-src=\"https:\/\/www.jqueryscript.net\/dummy\/1.mp4\">Video Lightbox</h2>").addTo(map);;
 
 
 // control that shows state info on hover

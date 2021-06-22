@@ -26,13 +26,13 @@ crossorigin="anonymous"
 <h1>MK Lightbox Image & Video Lightbox Examples</h1>
 <p class="lead">A dead-simple JavaScript library to display your images and videos in a lightbox popup or a navigatable gallery lightbox without having to write any JS code.</p>
 <h2>Image Lightbox</h2>
-<img class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" />
-<h2 class="mklbItem demo" data-video-src="https://www.jqueryscript.net/dummy/1.mp4">Video Lightbox</h2>
-<img class="mklbItem demo" src="https://source.unsplash.com/8CucspHlerY/600x450" data-video-src="https://www.jqueryscript.net/dummy/1.mp4" />
+<img id="i1" class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" />
+<h2 id="i2" class="mklbItem demo" data-video-src="https://www.jqueryscript.net/dummy/1.mp4">Video Lightbox</h2>
+<img id="i3" class="mklbItem demo" src="https://source.unsplash.com/8CucspHlerY/600x450" data-video-src="https://www.jqueryscript.net/dummy/1.mp4" />
 <h2>Gallery Lightbox</h2>
-<img class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" data-gallery="gallery1" />
-<img class="mklbItem demo" src="https://source.unsplash.com/8CucspHlerY/600x450" data-gallery="gallery1" />
-<img class="mklbItem demo" src="https://source.unsplash.com/cylcICfV7Bs/600x450" data-gallery="gallery1" />
+<img id="i4" class="mklbItem demo" src="https://source.unsplash.com/p9t7g5ORALs/600x450" data-gallery="gallery1" />
+<img id="i5" class="mklbItem demo" src="https://source.unsplash.com/8CucspHlerY/600x450" data-gallery="gallery1" />
+<img id="i6" class="mklbItem demo" src="https://source.unsplash.com/cylcICfV7Bs/600x450" data-gallery="gallery1" />
 </div>
 {% endraw %}
 <script>
@@ -67,7 +67,12 @@ return false;
 </script>
 <script src="https://www.cssscript.com/demo/gallery-lightbox-mk/mklb/js/mklb.js"></script>
 
-
+<script>
+function imageclicktest() {
+document.getElementById('i1').click();
+//  document.getElementById("demo").innerHTML = "Hello World";
+}
+</script>
 <!-- Lightobx issuse -->
 <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
 
@@ -99,7 +104,7 @@ L.marker([38.7251776,-105.607716]).bindPopup("Colorado").addTo(map);
 L.marker([41.6500201,-72.7342163]).bindPopup("Connecticut").addTo(map);
 L.marker([38.6920451,-75.4013315]).bindPopup("Delaware").addTo(map);
 L.marker([38.8937936,-76.9879976]).bindPopup("District of Columbia").addTo(map);
-L.marker([27.7567667,-81.4639835]).bindPopup("Florida <button>Click me!</button><h2 class=\"mklbItem demo\" data-video-src=\"https:\/\/www.jqueryscript.net\/dummy\/1.mp4\">Video Lightbox</h2>").addTo(map);
+L.marker([27.7567667,-81.4639835]).bindPopup("Florida <button onclick=\"imageclicktest()\">Click me!</button><h2 class=\"mklbItem demo\" data-video-src=\"https:\/\/www.jqueryscript.net\/dummy\/1.mp4\">Video Lightbox</h2>").addTo(map);
 L.marker([32.3293809,-83.1137366]).bindPopup("Georgia").addTo(map);
 L.marker([47.2868352,-120.212613]).bindPopup("Washington").addTo(map);
 L.marker([19.5872677,-155.4268897]).bindPopup("Hawaii").addTo(map);

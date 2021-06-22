@@ -108,6 +108,7 @@ var greenIcon = new StateIcon({iconUrl: 'leaf-green.png'}),
 alabamaIcon = new StateIcon({iconUrl: './images/alabama.png'}),
 alaskaIcon = new StateIcon({iconUrl: './images/alaska.png'}),
 arizonaIcon = new StateIcon({iconUrl: './images/arizona.png'}),
+californiaIcon = new StateIcon({iconUrl: './images/california.png'}),
 floridaIcon = new StateIcon({iconUrl: './images/florida.png'}),
 puertoricoIcon = new StateIcon({iconUrl: './images/puertorico.png'});
 
@@ -115,7 +116,7 @@ L.marker([32.576225,-86.680735], {icon: alabamaIcon}).bindPopup("Alabama").addTo
 L.marker([64.4459613,-149.680909], {icon: alaskaIcon}).bindPopup("Alaska").addTo(map);
 L.marker([34.395342,-111.763275], {icon: arizonaIcon}).bindPopup("Arizona").addTo(map);
 L.marker([35.2048883,-92.4479108], {icon: floridaIcon}).bindPopup("Arkansas").addTo(map);
-L.marker([36.7014631,-118.755997], {icon: floridaIcon}).bindPopup("California").addTo(map);
+L.marker([36.7014631,-118.755997], {icon: californiaIcon}).bindPopup("California").addTo(map);
 L.marker([38.7251776,-105.607716], {icon: floridaIcon}).bindPopup("Colorado").addTo(map);
 L.marker([41.6500201,-72.7342163], {icon: floridaIcon}).bindPopup("Connecticut").addTo(map);
 L.marker([38.6920451,-75.4013315], {icon: floridaIcon}).bindPopup("Delaware").addTo(map);

@@ -95,6 +95,19 @@ tileSize: 512,
 zoomOffset: -1
 }).addTo(map);
 
+//script for icons
+var StateIcon = L.Icon.extend({
+options: {
+iconSize:     [38, 95],
+iconAnchor:   [22, 94],
+popupAnchor:  [-3, -76]
+}
+});
+
+var greenIcon = new StateIcon({iconUrl: 'leaf-green.png'}),
+floridaIcon = new StateIcon({iconUrl: './images/florida.png'}),
+orangeIcon = new StateIcon({iconUrl: 'leaf-orange.png'});
+
 L.marker([32.576225,-86.680735]).bindPopup("Alabama").addTo(map);
 L.marker([64.4459613,-149.680909]).bindPopup("Alaska").addTo(map);
 L.marker([34.395342,-111.763275]).bindPopup("Arizona").addTo(map);
@@ -104,7 +117,7 @@ L.marker([38.7251776,-105.607716]).bindPopup("Colorado").addTo(map);
 L.marker([41.6500201,-72.7342163]).bindPopup("Connecticut").addTo(map);
 L.marker([38.6920451,-75.4013315]).bindPopup("Delaware").addTo(map);
 L.marker([38.8937936,-76.9879976]).bindPopup("District of Columbia").addTo(map);
-L.marker([27.7567667,-81.4639835]).bindPopup("Florida <button onclick=\"imageclicktest()\">Click me!</button><h2 class=\"mklbItem demo\" data-video-src=\"https:\/\/www.jqueryscript.net\/dummy\/1.mp4\">Video Lightbox</h2>").addTo(map);
+L.marker([27.7567667,-81.4639835], {icon: floridaIcon}).bindPopup("Florida <button onclick=\"imageclicktest()\">Click me!</button><h2 class=\"mklbItem demo\" data-video-src=\"https:\/\/www.jqueryscript.net\/dummy\/1.mp4\">Video Lightbox</h2>").addTo(map);
 L.marker([32.3293809,-83.1137366]).bindPopup("Georgia").addTo(map);
 L.marker([47.2868352,-120.212613]).bindPopup("Washington").addTo(map);
 L.marker([19.5872677,-155.4268897]).bindPopup("Hawaii").addTo(map);

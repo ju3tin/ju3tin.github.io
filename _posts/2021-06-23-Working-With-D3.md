@@ -1,0 +1,12 @@
+---
+layout: post
+section-type: post
+featimg: /images/blog/bg__photographer.jpg
+title: Working With D3
+category: tech
+tags: [ 'tutorial' ]
+---
+
+My name is Justin Grierson
+
+Any contributions, feedback or issues to the <a href="https://github.com/ju3tin" target="\_blank">repo</a> are more than welcome!

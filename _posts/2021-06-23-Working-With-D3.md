@@ -7,6 +7,21 @@ category: tech
 tags: [ 'tutorial' ]
 ---
 
-My name is Justin Grierson
-
-Any contributions, feedback or issues to the <a href="https://github.com/ju3tin" target="\_blank">repo</a> are more than welcome!
+<div id="main">
+<div id="sequence"></div>
+<div id="chart">
+<div id="explanation" style="visibility: hidden;">
+<span id="percentage"></span><br/>
+of visits begin with this sequence of pages
+</div>
+</div>
+</div>
+<div id="sidebar">
+<input type="checkbox" id="togglelegend"> Legend<br/>
+<div id="legend" style="visibility: hidden;"></div>
+</div>
+<script type="text/javascript" src="sequences.js"></script>
+<script type="text/javascript">
+// Hack to make this example display correctly in an iframe on bl.ocks.org
+d3.select(self.frameElement).style("height", "700px");
+</script> 

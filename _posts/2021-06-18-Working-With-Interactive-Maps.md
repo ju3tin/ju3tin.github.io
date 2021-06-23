@@ -109,6 +109,8 @@ alabamaIcon = new StateIcon({iconUrl: './images/alabama.png'}),
 alaskaIcon = new StateIcon({iconUrl: './images/alaska.png'}),
 arizonaIcon = new StateIcon({iconUrl: './images/arizona.png'}),
 californiaIcon = new StateIcon({iconUrl: './images/california.png'}),
+coloradoIcon = new StateIcon({iconUrl: './images/colorado.png'}),
+ConnecticutIcon = new StateIcon({iconUrl: './images/connecticut.png'}),
 floridaIcon = new StateIcon({iconUrl: './images/florida.png'}),
 texasIcon = new StateIcon({iconUrl: './images/texas.png'}),
 puertoricoIcon = new StateIcon({iconUrl: './images/puertorico.png'});
@@ -118,8 +120,8 @@ L.marker([64.4459613,-149.680909], {icon: alaskaIcon}).bindPopup("Alaska").addTo
 L.marker([34.395342,-111.763275], {icon: arizonaIcon}).bindPopup("Arizona").addTo(map);
 L.marker([35.2048883,-92.4479108], {icon: floridaIcon}).bindPopup("Arkansas").addTo(map);
 L.marker([36.7014631,-118.755997], {icon: californiaIcon}).bindPopup("California").addTo(map);
-L.marker([38.7251776,-105.607716], {icon: floridaIcon}).bindPopup("Colorado").addTo(map);
-L.marker([41.6500201,-72.7342163], {icon: floridaIcon}).bindPopup("Connecticut").addTo(map);
+L.marker([38.7251776,-105.607716], {icon: coloradoIcon}).bindPopup("Colorado").addTo(map);
+L.marker([41.6500201,-72.7342163], {icon: ConnecticutIcon}).bindPopup("Connecticut").addTo(map);
 L.marker([38.6920451,-75.4013315], {icon: floridaIcon}).bindPopup("Delaware").addTo(map);
 L.marker([38.8937936,-76.9879976], {icon: floridaIcon}).bindPopup("District of Columbia").addTo(map);
 L.marker([27.7567667,-81.4639835], {icon: floridaIcon}).bindPopup("Florida <button onclick=\"imageclicktest()\">Click me!</button><h2 class=\"mklbItem demo\" data-video-src=\"https:\/\/www.jqueryscript.net\/dummy\/1.mp4\">Video Lightbox</h2>").addTo(map);

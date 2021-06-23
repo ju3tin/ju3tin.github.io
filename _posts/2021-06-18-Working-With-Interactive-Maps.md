@@ -163,7 +163,7 @@ L.marker([31.8160381,-99.5120986], {icon: texasIcon}).bindPopup("Texas").addTo(m
 L.marker([39.4225192,-111.714358], {icon: floridaIcon}).bindPopup("Utah").addTo(map);
 L.marker([44.5990718,-72.5002608], {icon: floridaIcon}).bindPopup("Vermont").addTo(map);
 L.marker([37.1232245,-78.4927721], {icon: floridaIcon}).bindPopup("Virginia").addTo(map);
-L.marker([38.8950368,-77.0365427], {icon: floridaIcon}).bindPopup("Washington").addTo(map);
+//L.marker([38.8950368,-77.0365427], {icon: floridaIcon}).bindPopup("Washington").addTo(map);
 L.marker([38.4758406,-80.8408415], {icon: floridaIcon}).bindPopup("West Virginia").addTo(map);
 L.marker([44.4308975,-89.6884637], {icon: floridaIcon}).bindPopup("Wisconsin").addTo(map);
 L.marker([43.1700264,-107.568534], {icon: floridaIcon}).bindPopup("Wyoming").addTo(map);

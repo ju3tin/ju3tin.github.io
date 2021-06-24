@@ -62,7 +62,7 @@ The other improvement is generalizing and conventionalizing data inputs. The inp
 </div>
 </div>
 
-<script src="http://code.angularjs.org/1.3.5/angular.js"></script>
-<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="https://code.angularjs.org/1.3.5/angular.js"></script>
+<script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="./js/a/app.js"></script>
 <script src="./js/a/sunburst.js"></script>

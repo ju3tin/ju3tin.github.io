@@ -5,7 +5,7 @@ featimg: /images/blog/bg__photographer.jpg
 title: Working With D3
 category: tech
 tags: [ 'tutorial' ]
-custom_code: <link rel="stylesheet" href="./js/a/style.css" />
+custom_code: <!-- <link rel="stylesheet" href="./js/a/style.css" /> -->
 ---
 
 <div class="main" ng-controller="MainCtrl as sunburst">

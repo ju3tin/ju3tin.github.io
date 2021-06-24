@@ -11,6 +11,7 @@ custom_code: <!-- <link rel="stylesheet" href="./js/a/style.css" /> -->
 <div class="main" ng-controller="MainCtrl as sunburst">
 
 <!-- visualization -->
+{% raw %}
 <h2>Visualization</h2>
 <p>Hover for data summary, click on visualization to reset summary.</p>
 <p>Select example: <select ng-options="example for example in sunburst.examples" ng-model="sunburst.exampleSelected" ng-change="sunburst.selectExample(sunburst.exampleSelected)"></select></p>
@@ -66,3 +67,4 @@ The other improvement is generalizing and conventionalizing data inputs. The inp
 <script src="https://d3js.org/d3.v3.min.js"></script>
 <script src="./js/a/app.js"></script>
 <script src="./js/a/sunburst.js"></script>
+{% endraw %}

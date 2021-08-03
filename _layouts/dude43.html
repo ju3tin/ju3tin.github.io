@@ -145,136 +145,19 @@
                     </div>
                     <!-- end Content -->
 
-                    <!-- sidebar -->
-                    <div class="col-md-3 col-sm-3">
-
-                        <section id="sidebar" class="sidebar">
-
-                            <aside id="search">
-                                <header><h3>Search</h3></header>
-                                <div class="input-group">
-                                    <input type="text" class="form-control framed" placeholder="Enter Keyword">
-                                    <span class="input-group-btn"><button class="btn btn-primary btn-sm" type="button"><i class="fa fa-search"></i></button></span>
-                                </div>
-                            </aside>
-
-                            <aside id="post-archive">
-                                <header><h3>Post Archive</h3></header>
-                                <ul class="list-links list-unstyled">
-                                    <li><a href="#">June 2014</a></li>
-                                    <li><a href="#">May 2014</a></li>
-                                    <li><a href="#">April 2014</a></li>
-                                    <li><a href="#">March 2014</a></li>
-                                    <li><a href="#">January 2014</a></li>
-                                    <li><a href="#">December 2013</a></li>
-                                    <li><a href="#">November 2013</a></li>
-                                    <li><a href="#">August 2013</a></li>
-                                </ul>
-                            </aside>
-
-                            <aside id="categories">
-                                <header><h3>Categories</h3></header>
-                                <ul class="list-links list-unstyled">
-                                    <li><a href="#">Architecture</a></li>
-                                    <li><a href="#">Apartments</a></li>
-                                    <li><a href="#">Design</a></li>
-                                    <li><a href="#">Do it yourself</a></li>
-                                    <li><a href="#">Housing</a></li>
-                                    <li><a href="#">Interior</a></li>
-                                    <li><a href="#">Trends</a></li>
-                                </ul>
-                            </aside>
-
-                        </section>
-
-                    </div>
-
-                    <!-- end Sidebar -->
-                </div>
-            </div>
-
-        </main>
-        <!--end #content-->
-
-        <!--FOOTER
+                  <!--FOOTER
         ================================================================================================================
         ================================================================================================================
         -->
-        <footer id="ts-footer">
-            <section id="ts-footer-main">
-                <div class="container">
-
-                    <div class="ts-title">
-                        <h2>About Us</h2>
-                    </div>
-
-                    <div class="row">
-
-                        <div class="col-md-5">
-                            <p>
-                                Fusce pretium dui quis est pretium lobortis. Vestibulum eu ex sed nibh condimentum
-                                tristique eu finibus lorem. Nullam sed eleifend massa. Morbi nulla turpis, pharetra et
-                                nisl eu, pellentesque molestie erat
-                            </p>
-                            <a href="#" class="ts-link ts-underline mb-5 mb-md-0 d-inline-block">More About Us</a>
-                        </div>
-
-                        <div class="col-sm-6 col-md-4">
-                            <address class="ts-text-muted---white">
-                                1565 Broadcast Drive
-                                <br>
-                                Dulles, VA 20166
-                                <br>
-                                <br>
-                                <strong>Tel:</strong> +1 703-996-1212
-                                <br>
-                                <strong>Email:</strong> <a href="#">hello@example.com</a>
-                                <br>
-                                <strong>Skype:</strong> <a href="#">wearepreus</a>
-                                <br>
-                            </address>
-                        </div>
-
-                        <div class="col-sm-6 col-md-3">
-                            <nav class="nav flex-column">
-                                <a class="nav-link" href="#">Home</a>
-                                <a class="nav-link" href="#">About us</a>
-                                <a class="nav-link" href="#">Portfolio</a>
-                                <a class="nav-link" href="#">Services</a>
-                                <a class="nav-link" href="#">Contact</a>
-                            </nav>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <section>
-                <div class="container py-5">
-                    <small>© 2019 All Rights Reserved</small>
-                </div>
-            </section>
-
-        </footer>
+        {% include footer1.html %}
         <!--end #footer-->
 
     </div>
     <!--end page-->
+
 </div>
-
-	<script src="assets/js/jquery-3.3.1.min.js"></script>
-	<script src="assets/js/popper.min.js"></script>
-	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-	<script src="assets/js/isInViewport.jquery.js"></script>
-	<script src="assets/js/jquery.magnific-popup.min.js"></script>
-	<script src="assets/js/scrolla.jquery.min.js"></script>
-	<script src="assets/js/jquery.validate.min.js"></script>
-	<script src="assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>
-	<script src="assets/js/odometer.min.js"></script>
-	<script src="assets/js/owl.carousel.min.js"></script>
-    <script src="assets/js/jquery.vide.min.js"></script>
-    <script src="assets/js/custom.js"></script>
-
+{% include scripts.html %}
 </body>
 </html>
+
+<!-- Blog Layout End -->

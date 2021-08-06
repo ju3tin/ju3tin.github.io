@@ -2,7 +2,7 @@
     var tableData = [
         {% for post in site.posts %}
         { 
-       'title': 'Edge Case: Nested and Mixed Lists',
+       'title': '{{ post.title }}',
        'image': '/assets/img/bg__photographer.jpg',
        'categories': 'Edge Case',
        'date1': '15',

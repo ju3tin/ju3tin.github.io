@@ -5,10 +5,10 @@
        'title': '{{ post.title }}',
        'image': '/assets/img/bg__photographer.jpg',
        'categories': 'Edge Case',
-       'date1': '15',
-       'date2': 'May',
+       'date1': '{{ post.date | date: '%d' }}',
+       'date2': '{{ post.date | date: '%b' }}',
        'date3': '2004',
-       'url': '/edge-case-nested-and-mixed-lists.html',
+       'url': '{{ post.url }}',
        'header': 'Second test from form fish beast made every of seas all gathered us saying he our '
        }{% unless forloop.last %},{% endunless %}{% endfor %}
         

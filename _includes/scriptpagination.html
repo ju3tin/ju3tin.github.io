@@ -2,7 +2,7 @@
     var tableData = [
         {% for post in site.posts %}
         { 
-       'title': '{{ post.title }}',
+       'title': '{{ post.title | regex_replace: ''', '' }}',
        'image': '/assets/img/bg__photographer.jpg',
        'categories': 'Edge Case',
        'date1': '{{ post.date | date: '%d' }}',

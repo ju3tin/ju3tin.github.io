@@ -137,10 +137,10 @@
            
           var row = `
                     <article class="blog-post">
-                    <a href="blog__detail.html" class="blog-post-header-image">
+                    <a href="${myList[i].url}" class="blog-post-header-image">
                     <div class="bg-transfer"><img src="${myList[i].image}" alt=""></div>
                     </a>
-                    <header><a href="blog-detail.html"><h2>${myList[i].title}</h2></a></header>
+                    <header><a href="${myList[i].url}"><h2>${myList[i].title}</h2></a></header>
                     <figure class="meta">
                     <a href="#" class="link-icon"><i class="fa fa-user"></i>Admin</a>
                     <a href="#" class="link-icon"><i class="fa fa-calendar"></i>${myList[i].date1}/${myList[i].date2}/${myList[i].date3}</a>

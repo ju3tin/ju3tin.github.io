@@ -1,6 +1,16 @@
 <script>
     var tableData = [
-        {% for post in site.posts %}
+        { 
+       'title': 'Edge Case: Nested and Mixed Lists',
+       'image': '/img/blog/single_blog_1.png',
+       'categories': 'Edge Case',
+       'date1': '15',
+       'date2': 'May',
+       'url': '/edge-case-nested-and-mixed-lists.html',
+       'header': 'Second test from form fish beast made every of seas all gathered us saying he our '
+       }
+        
+        /* {% for post in site.posts %}
        { 
        'title': '{{ post.title }}',
        'image': '{% if post.titleimg %}{{ post.titleimg }}{% else %}/img/blog/single_blog_1.png{% endif %}',
@@ -9,7 +19,9 @@
        'date2': '{{ post.date | date: '%b' }}',
        'url': '{{ post.url }}',
        'header': '{% if post.header %}{{ post.header }}{% else %}Second test from form fish beast made every of seas all gathered us saying he our {% endif %}'
-       }{% unless forloop.last %},{% endunless %}{% endfor %}]
+       }{% unless forloop.last %},{% endunless %}{% endfor %}
+        */
+       ]
    
    /*
        1 - Loop Through Array & Access each value update

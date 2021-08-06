@@ -112,7 +112,7 @@
    
        for (var i = 1 in myList) {
            //Keep in mind we are using "Template Litterals to create rows"
-           var row = `
+        /*   var row = `
                     <article class="blog_item">
                     <div class="blog_item_img">
                     <img class="card-img rounded-0" src="${myList[i].image}" alt="" data-pagespeed-url-hash="4114322597" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
@@ -132,6 +132,30 @@
                     </div>
                     </article>
                      `
+         */
+           
+          var row = `
+                    <article class="blog-post">
+                    <a href="blog__detail.html" class="blog-post-header-image">
+                    <div class="bg-transfer"><img src="assets/img/img__case-study--03.jpg" alt=""></div>
+                    </a>
+                    <header><a href="blog-detail.html"><h2>Nulla sapien leo, placerat sed lacinia nec, rutrum quis</h2></a></header>
+                    <figure class="meta">
+                    <a href="#" class="link-icon"><i class="fa fa-user"></i>Admin</a>
+                    <a href="#" class="link-icon"><i class="fa fa-calendar"></i>06/04/2014</a>
+                    <div class="tags">
+                    <a href="#" class="tag article">Interior</a>
+                    <a href="#" class="tag article">New Living</a>
+                    </div>
+                    </figure>
+                    <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.
+                    Donec rutrum imperdiet ligula in bibendum. Aenean vulputate rutrum lobortis. Nullam non
+                    mi ac dui egestas venenatis. Etiam venenatis fermentum accumsan. Lorem ipsum dolor
+                    sit amet, consectetur adipiscing elit. Donec at lacus sapien.
+                    </p>
+                    <a href="blog-detail.html" class="btn btn-primary btn-small btn-grey">Read More</a>
+                    </article>
+                    `
            table.append(row)
        }
    

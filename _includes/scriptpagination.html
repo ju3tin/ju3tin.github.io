@@ -1,0 +1,130 @@
+<script>
+    var tableData = [
+        {% for post in site.posts %}
+       { 
+       'title': '{{ post.title }}',
+       'image': '{% if post.titleimg %}{{ post.titleimg }}{% else %}/img/blog/single_blog_1.png{% endif %}',
+       'categories': '{{ post.categories }}',
+       'date1': '{{ post.date | date: '%d' }}',
+       'date2': '{{ post.date | date: '%b' }}',
+       'url': '{{ post.url }}',
+       'header': '{% if post.header %}{{ post.header }}{% else %}Second test from form fish beast made every of seas all gathered us saying he our {% endif %}'
+       }{% unless forloop.last %},{% endunless %}{% endfor %}]
+   
+   /*
+       1 - Loop Through Array & Access each value update
+     2 - Create Table Rows & append to table
+   */
+   
+   
+   var state = {
+       'querySet': tableData,
+   
+       'page': 1,
+       'rows': 5,
+       'window': 5,
+   }
+   
+   buildTable()
+   
+   function pagination(querySet, page, rows) {
+   
+       var trimStart = (page - 1) * rows
+       var trimEnd = trimStart + rows
+   
+       var trimmedData = querySet.slice(trimStart, trimEnd)
+   
+       var pages = Math.round(querySet.length / rows);
+   
+       return {
+           'querySet': trimmedData,
+           'pages': pages,
+       }
+   }
+   
+   function pageButtons(pages) {
+       var wrapper = document.getElementById('pagination-wrapper')
+   
+       wrapper.innerHTML = ``
+       console.log('Pages:', pages)
+   
+       var maxLeft = (state.page - Math.floor(state.window / 2))
+       var maxRight = (state.page + Math.floor(state.window / 2))
+   
+       if (maxLeft < 1) {
+           maxLeft = 1
+           maxRight = state.window
+       }
+   
+       if (maxRight > pages) {
+           maxLeft = pages - (state.window - 1)
+           
+           if (maxLeft < 1){
+               maxLeft = 1
+           }
+           maxRight = pages
+       }
+       
+       
+   
+       for (var page = maxLeft; page <= maxRight; page++) {
+           wrapper.innerHTML += `<li class="page-item"><button value=${page} class="page btn btn-sm btn-info">${page}</button></li>`
+       }
+   
+       if (state.page != 1) {
+           wrapper.innerHTML = `<li class="page-item"><button value=${1} class="page btn btn-sm btn-info">&#171; First</button></li>` + wrapper.innerHTML
+       }
+   
+       if (state.page != pages) {
+           wrapper.innerHTML += `<li class="page-item"><button value=${pages} class="page btn btn-sm btn-info">Last &#187;</button></li>`
+       }
+   
+       $('.page').on('click', function() {
+           $('#table-body').empty()
+   
+           state.page = Number($(this).val())
+   
+           buildTable()
+       })
+   
+   }
+   
+   
+   function buildTable() {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+       var table = $('#table-body')
+   
+       var data = pagination(state.querySet, state.page, state.rows)
+       var myList = data.querySet
+   
+       for (var i = 1 in myList) {
+           //Keep in mind we are using "Template Litterals to create rows"
+           var row = `
+                    <article class="blog_item">
+                    <div class="blog_item_img">
+                    <img class="card-img rounded-0" src="${myList[i].image}" alt="" data-pagespeed-url-hash="4114322597" onload="pagespeed.CriticalImages.checkImageForCriticality(this);">
+                    <a href="#" class="blog_item_date">
+                    <h3>${myList[i].date1}</h3>
+                    <p>${myList[i].date2}</p>
+                    </a>
+                    </div>
+                    <div class="blog_details">
+                    <a class="d-inline-block" href="${myList[i].url}">
+                    <h2>${myList[i].title}</h2>
+                    </a>
+                    <p>${myList[i].header}</p>
+                    <ul class="blog-info-link">
+                    <li><a href="#"><i class="fa fa-user"></i>${myList[i].categories}</a></li>
+                    </ul>
+                    </div>
+                    </article>
+                     `
+           table.append(row)
+       }
+   
+       pageButtons(data.pages)
+       
+   }
+   
+       </script>

@@ -1,5 +1,6 @@
 <script>
     var tableData = [
+        {% for post in site.posts %}
         { 
        'title': 'Edge Case: Nested and Mixed Lists',
        'image': '/assets/img/bg__photographer.jpg',
@@ -9,7 +10,7 @@
        'date3': '2004',
        'url': '/edge-case-nested-and-mixed-lists.html',
        'header': 'Second test from form fish beast made every of seas all gathered us saying he our '
-       }
+       }{% unless forloop.last %},{% endunless %}{% endfor %}
         
         /* {% for post in site.posts %}
        { 

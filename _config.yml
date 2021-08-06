@@ -294,6 +294,7 @@ gems:
   - jekyll-sitemap
   - jekyll-archives
   - jekyll-paginate
+  - jekyll-regex-replace
 
 # Archives
 jekyll-archives:

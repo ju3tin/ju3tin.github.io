@@ -12,7 +12,6 @@ permalink: /search2json.json
       "content"  : "customer comments fell into this category. Legend"
       
     } ,
-  
     {
       
       "title"    : "Working With 3D models",
@@ -21,4 +20,5 @@ permalink: /search2json.json
       "url"      : "https://ju3tin.github.io/Working-With-3d-models.html",
       "date"     : "2021-06-21 00:00:00 +0000",
       "content"  : "three.js -3MF file with materials"
- }]{% endraw %}
+ }]
+ {% endraw %}

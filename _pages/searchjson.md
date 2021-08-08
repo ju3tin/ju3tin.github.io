@@ -2,6 +2,7 @@
 layout: none
 permalink: /search2json.json
 ---
+{% raw %}
 [
     {
       
@@ -25,3 +26,4 @@ permalink: /search2json.json
       
     } 
 ]
+{% endraw %}

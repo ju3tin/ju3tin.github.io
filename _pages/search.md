@@ -1,5 +1,5 @@
 ---
-layout: none
+layout: search3
 permalink: /search2.html
 ---
 

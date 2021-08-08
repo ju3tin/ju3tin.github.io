@@ -1,4 +1,7 @@
-
+---
+layout: none
+permalink: /search2.html
+---
 
 <!doctype html>
 <html lang="en">

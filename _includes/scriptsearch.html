@@ -10,7 +10,7 @@ $(document).ready(function(){
    $.each(data, function(key, value){
     if (value.title.search(expression) != -1 || value.content.search(expression) != -1)
     {
-     $('#result').append('<li class="list-group-item link-class"><a href="'+value.url+'"><img src="'+value.image+'" height="40" width="40" class="img-thumbnail" /> '+value.title+' | <span class="text-muted">'+value.category+'</span></a></li>');
+     $('#result').append('<li class="list-group-item link-class"><a href="'+value.url+'"><img src="'+value.simage+'" height="40" width="40" class="img-thumbnail" /> '+value.title+' | <span class="text-muted">'+value.category+'</span></a></li>');
     }
    });   
   });

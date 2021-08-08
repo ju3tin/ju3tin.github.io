@@ -1,3 +1,7 @@
+---
+layout: none
+permalink: /search12.html
+---
 
 <html>
  <head>

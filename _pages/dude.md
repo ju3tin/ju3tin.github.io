@@ -46,7 +46,7 @@ $(document).ready(function(){
   $('#state').val('');
   var searchField = $('#search').val();
   var expression = new RegExp(searchField, "i");
-  $.getJSON('search33.json', function(data) {
+  $.getJSON('search.json', function(data) {
    $.each(data, function(key, value){
     if (value.title.search(expression) != -1 || value.content.search(expression) != -1)
     {

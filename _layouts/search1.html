@@ -2,12 +2,12 @@
   {% for post in site.posts %}
     {
       {% if post.title != nil %}
-      "title"    : "{{ post.title | escape | remove: "'" }}",
+      "title"    : "{{ post.title | escape | remove: "'" | remove: """ }}",
       "category" : "{{ post.categories }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
-      "content"  : "{{ post.content | strip_html | strip_newlines | remove: "'" }}"
+      "content"  : "{{ post.content | strip_html | strip_newlines | remove: "'" | remove: """ }}"
       {% endif %}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
@@ -15,12 +15,12 @@
   {% for page in site.pages %}
    {
      {% if page.title != nil %}{% if page.url != "/assets/katex/" %}
-        "title"    : "{{ page.title | escape }}",
+        "title"    : "{{ page.title | escape  | remove: "'" | remove: """ }}",
         "category" : "{{ page.categories }}",
         "tags"     : "{{ page.tags | join: ', ' }}",
         "url"      : "{{ site.baseurl }}{{ page.url }}",
         "date"     : "{{ page.date }}",
-        "content"  : "{{ page.content | strip_html | strip_newlines | remove: "'" }}"
+        "content"  : "{{ page.content | strip_html | strip_newlines | remove: "'" | remove: """ }}"
      {% endif %}{% endif %}
    } {% unless forloop.last %},{% endunless %}
   {% endfor %}

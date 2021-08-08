@@ -5,6 +5,7 @@
       "title"    : "{{ post.title | escape | replace: "'", "" | remove: "'" | remove: '"' }}",
       "category" : "{{ post.categories }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
+      "image"    : "{{ post.image }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
       "content"  : "wheres my car"

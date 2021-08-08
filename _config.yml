@@ -168,6 +168,8 @@ siteimage: "/assets/img/bg-office1.jpg"
 # Social Buttons #
 ##################
 
+include: ['_pages']
+
 social:
   - title: "facebook"
     url: "https://facebook.com/justin.grierson.5"

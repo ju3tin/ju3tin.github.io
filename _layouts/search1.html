@@ -5,8 +5,8 @@
       "title"    : "{{ post.title | escape | replace: "'", "" | remove: "'" | remove: '"' }}",
       "category" : "{{ post.categories }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
-      "image"    : "{{ post.image }}",
-      "simage"   : "{{ post.smallimage}}",
+      "image"    : "{% if post.image %}{{ post.image }}{% else %}{% endif %}",
+      "simage"   : "{% if post.smallimage %}{{ post.smallimage }}{% else %}{% endif %}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
       "content"  : "test"

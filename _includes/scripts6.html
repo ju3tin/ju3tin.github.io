@@ -1,0 +1,39 @@
+<script src="/assets/js/jquery-3.3.1.min.js"></script>
+	<script src="/assets/js/popper.min.js"></script>
+	<script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/imagesloaded.pkgd.min.js"></script>
+	<script src="/assets/js/isInViewport.jquery.js"></script>
+	<script src="/assets/js/jquery.magnific-popup.min2.js"></script>
+	<script src="/assets/js/scrolla.jquery.min.js"></script>
+	<script src="/assets/js/jquery.validate.min.js"></script>
+	<script src="/assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>
+	<script src="/assets/js/odometer.min.js"></script>
+	<script src="/assets/js/owl.carousel.min.js"></script>
+    <script src="/assets/js/particles.min.js"></script>
+    <script src="/assets/js/custom.js"></script>
+ <script src="/assets/js/jquery.bs.gdpr.cookies.js"></script>
+    <script type="text/javascript">
+        var settings = {
+            message: 'We use cookies to do things like remember what you&#39;ve added to your shopping basket, offer live chat support and show you content we think you&#39;ll be interested in. If you&#39;re happy with the use of cookies by Justin Grierson and selected partners, click accept. <b>',
+            moreLinkLabel: 'Read more</b>',
+            messageMaxHeightPercent: 30,
+            moreLink: '/privacy.html',
+            delay: 1000,
+            allowAdvancedOptions: true,
+            OnAccept : function() {
+                console.log('Yay! User accepted your cookies window!');
+                console.log('User preferences');
+                var preferences = $.fn.bsgdprcookies.GetUserPreferences();
+                console.log(preferences);
+
+            }
+        }
+
+        $(document).ready(function() {
+            $('body').bsgdprcookies(settings);
+
+            $('#cookiesBtn').on('click', function(){
+                $('body').bsgdprcookies(settings, 'reinit');
+            });
+        });
+    </script>

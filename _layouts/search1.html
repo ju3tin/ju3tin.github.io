@@ -2,12 +2,12 @@
   {% for post in site.posts %}
     {
       {% if post.title != nil %}
-      "title"    : "{{ post.title | escape }}",
+      "title"    : "{{ post.title | escape | remove: "'" }}",
       "category" : "{{ post.categories }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
-      "content"  : "{{ post.content | strip_html | strip_newlines }}"
+      "content"  : "{{ post.content | strip_html | strip_newlines | remove: "'" }}"
       {% endif %}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}
@@ -20,7 +20,7 @@
         "tags"     : "{{ page.tags | join: ', ' }}",
         "url"      : "{{ site.baseurl }}{{ page.url }}",
         "date"     : "{{ page.date }}",
-        "content"  : "{{ page.content | strip_html | strip_newlines }}"
+        "content"  : "{{ page.content | strip_html | strip_newlines | remove: "'" }}"
      {% endif %}{% endif %}
    } {% unless forloop.last %},{% endunless %}
   {% endfor %}

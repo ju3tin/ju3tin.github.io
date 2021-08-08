@@ -7,7 +7,7 @@
       "tags"     : "{{ post.tags | join: ', ' }}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
-      "content"  : "{{ post.content | replace: "'", "" | remove: "'" | remove: '"' | strip_html | strip_newlines }}"
+      "content"  : "wheres my car"
       {% endif %}
     } {% unless forloop.last %},{% endunless %}
   {% endfor %}

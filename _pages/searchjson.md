@@ -1,5 +1,8 @@
+---
+layout: none
+permalink: /search2json.json
+---
 [
-  
     {
       
       "title"    : "Working With D3",
@@ -20,6 +23,5 @@
       "date"     : "2021-06-21 00:00:00 +0000",
       "content"  : "three.js -3MF file with materials"
       
-    }
-  
+    } 
 ]

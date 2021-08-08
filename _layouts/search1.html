@@ -5,8 +5,8 @@
       "title"    : "{{ post.title | escape | replace: "'", "" | remove: "'" | remove: '"' }}",
       "category" : "{{ post.categories }}",
       "tags"     : "{{ post.tags | join: ', ' }}",
-      "image"    : "{% if post.image %}{{ post.image }}{% else %}{% endif %}",
-      "simage"   : "{% if post.smallimage %}{{ post.smallimage }}{% else %}/assests/images/smallimage.png{% endif %}",
+      "image"    : "{% if post.image %}{{ post.image }}{% else %}/assets/img/bg__photographer.jpg{% endif %}",
+      "simage"   : "{% if post.smallimage %}{{ post.smallimage }}{% else %}/assests/images/smallimage1.png{% endif %}",
       "url"      : "{{ site.baseurl }}{{ post.url }}",
       "date"     : "{{ post.date }}",
       "content"  : "test"

@@ -54,7 +54,7 @@ $ bundle exec jekyll serve
 
 Jekyll Cart was optimized for CloudCannon but will run without it. If you plan to use the email checkout feature but aren't hosted with CloudCannon, you'll need some form system to do the sending. [Formspree](https://formspree.io/) is a good option.
 
-## License
+## License   
 
 [Jekyll Cart](https://github.com/bradonomics/jekyll-cart/) is released under the [GPL-2.0 License](http://www.gnu.org/licenses/gpl-2.0.html).
 

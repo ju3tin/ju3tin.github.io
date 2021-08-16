@@ -5,6 +5,7 @@ categories:
 tags:
   - image
   - Post Formats
+layout: post
 ---
 
 

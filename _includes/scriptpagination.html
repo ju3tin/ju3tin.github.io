@@ -4,7 +4,7 @@
         {
         'title': '{{ post.title | remove: "'" }}',
        //'title': '{{ post.title | regex_replace: ''', '' }}',
-       'image': '{% if post.titleimg %}{{ post.titleimg }}{% else %}/assets/img/bg__photographer.jpg{% endif %}',
+       'image': '{% if post.titleimg %}{{ post.titleimg }}{% elsif post.featimg %}{{ post.featimg }}{% else %}/assets/img/bg__photographer.jpg{% endif %}',
        'categories': '{{ post.categories }}',
        'date1': '{{ post.date | date: '%d' }}',
        'date2': '{{ post.date | date: '%m' }}',

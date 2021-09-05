@@ -1,5 +1,6 @@
 ---
 layout: post
+featimg: /images/pic5.png
 section-type: post
 title: Working With Maps
 category: tech

@@ -2,7 +2,7 @@
 author: someone
 layout: post-full
 type: gallery
-featimg: gallery-2.jpg
+featimg: /images/pic8.png
 title: Gallery Alternative
 tags: [gallery, image]
 category: [image]

@@ -11,6 +11,7 @@ tags:
   - html
   - markup
 sidebar_option: sidebar
+featimg: /images/pic14.png
 ---
 
 A variety of common markup showing how the theme styles them.

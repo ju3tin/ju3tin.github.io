@@ -3,6 +3,7 @@ layout: post
 section-type: post
 title: Adding a life event in the Timeline
 category: tech
+featimg: /images/pic13.png
 tags: [ 'tutorial' ]
 ---
 One of the coolest features of { Personal } is that enables you to tell your life's story in

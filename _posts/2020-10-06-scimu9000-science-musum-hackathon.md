@@ -3,6 +3,7 @@ layout: post
 section-type: post
 title: Science Museum Hackathon
 category: tech
+featimg: /images/pic9.png
 tags: [ 'tutorial' ]
 ---
 

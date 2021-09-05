@@ -4,6 +4,7 @@ section-type: post
 title: Modifying the Header
 category: tech
 tags: [ 'tutorial' ]
+featimg: /images/pic15.png
 ---
 
 The intro part of the index page (Header) is consisted of four elements:

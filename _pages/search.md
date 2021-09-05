@@ -365,7 +365,7 @@ permalink: /search2.html
                 <div class="container py-5 my-5">
 
                     <h2 class="mb-5">Do You Love What You See?</h2>
-                    <a href="#" class="btn btn-outline-dark">Contact Us</a>
+                    <a href="#" class="btn btn-outline-dark">Contact Me</a>
 
                 </div>
             </section>

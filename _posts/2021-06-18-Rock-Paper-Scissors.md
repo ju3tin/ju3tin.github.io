@@ -1,6 +1,7 @@
 ---
 layout: post
 section-type: post
+featimg: /images/pic6.png
 title: Rock Paper Scissors
 category: tech
 tags: [ 'games' ]

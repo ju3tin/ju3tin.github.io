@@ -34,7 +34,6 @@ force-https: True
 
 lang: "en"
 author: "Justin Grierson"
-title: "{ Justin Grierson }"
 description: "Blog and website of Justin Grierson, blogging mainly for tech. Opinions expressed are mine."
 keywords: "smith, jones, personal, jekyll, theme"
 favicon: "/img/favicon.ico"
@@ -208,9 +207,6 @@ pages_list:
   Timeline: 'timeline'
   Contact: 'contact'
 
-# Exclusion list from the generated _site
-
-exclude: ["LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
 
 # Pagination path
 
@@ -230,7 +226,9 @@ gems:
   - jekyll-archives
   - jekyll-paginate
   - jemoji
-  
+  - [jekyll-paginate]
+  #  - jekyll-regex-replace
+
 compress_html:
   clippings: all
   ignore:
@@ -240,15 +238,12 @@ compress_html:
 
 # Site Settings
 title: Justin Grierson
-description: Blog and website of Justin Grierson, blogging mainly for tech. Opinions expressed are mine.
-url:
+
 
 # Jekyll Configuration
 encoding: UTF-8
 # permalink: /:title/
 permalink: /:title.html
-paginate: 5
-paginate_path: "/blog/page/:num/"
 media_folder: "/img/galleries/gallery-standard-post"
 
 # Markdown Processing
@@ -288,15 +283,10 @@ sidebar_options:
 
 # File Handling
 # include: [_pages]
-exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, gulpfile.js, package.json]
+exclude: [lib, config.rb, .sass-cache, Capfile, config, log, Rakefile, Rakefile.rb, tmp, Gemfile, Gemfile.lock, README.md, LICENSE.md, node_modules, gulpfile.js, package.json "LICENSE", "README.md", "CONTRIBUTING", "CONTRIBUTORS", "scripts"]
 
 # Plugins
-gems:
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-archives
-  - jekyll-paginate
-#  - jekyll-regex-replace
+
 
 # Archives
 jekyll-archives:
@@ -314,5 +304,5 @@ compress_html:
   ignore:
     envs: development
 
-gems: [jekyll-paginate]
+
 

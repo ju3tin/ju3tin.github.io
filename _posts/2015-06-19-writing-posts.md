@@ -4,6 +4,7 @@ section-type: post
 title: Writing posts
 category: tech
 tags: [ 'tutorial' ]
+featimg: /images/pic4.png
 ---
 
 ### Creating a new post

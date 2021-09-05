@@ -2,6 +2,7 @@
 layout: post
 section-type: post
 title: This is a timeline about me
+featimg: /images/pic12.png
 category: tech
 tags: [ 'tutorial' ]
 custom_css:

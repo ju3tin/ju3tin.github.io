@@ -16,7 +16,7 @@
                     </a>
                     <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                     <h4>
-                        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a>
+                        <a href="{{ post.url | replace: '//', '/'}}">{{ post.title }}</a>
                     </h4>
                    <p>{{ post.content | strip_html | strip | truncate: 140 }}&#x02026;</p>
               <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>
@@ -43,7 +43,7 @@
                     </a>
                     <h6>{{ post.date | date: '%B %d, %Y' }}</h6>
                     <h4>
-                        <a href="{{ post.url | prepend: site.baseurl | replace: '//', '/'}}">{{ post.title }}</a>
+                        <a href="{{ post.url | replace: '//', '/'}}">{{ post.title }}</a>
                     </h4>
                    <p>{{ post.content | strip_html | strip | truncate: 140 }}&#x02026;</p>
               <p><a class="more-link" href="{{ post.url }}">Continue Reading</a></p>

@@ -213,12 +213,6 @@ pages_list:
 paginate_path: "blog/page:num/"
 
 # Enable minification SASS
-jekyll-archives:
-  enabled:
-    - categories
-    - tags
-sass:
-  style: compressed
 
 gems:
   - jekyll-feed
@@ -299,10 +293,7 @@ jekyll-archives:
 
 # HTML Compression
 # - http://jch.penibelst.de/
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+
 
 
 

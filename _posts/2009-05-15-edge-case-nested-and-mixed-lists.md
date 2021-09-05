@@ -8,6 +8,7 @@ tags:
   - edge case
   - lists
   - markup
+featimg: /images/pic15.png
 ---
 
 Nested and mixed lists are an interesting beast. It's a corner case to make sure that

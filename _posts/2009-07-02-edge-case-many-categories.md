@@ -18,6 +18,7 @@ categories:
 tags:
   - categories
   - edge case
+featimg: /images/pic15.png
 ---
 
 This post has many categories.

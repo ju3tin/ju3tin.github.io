@@ -9,6 +9,7 @@ tags:
   - html
   - layout
   - title
+featimg: /images/pic15.png
 ---
 
 Check for long titles and how they might break a template.

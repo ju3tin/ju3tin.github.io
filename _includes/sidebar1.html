@@ -1,0 +1,86 @@
+<div class="col-md-3 col-sm-3">
+
+    <section id="sidebar" class="sidebar">
+
+        <aside id="search">
+            <header><h3>Search</h3></header>
+            <div class="input-group">
+                <input type="text" id="search" name="search" class="form-control framed" placeholder="Enter Keyword">
+                <span class="input-group-btn"><button class="btn btn-primary btn-sm" type="button"><i class="fa fa-search"></i></button></span>
+            </div>
+<ul class="list-group" id="result"></ul>
+        </aside>
+
+        <aside id="post-archive">
+            <header><h3>Post Archive</h3></header>
+            <div class="archive">
+                
+                <p id="demo500"></p>
+
+<script>
+var fruits, text, fLen, i;
+fruits = [ 
+{% for post in site.posts %}
+{% unless post.next %}"{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}"    {% else %}
+{% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
+{% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
+{% if month != nmonth %}, "{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}"  {% endif %}
+{% endunless %}
+
+{% endfor %}];
+fLen = fruits.length;
+
+text = "<ul>";
+for (i = 0; i < 8; i++) {
+text += "<li><a href=\"archive_monthly/" + fruits[i] + "\" >" + fruits[i] + "</a></li>";
+}
+text += "</ul>";
+
+document.getElementById("demo500").innerHTML = text;
+</script>
+                
+
+
+
+
+</div>
+        </aside>
+
+        <aside id="categories">
+            <header><h3>Categories</h3></header>
+            <p id="demo501"></p>
+            <script>
+            var fruitsi, texti, fLeni, ii;
+            fruitsi =  ["dsfst","werwer","werwer","dsff","sdf","sdf","sdfdfty","dsfsdfdsfdf","tertfgfhhjhgjg676" ];
+                fLen = fruits.length;
+
+texti = "<!--<ul>";
+for (ii = 0; ii < 8; ii++) {
+texti += "<li><a href=\"archive_monthly/" + fruits[ii] + "\" >" + fruits[ii] + "</a></li>";
+}
+text += "</ul>-->";
+
+//document.getElementById("demo501").innerHTML = texti;
+                
+            </script>
+            <ul class="list-links list-unstyled">
+         <ul class="category-list">
+{% assign category_list = site.categories %}
+{% if category_list.first[0] == null %}
+{% for category in category_list  limit:8 %}
+<li><a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category }}">{{ category }}</a></li>
+{% endfor %}
+{% else %}
+{% for category in category_list  limit:8    %}
+<li><a href="{{ site.category_dir | prepend: site.baseurl | replace: '//', '/' }}/{{ category[0] }}">{{ category[0] }}</a></li>
+{% endfor %}
+{% endif %}
+{% assign category_list = nil %}
+</ul>
+            </ul>
+        </aside>
+
+    </section>
+
+</div>
+

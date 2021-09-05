@@ -4,6 +4,7 @@ section-type: post
 title: Modifying the Contact
 category: tech
 tags: [ 'tutorial' ]
+featimg: /images/pic15.png
 ---
 
 The contact part of the index page is consisted of two elements:

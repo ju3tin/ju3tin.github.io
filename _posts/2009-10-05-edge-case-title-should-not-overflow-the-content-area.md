@@ -9,6 +9,7 @@ tags:
   - html
   - layout
   - title
+featimg: /images/pic15.png
 ---
 
 ## Title should not overflow the content area

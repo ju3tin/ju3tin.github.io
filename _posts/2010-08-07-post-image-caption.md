@@ -6,6 +6,7 @@ tags:
   - image
   - Post Formats
 layout: post
+featimg: /images/pic8.png
 ---
 
 

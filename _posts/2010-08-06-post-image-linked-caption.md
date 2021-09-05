@@ -5,6 +5,7 @@ categories:
 tags:
   - image
   - Post Formats
+featimg: /images/pic8.png
 ---
 
 

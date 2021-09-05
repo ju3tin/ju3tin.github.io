@@ -7,7 +7,7 @@ tags:
   - content
   - css
   - markup
-  featimg: /images/pic15.png
+featimg: /images/pic15.png
 ---
 
 ### Default

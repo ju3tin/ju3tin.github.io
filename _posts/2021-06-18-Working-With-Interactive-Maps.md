@@ -20,7 +20,7 @@ crossorigin="anonymous"
 <script src="https://unpkg.com/jquery@3.6.0/dist/jquery.min.js" integrity="sha384-vtXRMe3mGCbOeY7l30aIg8H9p3GdeSe4IFlP6G8JMa7o7lXvnz3GFKzPxzJdPfGK" crossorigin="anonymous"></script><script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha384-RFZC58YeKApoNsIbBxf4z6JJXmh+geBSgkCQXFyh+4tiFSJmJBt+2FbjxW7Ar16M" crossorigin="anonymous"></script>
 {% raw %}
 <!-- The day of the -->
-
+<!--
 <a class="group1" href="./assets/img/bg__photographer.jpg" title="Me and my grandfather on the Ohoopee.">Grouped Photo 1</a>
 
 <div class="container">
@@ -74,6 +74,7 @@ document.getElementById('i1').click();
 //  document.getElementById("demo").innerHTML = "Hello World";
 }
 </script>
+-->
 <!-- Lightobx issuse -->
 <div id="map" style="width: 800px; height: 440px; border: 1px solid #AAA;"></div>
 

@@ -40,3 +40,7 @@ tags: [ 'tutorial' ]
             <ul id="suggestion-list"></ul>
         </div>
     </div>
+    
+<script type="text/javascript" src="/chatobt/index.js" ></script>
+<script type="text/javascript" src="/chatobt/constants.js" ></script>
+<script type="text/javascript" src="/chatobt/speech.js" ></script>

@@ -19,7 +19,7 @@ tags: [ 'tutorial' ]
        <!-- <div id="svg_size">
             <svg id="svg_canvas" viewBox="0 0 1024 704" version="1.1" xmlns="http://www.w3.org/2000/svg"></svg>
         </div>-->
-        <div class="chatUi">
+    <!--    <div class="chatUi">
             <div id="chat-scroll-wrapper"><div id="chat-flow"></div></div>
             <div id="input-wrapper" class="responsive-columns-wrapper">
                 <div id="input-mic-holder">
@@ -39,7 +39,7 @@ tags: [ 'tutorial' ]
             <p class="pre-bar">I’m trained on these topics:</p>
             <ul id="suggestion-list"></ul>
         </div>
-    </div>
+    </div>-->
 <div id="chat" class="chat">
 			<div id="messages" class="messages"></div>
 			<input id="input" type="text" placeholder="Say something..." autocomplete="off" autofocus="true" />

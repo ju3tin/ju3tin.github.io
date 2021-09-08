@@ -45,6 +45,6 @@ tags: [ 'tutorial' ]
 			<input id="input" type="text" placeholder="Say something..." autocomplete="off" autofocus="true" />
 		</div>
     
-<script type="text/javascript" src="/chatobt/index.js" ></script>
-<script type="text/javascript" src="/chatobt/constants.js" ></script>
-<script type="text/javascript" src="/chatobt/speech.js" ></script>
+<script type="text/javascript" src="/chatbot/index.js" ></script>
+<script type="text/javascript" src="/chatbot/constants.js" ></script>
+<script type="text/javascript" src="/chatbot/speech.js" ></script>

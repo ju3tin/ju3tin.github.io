@@ -40,6 +40,10 @@ tags: [ 'tutorial' ]
             <ul id="suggestion-list"></ul>
         </div>
     </div>
+<div id="chat" class="chat">
+			<div id="messages" class="messages"></div>
+			<input id="input" type="text" placeholder="Say something..." autocomplete="off" autofocus="true" />
+		</div>
     
 <script type="text/javascript" src="/chatobt/index.js" ></script>
 <script type="text/javascript" src="/chatobt/constants.js" ></script>

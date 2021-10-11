@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post2
 title: Categories
 permalink: /cat1.html
 ---

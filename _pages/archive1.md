@@ -1,4 +1,7 @@
-
+---
+layout: default
+permalink: /archive1.html
+---
 #### by Month
 {% include monthly_archive.html %}
 

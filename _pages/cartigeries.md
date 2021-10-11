@@ -1,7 +1,7 @@
 ---
 layout: post2
 title: Categories
-permalink: /cat1.html
+permalink: /cat3.html
 ---
 
 <div class="tags-expo">

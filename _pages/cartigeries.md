@@ -1,6 +1,7 @@
 ---
 layout: page
 title: Categories
+permalink: /cat1.html
 ---
 
 <div class="tags-expo">

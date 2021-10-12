@@ -34,7 +34,7 @@ permalink: /search2.html
                 <button class="navbar-toggler d-block d-xl-none" type="button">
                     <i class="fa fa-bars"></i>
                 </button>
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="/index.html">
                     <img src="assets/img/brand-light.png" alt="brand" class="mw-100">
                 </a>
             </div>

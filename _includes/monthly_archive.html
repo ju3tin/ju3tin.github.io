@@ -2,12 +2,12 @@
  <ul class="archive">
   {% for post in site.posts %}
     {% unless post.next %}
-        <h5 id="1">{{ post.date | date: '%B' }}</h5>
+        <h5 id="{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}</h5>
     {% else %}
         {% capture month %}{{ post.date | date: '%B' }}{% endcapture %}
         {% capture nmonth %}{{ post.next.date | date: '%B' }}{% endcapture %}
         {% if month != nmonth %}
-            <h5 id="2">{{ post.date | date: '%B' }}</h5>
+            <h5 id="{{ post.date | date: '%B' }}-{{ post.date | date: '%Y' }}">{{ post.date | date: '%B' }}</h5>
         {% endif %}
     {% endunless %}
     <li><span id="3" class="date">{{ post.date | date:"%d." }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>

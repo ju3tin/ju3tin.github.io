@@ -1,1 +1,1 @@
-bundle exec jekyll serve --baseUrl / --port 1234
+bundle exec jekyll serve --baseUrl / --port 3000

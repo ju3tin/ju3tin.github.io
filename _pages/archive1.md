@@ -1,5 +1,5 @@
 ---
-layout: post2
+layout: post3
 title: Archive
 permalink: /archive1.html
 ---

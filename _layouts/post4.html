@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+{% include head2b.html %}
+<body class="">
+<div class="ts-page-wrapper">f
+<!--Brand Navigation ====================================================================================================================
+-->
+   {% include brand1.html %}
+
+     <!--Main Left Navigation
+    ====================================================================================================================
+    -->
+   {% include navigation1.html %}
+  
+    <!--Content
+    ====================================================================================================================
+    -->
+    <div class="ts-content">
+        <!--HERO HEADER
+        ================================================================================================================
+        ================================================================================================================
+        -->
+
+        <header id="ts-hero" class="ts-block ts-has-overlay text-white">
+
+            <div class="container pt-2 pt-sm-5 pt-lg-0">
+                <h1>Archive</h1>
+                <h3>By Month</h3>
+            </div>
+
+            <div class="ts-background" data-bg-parallax="scroll" data-bg-parallax-speed="3">
+                <div class="ts-background-image ts-background-repeat ts-img-into-bg ts-parallax-element">
+                    <img src="assets/img/img__case-study--01.jpg" alt="">
+                </div>
+            </div>
+
+        </header>
+
+        <!--MAIN CONTENT
+        ================================================================================================================
+        ================================================================================================================
+        -->
+        <main id="ts-content">
+
+            <!--Blog Listing
+            ============================================================================================================
+            -->
+
+            <div class="container">
+
+                <div class="row">
+                    <!-- Content -->
+
+                    <div class="col-md-9 col-sm-9">
+
+                        <section>
+
+                            <article class="blog-post">
+                               
+                                <figure class="meta">
+                                  <!--  <a href="#" class="link-icon"><i class="fa fa-user"></i> {% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</a>
+                                    <a href="#" class="link-icon"><i class="fa fa-calendar"></i>{{ page.date | date: '%B %d, %Y' }}</a>
+                                    --><div class="tags">
+                                       
+                                
+                                        {% for tag in page.tags %}
+                <a class="tag article" href="{{site.baseurl}}/tags/{{tag | downcase}}.html">{{ tag }}</a>
+              {% endfor %}
+                                        
+                                    </div>
+                                </figure>
+                                {{ content }}
+                            </article>
+
+                        </section>
+
+                        <section id="about-author">
+                            <header><h3>About the Author</h3></header>
+                            <div class="post-author p-4 border">
+
+                                <div class="ts-circle__sm float-left mr-4">
+                                    <div class="ts-img-into-bg">
+                                        <img src="{% if page.author_tinyimage %}{{ page.author_tinyimage }}{% else %}{{ site.author_tinyimage }}{% endif %}" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="wrapper">
+                                    <header>{% if page.author %}{{ page.author }}{% else %}{{ site.author }}{% endif %}</header>
+                                    <p class="mb-0">
+                                    
+                                        {% if page.author_blurb %}{{ page.author_blurb }}{% else %}{{ site.author_blurb }}{% endif %}
+                                    
+                                    </p>
+                                </div>
+
+                            </div>
+                        </section>
+
+                        <section id="comments" class="py-5">
+
+                            <header>
+                                <h2>Comments</h2>
+                            </header>
+
+                            <ul class="comments list-unstyled">
+                                <li class="comment">
+                                    <div class="ts-circle__sm float-left mr-4">
+                                        <div class="ts-img-into-bg">
+                                            <img src="/assets/img/computart.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="comment-wrapper">
+                                        <div class="name pull-left">Administrator</div>
+                                        <span class="date"><span class="fa fa-calendar mr-2"></span>12.05.2014</span>
+                                        <p>Unfortunately the comments have been turned off but dont worry they will be back soon.
+                                        </p>
+                                        <a href="#" class="reply"><span class="fa fa-reply mr-2"></span>Reply</a>
+                                        <hr>
+                                    </div>
+                                </li>
+                                
+                               
+                            </ul>
+                        </section>
+
+                        <section id="leave-reply" class="py-5">
+                            <header><h2 class="no-border">Leave a Reply</h2></header>
+                            <form role="form" id="form-blog-reply" method="post"  class="clearfix">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="form-blog-reply-name">Your Name<em>*</em></label>
+                                            <input type="text" class="form-control" id="form-blog-reply-name" name="form-blog-reply-name" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="form-blog-reply-email">Your Email<em>*</em></label>
+                                            <input type="email" class="form-control" id="form-blog-reply-email" name="form-blog-reply-email" required>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <label for="form-blog-reply-message">Your Message<em>*</em></label>
+                                            <textarea class="form-control" id="form-blog-reply-message" rows="5" name="form-blog-reply-message" required></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group clearfix">
+                                    <button type="submit" class="btn btn-primary" id="form-blog-reply-submit">Leave a Reply</button>
+                                </div>
+                                <div id="form-rating-status"></div>
+                            </form>
+                        </section>
+
+                    </div>
+                    <!-- end Content -->
+
+                    {% include sidebar1.html %}
+
+                    <!-- sidebar -->
+ 
+                    <!-- end Sidebar -->
+                </div>
+            </div>
+
+        </main>
+        <!--end #content-->
+
+        <!--FOOTER
+        ================================================================================================================
+        ================================================================================================================
+        -->
+       
+        {% include footer1.html %}
+        
+        <!--end #footer-->
+
+    </div>
+    <!--end page-->
+</div>
+
+	{% include js1.html %}
+    
+</body>
+	{% include scriptsearch.html %}
+</html>

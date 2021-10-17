@@ -1,0 +1,218 @@
+
+<!-- HEAD Start -->
+
+<head>
+  {% include force-https.html %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-179388840-1"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'UA-179388840-1');
+</script>
+<script>
+  var options = {
+      language: 'en',
+      debug: true,
+      height: 650,
+      soundcite: true,
+      sheets_proxy: 'https://sheets-proxy.knightlab.com/proxy/'
+  }
+
+
+  function ready(fn) {
+      if (document.readyState != 'loading') {
+          fn();
+      } else {
+          document.addEventListener('DOMContentLoaded', fn);
+      }
+  }
+
+  function timelineFromInput() {
+      document.getElementById('timeline-embed').innerHTML = ''
+      var dataUrl = document.getElementById('timeline-src').value
+      window.timeline = new TL.Timeline('timeline-embed', dataUrl, options)
+  }
+
+  ready(function() {
+
+      // sanitize test
+      // var dataUrl = 'https://docs.google.com/spreadsheets/d/1Q4-R3mlK7w1liCEl5_SGPaeLpfHDVdMtc83rjSTHBZo/edit#gid=0'
+
+      // Zander Work's exploit
+      // var dataUrl = 'https://docs.google.com/spreadsheets/d/1Jt5Csoku0W73100mnG_byVdvCFLXT8G5gG9lu1yggA0/edit#gid=0'
+
+      // women in computing:
+      var dataUrl = 'json/timeline4.json';
+
+      window.timeline = new TL.Timeline('timeline-embed', dataUrl, options)
+
+      window.timeline.on("ready", () => {
+          console.log("Timeline ready event fired")
+      })
+
+
+      document.getElementById('timeline-src').value = dataUrl
+      document.getElementById('timeline-src').addEventListener('keyup', (e) => {
+          e.preventDefault();
+          if (e.keyCode === 13) {
+              timelineFromInput()
+          }
+      })
+
+      document.querySelectorAll('nav a').forEach(el => {
+          el.addEventListener('click', e => {
+              e.preventDefault()
+              let url = e.target.attributes['href'].value
+              document.getElementById('timeline-src').value = url
+              timelineFromInput()
+          })
+      })
+  })
+</script>
+<style>
+  body {
+      font-family: sans-serif;
+      background-color: #fff;
+  }
+  
+  #timeline-embed {
+      margin: 1em 0;
+      height: 650px;
+  }
+  
+  input[type="text"] {
+      font-size: 12pt
+  }
+  
+  nav {
+      margin: 10px 0;
+  }
+  
+  nav a {
+      margin: 5px;
+  }
+  #result {
+   position: absolute;
+   width: 100%;
+   max-width:870px;
+   cursor: pointer;
+   overflow-y: auto;
+   max-height: 400px;
+   box-sizing: border-box;
+   z-index: 1001;
+  }
+  .link-class:hover{
+   background-color:#f1f1f1;
+  }
+  .chat {
+	height: 300px;
+	width: 50vw;
+	display: flex;
+	flex-direction: column;
+  justify-content: center;
+	align-items: center;
+} 
+
+::-webkit-input-placeholder { 
+	color: .711 
+}
+ 
+input { 
+	border: 0; 
+	padding: 15px; 
+	margin-left: auto;
+	border-radius: 10px; 
+}
+
+.messages {
+	display: flex;
+	flex-direction: column;
+	overflow: scroll;
+	height: 90%;
+	width: 100%;
+	background-color: white;
+	padding: 15px;
+	margin: 15px;
+	border-radius: 10px;
+}
+
+#bot {
+	margin-left: auto;
+}
+
+.bot {
+	font-family: Consolas, 'Courier New', Menlo, source-code-pro, Monaco,  
+	monospace;
+}
+
+.avatar {
+	height: 25px;
+}
+
+.response {
+	display: flex;
+	align-items: center;
+	margin: 1%;
+}
+  </style> 
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="{{site.description}}">
+  <meta name="author" content="{{site.author}}">
+  <meta name="keywords" content="{{site.keywords}}">
+  <meta property="og:locale" content="" />
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="Justin Grierson" />
+  <meta property="og:description" content="Blog and website of Justin Grierson, blogging mainly for tech. Opinions expressed are mine." />
+  <meta property="og:url" content="https://ju3tin.github.io/" />
+  <meta property="og:site_name" content="Justin's Blog" />
+<meta property="article:section" content="Uncategorised" />
+<meta property="article:published_time" content="" />
+<meta property="article:modified_time" content="" />
+<meta property="og:updated_time" content="" />
+<meta property="og:image" content="https://ju3tin.github.io/assets/img/bg-office1.jpg" />
+<meta property="og:image:secure_url" content="https://ju3tin.github.io/assets/img/bg-office1.jpg" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="800" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:description" content="Blog and website of Justin Grierson, blogging mainly for tech. Opinions expressed are mine." />
+<meta name="twitter:title" content="Justin Grierson" />
+<meta name="twitter:image" content="https://ju3tin.github.io/assets/img/bg-office1.jpg" />
+<meta property="og:image" content="https://ju3tin.github.io/img/tinyauthor1.jpg" />
+<meta property="og:image:type" content="image/jpg" />
+<meta property="og:image:width" content="400" />
+<meta property="og:image:height" content="400" />
+  <link rel="canonical" href="{{page.url | replace:'index.html','' | prepend: site.baseurl}}">
+  <title>{{site.title}}{% if page.title %} | {{page.title}}{% endif %}</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:300,400,600">
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="/assets/font-awesome/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="/assets/css/magnific-popup.css">
+    <link rel="stylesheet" href="/assets/css/odometer-theme-default.css">
+    <link rel="stylesheet" href="/assets/css/style1.css">
+  {% if page.custom_code %}{{page.custom_code}}{% endif %}
+  {% if page.custom_code_file %}{% include {{ page.custom_code_file }} %}{% endif %}
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  {% if site.favicon %}
+    <link rel="shortcut icon" type="image/x-icon" href="{{site.baseurl}}{{site.favicon}}">
+  {% endif %}
+
+  {% if page.url == "/404.html" | prepend: {{site.baseurl}} %}
+    <meta http-equiv="refresh" content="20; url={{site.baseurl}}/">
+  {% endif %}
+
+
+</head>
+
+<!-- HEAD End -->

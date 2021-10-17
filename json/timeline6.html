@@ -1,0 +1,39 @@
+---
+layout: none
+permalink: /json/js2.json
+---
+{
+    "title": {
+        "media": {
+          "url": "/assets/img/img__dev1.jpg",
+          "caption": "Me talking at Google Campus",
+          "credit": "ju3tin.github.io/<a href='#'>img__dev1.jpg</a>"
+        },
+        "text": {
+          "headline": "A Timeline of all my Blog Posts",
+          "text": "<p>So While playing with my data I thought about how to show all my blogposts on one page</p>"
+        }
+    },
+    "events": [
+    {%- assign posts = site.posts -%}
+    {%- for p in posts %}
+    {
+        "media": {
+            "url": "{% if p.media == "" or p.media == nil %}{{ p.featimg }}{% else %}{{ p.media }}{% endif %}",
+            "caption": "{{ p.description }}",
+            "credit": "{{ p.credit }}"
+        },
+        "start_date": {
+          "year": "{{p.date | date: "%Y"}}",
+          "month": "{{p.date | date: "%m"}}",
+          "day": "{{p.date | date: "%d"}}"
+        },
+        "text": {
+          "headline": {{ p.title | markdownify | strip_html | jsonify }},
+          "text": "{{ p.url }}"
+        }
+    }
+    {%- unless forloop.last %},{% endunless -%}
+    {% endfor %}
+    ]
+}

@@ -30,7 +30,7 @@ permalink: /json/js2.json
         },
         "text": {
           "headline": {{ p.title | markdownify | strip_html | jsonify }},
-          "text": "{{ p.url }}"
+          "text": "<a href=\"{{ p.url }}\" target=\"_parent\">Click Here</a>"
         }
     }
     {%- unless forloop.last %},{% endunless -%}

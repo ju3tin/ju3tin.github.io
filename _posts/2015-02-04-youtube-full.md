@@ -8,6 +8,7 @@ title: YouTube full
 tags: [video, iframe]
 category: [video]
 featimg: /images/pic11.png
+media: https://www.youtube-nocookie.com/embed/E802ZnXbnFY
 ---
 This youtube video uses the iframe instead of the thumbnail image on the index pages.
 

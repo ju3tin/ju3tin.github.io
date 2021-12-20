@@ -1,0 +1,29 @@
+.cabinet {
+  background-image: url("img/arcade_cabinet2.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  display: flex;
+  justify-content: center;
+  height: 1005px;
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cuatro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 210;
+    width: 200
+}
+canvas {
+  border: 1px solid black;
+  align-items: center;
+  margin-left: -85;
+  margin-bottom: 120px;
+  background-color: black;
+}

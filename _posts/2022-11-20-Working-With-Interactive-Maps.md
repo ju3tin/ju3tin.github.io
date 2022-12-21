@@ -1,3 +1,12 @@
+---
+author: someone
+layout: post
+type: post
+featimg: /images/pic1.png
+title: Audio Full
+tags: [music, soundcloud]
+category: [audio]
+---
 <table style="width:100%">
 <tr>
 <td><div id="findbox"></div>

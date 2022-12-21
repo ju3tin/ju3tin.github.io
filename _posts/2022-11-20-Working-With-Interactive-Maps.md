@@ -71,7 +71,7 @@ let a35 = -1;
 var uktownstate = {type:String("FeatureCollection"),features:[dude77]};
 var data = statesData;
 var data2 = uktownstate;
-let text = "";
+let text1 = "";
 let text2 = "";
 document.getElementById("list2").innerHTML = text2;
 myfruit = {};
@@ -171,17 +171,12 @@ map.addControl(searchControl);//inizialize search control
 };
 httpRequest1.open('GET', 'https://members-api.parliament.uk/api/Location/Constituency/'+data2.value.id+'/Geometry');
 httpRequest1.send();
-text2 += data2.value.id+" - "+data2.value.name+" - "+data66+"<br>";
+text12 += data2.value.id+" - "+data2.value.name+" - "+data66+"<br>";
 });
 }
 }
 makeRequest();
 }
-const fruits99 = data.features;
-fruits99.forEach(myFunction);
-document.getElementById("list").innerHTML = text;
+document.getElementById("list").innerHTML = text1;
 const fruits2 = data2.features;
-function myFunction(item, index, emp1) {
-text += index + ": " + item.properties.name + "<br>";
-}
 </script>

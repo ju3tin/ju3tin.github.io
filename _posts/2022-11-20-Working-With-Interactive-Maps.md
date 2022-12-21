@@ -2,34 +2,14 @@
 layout: postcopy
 featimg: /images/pic5.png
 section-type: post
-title: Working With Maps
+title: Working With Maps 2
 category: tech
 custom_code: <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
 <link rel="stylesheet" href="/css/leaflet-search.css" />
 <link rel="stylesheet" href="/css/style.css" />
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-<style>
-#findbox {
-background: #eee;
-border-radius:.125em;
-border:2px solid #1978cf;
-box-shadow: 0 0 8px #999;
-margin-bottom: 10px;
-padding: 2px 0;
-width: 600px;
-height: 26px;
-}
-.search-tooltip {
-width: 200px;
-}
-.leaflet-control-search .search-cancel {
-position: static;
-float: left;
-margin-left: -22px;
-}
-</style>
-custom_code_file : leafletcss.html
+custom_code_file : leaflet2.html
 tags: [ 'games' ]
 ---
 <table style="width:100%">

@@ -4,11 +4,7 @@ featimg: /images/pic5.png
 section-type: post
 title: Working With Maps 2
 category: tech
-custom_code: <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
-<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
-<link rel="stylesheet" href="/css/leaflet-search.css" />
-<link rel="stylesheet" href="/css/style.css" />
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+custom_code: <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><link rel="stylesheet" href="/css/leaflet-search.css" /><link rel="stylesheet" href="/css/style.css" /><script src="/js/jquery1.min.js"></script>
 custom_code_file : leaflet2.html
 tags: [ 'games' ]
 ---

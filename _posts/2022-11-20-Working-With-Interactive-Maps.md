@@ -177,8 +177,8 @@ text2 += data2.value.id+" - "+data2.value.name+" - "+data66+"<br>";
 }
 makeRequest();
 }
-const fruits = data.features;
-fruits.forEach(myFunction);
+const fruits99 = data.features;
+fruits99.forEach(myFunction);
 document.getElementById("list").innerHTML = text;
 const fruits2 = data2.features;
 function myFunction(item, index, emp1) {

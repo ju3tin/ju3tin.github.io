@@ -171,7 +171,7 @@ map.addControl(searchControl);//inizialize search control
 };
 httpRequest1.open('GET', 'https://members-api.parliament.uk/api/Location/Constituency/'+data2.value.id+'/Geometry');
 httpRequest1.send();
-text12 += data2.value.id+" - "+data2.value.name+" - "+data66+"<br>";
+text1 += data2.value.id+" - "+data2.value.name+" - "+data66+"<br>";
 });
 }
 }

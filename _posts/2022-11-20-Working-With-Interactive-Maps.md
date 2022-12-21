@@ -4,7 +4,31 @@ featimg: /images/pic5.png
 section-type: post
 title: Working With Maps
 category: tech
-custom_code: <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script><link rel="stylesheet" href="./css/colorbox.css"/> <link rel="stylesheet" href="https://www.cssscript.com/demo/gallery-lightbox-mk/mklb/css/mklb.css"/><link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/><script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js" integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA==" crossorigin=""></script>
+custom_code: <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /> 
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
+<link rel="stylesheet" href="/css/leaflet-search.css" />
+<link rel="stylesheet" href="/css/style.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<style>
+#findbox {
+background: #eee;
+border-radius:.125em;
+border:2px solid #1978cf;
+box-shadow: 0 0 8px #999;
+margin-bottom: 10px;
+padding: 2px 0;
+width: 600px;
+height: 26px;
+}
+.search-tooltip {
+width: 200px;
+}
+.leaflet-control-search .search-cancel {
+position: static;
+float: left;
+margin-left: -22px;
+}
+</style>
 custom_code_file : leafletcss.html
 tags: [ 'games' ]
 ---

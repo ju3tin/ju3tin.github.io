@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: postcopy
 featimg: /images/pic5.png
 section-type: post
 title: Working With Maps

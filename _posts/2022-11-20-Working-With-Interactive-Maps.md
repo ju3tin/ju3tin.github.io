@@ -12,9 +12,10 @@ tags: [ 'games' ]
 <tr>
 <td><div id="findbox"></div>
 <div id="map"></div></td>
-<td id="info"></td>
 </tr>
 </table>
+<br />
+<div id="info"></div>
 <div style="display:none" id="list"></div>
 <div id="list2"></div>
 <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js"></script>

@@ -1,4 +1,4 @@
 ---
-layout: search3
+layout: coffee
 permalink: /coffee.html
 ---

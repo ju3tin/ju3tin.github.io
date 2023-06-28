@@ -49,16 +49,93 @@
 
                     <div class="row no-gutters ts-gallery">
 
-                          <br /><br />
-  <div class="container" style="width:900px;">
-   <h2 align="center"></h2>
-   <h3 align="center"></h3>   
-   <div align="center">
-    <input type="text" name="search" id="search" placeholder="Search Website" class="form-control" />
-   </div>
-   <ul class="list-group" id="result"></ul>
-   <br />
-  </div>
+         <div>
+<span id="wallet-address"></span>
+</div>
+<form>
+<div style="max-height: 10px;">
+<img id="logo" src="/images/logo.png" alt="Girl in a jacket" height="90px">
+</div><br /><br /><br /><br /><br />
+<input id="price" type="number" value="0"><br />
+<input id="name" type="text"><br />
+<textarea id="message" name="message" rows="10" cols="30"></textarea>
+</form>
+<div>
+<span id="get-memo"></span>
+</div>
+<script type="text/javascript">
+var account = null;
+var contract = null;
+const ABI = [{"inputs":[],
+"stateMutability":"nonpayable",
+"type":"constructor"},
+{"anonymous":false,
+"inputs":[{"indexed":true,
+"internalType":"address",
+"name":"from",
+"type":"address"},
+{"indexed":false,"internalType":"uint256","name":"timestamp","type":"uint256"},
+{"indexed":false,"internalType":"string","name":"name","type":"string"},
+{"indexed":false,"internalType":"string","name":"message","type":"string"}],
+"name":"NewMemo","type":"event"},
+{"inputs":[{"internalType":"string","name":"_name","type":"string"},
+{"internalType":"string","name":"_message","type":"string"}],
+"name":"buyCoffee","outputs":[],"stateMutability":"payable","type":"function"},
+{"inputs":[],"name":"getMemos","outputs":[{"components":[{"internalType":"address","name":"from","type":"address"},
+{"internalType":"uint256","name":"timestamp","type":"uint256"},
+{"internalType":"string","name":"name","type":"string"},
+{"internalType":"string","name":"message","type":"string"}],
+"internalType":"struct BuyMeACoffee.Memo[]","name":"","type":"tuple[]"}],
+"stateMutability":"view","type":"function"},
+{"inputs":[],"name":"withdrawTips","outputs":[],"stateMutability":"nonpayable","type":"function"}];
+const ADDRESS = "0xB7E093cA948a59D5e6179FCdE28B996b4C631924";
+(async() =>{
+if (window.ethereum){
+await window.ethereum.send('eth_requestAccounts');
+window.web3 = new Web3(window.ethereum);
+
+var accounts = await window.web3.eth.getAccounts();
+account = accounts[0];
+document.getElementById('wallet-address').textContent = account;
+document.getElementById('logo').onclick = ()=>{
+sendmemo();
+}
+contract = new web3.eth.Contract(ABI, ADDRESS);
+if (contract){
+var memos = await contract.methods.getMemos().call()
+.then(function(error, result) {
+if (!error){
+for (i = 0; i < result.length; i++){
+document.getElementById('get-memo').innerHTML = i;
+}
+}else{
+var memo33 = document.getElementById('get-memo');
+for (i = 0; i < error.length; i++){
+var backside = document.createElement("div");
+memo33.appendChild(backside);
+backside.innerHTML = "<br />name :"+error[i][2]+"<br />message :"+error[i][3];
+}
+}
+})
+
+var stringreplace =  String(memos).replaceAll(",","<br/>");
+}
+}
+})();
+const sendmemo = async () => {
+if (contract){
+var name1 = document.getElementById('name').value;
+var message1 = document.getElementById('message').value;
+var price1 = document.getElementById('price').value;
+var accounts = await window.web3.eth.getAccounts();
+account = accounts[0];
+var transaction = await contract.methods.buyCoffee(name1, message1).send({       
+from: accounts[0],
+value: web3.utils.toWei(price1, 'ether'),
+})
+};
+}
+</script>
 
                     </div>
                 </div>

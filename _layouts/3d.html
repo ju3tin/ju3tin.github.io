@@ -725,28 +725,28 @@ scene.add( dirLight );
 
 // ground
 var textureLoader = new THREE.TextureLoader();
-var skirt = textureLoader.load('https://emersa.io/assets/glb/textures/skirt.png');
-var head = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Skin_Head_Diffuse.jpg');
-var body = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Skin_Body_Diffuse.jpg');
-var arm = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Skin_Arm_Diffuse.jpg');
-var leg = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Skin_Leg_Diffuse.jpg');
-var nails = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Nails_Diffuse.jpg');
-var eyelash = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Eyelash_Diffuse.jpg');
-var hair = textureLoader.load('https://emersa.io/assets/glb/textures/Hair_Diffuse.png');
-var tearR = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Tearline_R_Diffuse.jpg');
-var tearL = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Tearline_L_Diffuse.jpg');
-var tongue = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Tongue_Diffuse.png');
-var upper = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Upper_Teeth_Diffuse.png');
-var lower = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Lower_Teeth_Diffuse.png');
-var hair01 = textureLoader.load('https://emersa.io/assets/glb/textures/Hair_Diffuse_0001.png');
-var corneaL = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Cornea_L_Diffuse.png');
-var eyeL = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Eye_L_Diffuse.png');
-var corneaR = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Cornea_R_Diffuse.png');
-var eyeR = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Eye_R_Diffuse.png');
-var eyeRO = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Eye_Occlusion_R_Diffuse.jpg');
-var eyeLO = textureLoader.load('https://emersa.io/assets/glb/textures/Std_Eye_Occlusion_L_Diffuse.jpg');
-var hair02 = textureLoader.load('https://emersa.io/assets/glb/textures/Hair_Transparency_Diffuse.png');
-var scalp = textureLoader.load('https://emersa.io/assets/glb/textures/Scalp_Transparency_Diffuse.jpg');
+var skirt = textureLoader.load('/assets/glb/textures/skirt.png');
+var head = textureLoader.load('/assets/glb/textures/Std_Skin_Head_Diffuse.jpg');
+var body = textureLoader.load('/assets/glb/textures/Std_Skin_Body_Diffuse.jpg');
+var arm = textureLoader.load('/assets/glb/textures/Std_Skin_Arm_Diffuse.jpg');
+var leg = textureLoader.load('/assets/glb/textures/Std_Skin_Leg_Diffuse.jpg');
+var nails = textureLoader.load('/assets/glb/textures/Std_Nails_Diffuse.jpg');
+var eyelash = textureLoader.load('/assets/glb/textures/Std_Eyelash_Diffuse.jpg');
+var hair = textureLoader.load('/assets/glb/textures/Hair_Diffuse.png');
+var tearR = textureLoader.load('/assets/glb/textures/Std_Tearline_R_Diffuse.jpg');
+var tearL = textureLoader.load('/assets/glb/textures/Std_Tearline_L_Diffuse.jpg');
+var tongue = textureLoader.load('/assets/glb/textures/Std_Tongue_Diffuse.png');
+var upper = textureLoader.load('/assets/glb/textures/Std_Upper_Teeth_Diffuse.png');
+var lower = textureLoader.load('/assets/glb/textures/Std_Lower_Teeth_Diffuse.png');
+var hair01 = textureLoader.load('/assets/glb/textures/Hair_Diffuse_0001.png');
+var corneaL = textureLoader.load('/assets/glb/textures/Std_Cornea_L_Diffuse.png');
+var eyeL = textureLoader.load('/assets/glb/textures/Std_Eye_L_Diffuse.png');
+var corneaR = textureLoader.load('/assets/glb/textures/Std_Cornea_R_Diffuse.png');
+var eyeR = textureLoader.load('/assets/glb/textures/Std_Eye_R_Diffuse.png');
+var eyeRO = textureLoader.load('/assets/glb/textures/Std_Eye_Occlusion_R_Diffuse.jpg');
+var eyeLO = textureLoader.load('/assets/glb/textures/Std_Eye_Occlusion_L_Diffuse.jpg');
+var hair02 = textureLoader.load('/assets/glb/textures/Hair_Transparency_Diffuse.png');
+var scalp = textureLoader.load('/assets/glb/textures/Scalp_Transparency_Diffuse.jpg');
 var hair02Material = new THREE.MeshPhongMaterial({map:hair02});
 var eyeLOMaterial = new THREE.MeshPhongMaterial({map:eyeLO});
 var eyeROMaterial = new THREE.MeshPhongMaterial({map:eyeRO});
@@ -782,7 +782,7 @@ scene.add( grid );
 // model
 
 const loader = new FBXLoader( manager );
-loader.load( 'https://emersa.io/assets/glb/dude45d.fbx', function ( object ) {
+loader.load( '/assets/glb/dude45d.fbx', function ( object ) {
 
 mixer = new THREE.AnimationMixer( object );
 

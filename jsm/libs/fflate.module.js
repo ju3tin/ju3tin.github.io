@@ -1,4 +1,3 @@
-  
 /*!
 fflate - fast JavaScript compression/decompression
 <https://101arrowz.github.io/fflate>

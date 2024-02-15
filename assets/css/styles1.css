@@ -1,0 +1,40 @@
+@import"https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap";
+body{/*background:#000;*/
+    color:#fff;cursor:default;
+    font-family:"Roboto Mono",monospace;
+    line-height:normal;margin:0;position:relative}
+    body.cursor-pointer{cursor:pointer}
+    @media print{body{background:#fff;color:#000}}
+    a{color:inherit;cursor:pointer;text-decoration:underline}
+    a:focus{text-decoration:none}a:hover{text-decoration:none}
+    h1,h2,h3,h4,h5,h6{font-size:1em}
+    .error{background-color:red;color:#fff;margin-top:0;padding:10px}
+    @media print{.error{display:none !important}}
+    .alt{margin:auto;max-width:400px;padding:20px;text-align:center;visibility:hidden}
+    body.show-alt .alt{visibility:visible}
+    @media print{.alt{visibility:visible}}
+    @-webkit-keyframes elsewhereReveal{0%{opacity:0}100%{opacity:1}}
+    @keyframes elsewhereReveal{0%{opacity:0}100%{opacity:1}}
+    .elsewhere{-webkit-animation-delay:1s;animation-delay:1s;
+        -webkit-animation-duration:1s;animation-duration:1s;
+        -webkit-animation-fill-mode:forwards;
+        animation-fill-mode:forwards;
+        -webkit-animation-name:elsewhereReveal;
+        animation-name:elsewhereReveal;
+        -webkit-animation-timing-function:ease-in-out;
+        animation-timing-function:ease-in-out;
+        bottom:0;display:block;
+        font-size:.7em;left:0;
+        list-style:none;
+        margin:0;opacity:0;
+        padding:0 0 20px 0;
+        pointer-events:none;
+        position:fixed;
+        right:0;
+        text-align:center;text-transform:uppercase;z-index:2}
+        .elsewhere li{display:inline-block;margin:5px}
+        .elsewhere a{pointer-events:auto;text-decoration:none;transition:color .3s ease}
+        .elsewhere a:focus,.elsewhere a:hover{color:gray}
+        @media print{.elsewhere{display:none !important}}
+        .webgl-scene{bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:50%}
+        @media print{.webgl-scene{display:none !important}}

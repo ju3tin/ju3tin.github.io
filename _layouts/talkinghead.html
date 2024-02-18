@@ -315,8 +315,8 @@
   .blink>:not(div):not(ol):not(ul):not(pre):last-child:after,
   .blink>ol:last-child li:last-child:after,.blink>pre:last-child code:after,
   .blink>ul:last-child li:last-child:after {
-    -webkit-animation: blinking 1s steps(5,start) infinite;
-    animation: blinking 1s steps(5,start) infinite; content: "▋";
+    -webkit-aation: blinking 1s steps(5,start) infinite;
+    aation: blinking 1s steps(5,start) infinite; content: "▋";
     margin-left: .25rem; vertical-align: baseline; white-space: nowrap;
   }
 
@@ -441,7 +441,7 @@ const i18n = {
     'Adjust': 'Säätö', 'Speech': 'Puhe', 'Silence': 'Hiljaisuus', 'Framing': 'Rajaus',
     'Mixer': 'Mikseri', 'Space': 'Tila', 'Dry': 'Suora', 'voice-test': 'Äänitesti',
     'Limits': 'Rajat', 'ai-stop': 'Stop', 'ai-stopword': 'Avainsana', 'ai-user': 'Käyttäjä',
-    'ai-username': 'Nimi', 'input': 'Kirjoita viesti.', 'Name': 'Nimi', 'Language': 'Kieli',
+    'ai-username': 'i', 'input': 'Kirjoita viesti.', 'Name': 'i', 'Language': 'Kieli',
     'en': 'English', 'fi': 'Finnish', 'words': 'sanaa', 'dialogs': 'sanomaa',
     'Manuscript': 'Käsikirjoitus', 'Exclude': 'Ohita', 'Italics': 'Kursiivi',
     'Code': 'Koodi', 'Light': 'Valo', 'LightAmbient': 'Ambientti',
@@ -816,7 +816,7 @@ let CFG = {
   session: 0,
   sessions : [
     {
-      name: "Nimetön",
+      name: "Anna",
       theme: { lang: 'en', brightness:"dark", ratio:"wide", layout:"port" },
       view: { image: 'NONE' },
       avatar: {},
@@ -825,7 +825,7 @@ let CFG = {
       voice: { background: "NONE", type: "google", google:{ id: "en-GB-Standard-A"}, lipsync:{ lang: 'en' } }
     },
     {
-      name: "Nimetön 2",
+      name: "Anna 2",
 
       theme: { lang: 'en', brightness: "dark", ratio: "wide", layout: "land" },
       view: { image: 'NONE' },
@@ -920,7 +920,7 @@ function loadConfig(session = null) {
         if ( id >= 0 && id < CFG.sessions.length ) {
           let name = CFG.sessions[id].name;
           if ( !name || name.length === 0 ) {
-            name = "Nimetön";
+            name = "Anna";
             CFG.sessions[id].name = name;
           }
           e.select("div")
@@ -936,7 +936,7 @@ function loadConfig(session = null) {
           let n = d3.select("#directory").node().lastElementChild;
           let name = CFG.sessions[i].name;
           if ( !name || name.length === 0 ) {
-            name = "Nimetön";
+            name = "Anna";
             CFG.sessions[i].name = name;
           }
           let clone = d3.select(n).clone(true);
@@ -2913,7 +2913,7 @@ document.addEventListener('DOMContentLoaded', async function(e) {
   d3.select("#session-duplicate").on('click', function(ev) {
     let id = CFG.sessions.length;
     let clone = JSON.parse( JSON.stringify(cfg()) );
-    clone.name = 'Nimetön';
+    clone.name = 'Anna';
     CFG.sessions.push(clone);
     saveConfig();
     loadConfig(id);

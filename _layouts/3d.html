@@ -1012,7 +1012,9 @@ var voice = {
         console.log(said);
         
         const xhr = new XMLHttpRequest();
-xhr.open("GET", `https://apps.emersa.io:8082/dude123a/${said}`);
+{% for apii in site.data.apis %}{% assign api1 = apii[1] %}
+xhr.open("GET", `{{ api1.api }}${said}`);
+{% endfor %}
 xhr.send();
 xhr.responseType = "json";
 xhr.onload = () => {

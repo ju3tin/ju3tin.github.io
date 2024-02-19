@@ -1026,10 +1026,10 @@ xhr.onload = () => {
     //    var objlength = JSON.stringify(obj.traits);
     //  var obj = JSON.parse(this.responseText);
 console.log(obj);
-console.log(obj.textList);
+//console.log(obj.textList);
 //console.log(JSON.stringify(obj.traits));
-var objlength = obj.textList;
-var obj1q = obj.textList;
+var objlength = obj.traits.text[0].value;
+var obj1q = obj.traits.text[0].value;
     /*    if (obj.filter(company => company.Name === 'Magenic').length ) {
   console.log('I contain Magenic');
 }*/

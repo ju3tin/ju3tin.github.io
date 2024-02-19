@@ -1013,7 +1013,7 @@ var voice = {
         
         const xhr = new XMLHttpRequest();
 {% for apii in site.data.apis %}{% assign api1 = apii[0] %}
-xhr.open("GET", `{{ api1.api }}${said}`);
+xhr.open("GET", `https://nodeapi-neon.vercel.app/q1/${said}`);
 {% endfor %}
 xhr.send();
 xhr.responseType = "json";

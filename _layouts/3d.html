@@ -1569,7 +1569,7 @@ let xhr = new XMLHttpRequest();
 var userMessage = document.querySelector("#userInput").value;
 let userHtml = '<div class="d-flex justify-content-end mb-4">'+'<div class="msg_cotainer_send">'+userMessage+'</div>'+image1+'</div>'
 document.querySelector('#body').innerHTML+= userHtml;
-xhr.open(`GET`, `https://apps.emersa.io:8082/dude123a/${userMessage}`);
+xhr.open(`GET`, `https://nodeapi-neon.vercel.app/q1/${userMessage}`);
 xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 xhr.send(`messageValue=${userMessage}`);
 xhr.onload = function () {

@@ -782,8 +782,9 @@ scene.add( grid );
 // model
 
 const loader = new FBXLoader( manager );
-loader.load( '/assets/glb/dude45d.fbx', function ( object ) {
+//loader.load( '/assets/glb/dude45d.fbx', function ( object ) {
 
+loader.load( '/avatars/girl.fbx', function ( object ) {
 mixer = new THREE.AnimationMixer( object );
 
 const clips = object.animations;

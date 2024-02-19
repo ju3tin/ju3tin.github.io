@@ -724,6 +724,7 @@ scene.add( dirLight );
 // scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
 
 // ground
+	/*
 var textureLoader = new THREE.TextureLoader();
 var skirt = textureLoader.load('/assets/glb/textures/skirt.png');
 var head = textureLoader.load('/assets/glb/textures/Std_Skin_Head_Diffuse.jpg');
@@ -769,6 +770,7 @@ var eyelashMaterial = new THREE.MeshPhongMaterial({map: eyelash});
 var hairMaterial = new THREE.MeshPhongMaterial({map: hair});
 var hair01Material = new THREE.MeshPhongMaterial({map: hair01});
 var scalpMaterial = new THREE.MeshPhongMaterial({map: scalp});
+*/
 const mesh = new THREE.Mesh( new THREE.PlaneGeometry( 2000, 2000 ), new THREE.MeshPhongMaterial( { color: 0x999999, depthWrite: false } ) );
 mesh.rotation.x = - Math.PI / 2;
 mesh.receiveShadow = true;

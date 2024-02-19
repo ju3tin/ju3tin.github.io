@@ -36,7 +36,7 @@
       //       that you are the only one to have access to that code!
       const nodeAvatar = document.getElementById('avatar');
       head = new TalkingHead( nodeAvatar, {
-        ttsEndpoint: "https://eu-texttospeech.googleapis.com/v1beta1/text:synthesize",
+        ttsEndpoint: "https://nodetts.vercel.app?text=",
         ttsApikey: "put-your-own-Google-TTS-API-key-here", // <- Change this
         cameraView: "upper"
       });

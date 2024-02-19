@@ -1012,7 +1012,7 @@ var voice = {
         console.log(said);
         
         const xhr = new XMLHttpRequest();
-{% for apii in site.data.apis %}{% assign api1 = apii[1] %}
+{% for apii in site.data.apis %}{% assign api1 = apii[0] %}
 xhr.open("GET", `{{ api1.api }}${said}`);
 {% endfor %}
 xhr.send();

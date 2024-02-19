@@ -1290,7 +1290,7 @@ xhr.addEventListener("readystatechange", function() {
        fd.append("file", blob);
         $.ajax({
             type: 'POST',
-            url: 'https://sea-turtle-app-w6yax.ondigitalocean.app/read4',
+            url: 'https://nodeapi-neon.vercel.app/why',
             data: fd,
             processData: false,
             contentType: false
@@ -1301,14 +1301,14 @@ xhr.addEventListener("readystatechange", function() {
     };      
     // trigger the read from the reader...
     reader.readAsDataURL(blob1);
-/*xhr.open("POST", "https://sea-turtle-app-w6yax.ondigitalocean.app/read4", true);
+/*xhr.open("POST", "https://nodeapi-neon.vercel.app/why", true);
 xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 	xhr.setRequestHeader("Access-Control-Allow-Methods","PUT, GET, POST, DELETE, OPTIONS");
 	xhr.setRequestHeader("Access-Control-Allow-Headers","Special-Request-Header, Origin, X-Requested-With, Content-Type, Accept, Authorization");
 	xhr.setRequestHeader('Access-Control-Allow-Credentials', 'true');
 	xhr.setRequestHeader('Access-Control-Max-Age', '240');
 xhr.send(data);
-	xhr.open("POST","https://sea-turtle-app-w6yax.ondigitalocean.app/read4",true);
+	xhr.open("POST","https://nodeapi-neon.vercel.app/why",true);
 	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 	xhr.setRequestHeader("Access-Control-Allow-Methods","PUT, GET, POST, DELETE, OPTIONS");
 	xhr.setRequestHeader("Access-Control-Allow-Headers","Special-Request-Header, Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -1524,7 +1524,7 @@ function createDownloadLink(blob) {
 	var fd=new FormData();
 	fd.append("file",blob, filename);
 	var xhr=new XMLHttpRequest();
-	xhr.open("POST","https://sea-turtle-app-w6yax.ondigitalocean.app/read4",true);
+	xhr.open("POST","https://nodeapi-neon.vercel.app/why",true);
 	xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 	xhr.setRequestHeader("Access-Control-Allow-Methods","PUT, GET, POST, DELETE, OPTIONS");
 	xhr.setRequestHeader("Access-Control-Allow-Headers","Special-Request-Header, Origin, X-Requested-With, Content-Type, Accept, Authorization");
@@ -1545,7 +1545,7 @@ e.target.responseText
 		  };
 		  var fd=new FormData();
 		  fd.append("file",blob, filename);
-		  xhr.open("POST","https://sea-turtle-app-w6yax.ondigitalocean.app/read4",true);
+		  xhr.open("POST","https://nodeapi-neon.vercel.app/why",true);
 		  xhr.setRequestHeader('Access-Control-Allow-Origin', '*');
 		  xhr.setRequestHeader("Access-Control-Allow-Methods","PUT, GET, POST, DELETE, OPTIONS");
 		  xhr.setRequestHeader("Access-Control-Allow-Headers","Special-Request-Header, Origin, X-Requested-With, Content-Type, Accept, Authorization");

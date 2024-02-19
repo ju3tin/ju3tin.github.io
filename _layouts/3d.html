@@ -1026,7 +1026,7 @@ xhr.onload = () => {
     //    var objlength = JSON.stringify(obj.traits);
     //  var obj = JSON.parse(this.responseText);
 console.log(obj);
-//console.log(obj.textList);
+//console.log(obj.traits.text[0].value);
 //console.log(JSON.stringify(obj.traits));
 var objlength = obj.traits.text[0].value;
 var obj1q = obj.traits.text[0].value;
@@ -1037,7 +1037,7 @@ var obj1q = obj.traits.text[0].value;
         if (objlength.length < 1) {
 		var objecttext = "I'm sorry, but I didn't understand the question. Please try again";
 		console.log(objecttext+'dfgdfgdfgdfgdgdgdgdgf'); 
-        }else { var objecttext = obj.textList};
+        }else { var objecttext = obj.traits.text[0].value};
         const listener = new THREE.AudioListener();
 		camera.add( listener );
 		const sound = new THREE.Audio( listener );
@@ -1575,14 +1575,14 @@ xhr.send(`messageValue=${userMessage}`);
 xhr.onload = function () {
 var obj = JSON.parse(this.responseText);
 console.log(JSON.stringify(obj));
-console.log(JSON.stringify(obj.textList));
+console.log(JSON.stringify(obj.traits.text[0].value));
 //console.log(JSON.stringify(obj.traits));
-var objlength = JSON.stringify(obj.textList);
-var obj1q = JSON.stringify(obj.textList);
+var objlength = JSON.stringify(obj.traits.text[0].value);
+var obj1q = JSON.stringify(obj.traits.text[0].value);
 if (objlength.length < 3) {
 var objecttext = "I'm sorry, but I didn't understand the question. Please try again";
 console.log(objecttext+'dfgdfgdfgdfgdgdgdgdgf'); 
-}else { var objecttext = obj.textList};
+}else { var objecttext = obj.traits.text[0].value};
 let botHtml = '<div class="d-flex justify-content-start mb-4">'+'<div class="img_cont_msg">'+image2a+'</div>'+'<div class="msg_cotainer">'+objecttext+'</div>'+'</div>'
 document.querySelector('#body').innerHTML+= botHtml;
 const listener = new THREE.AudioListener();

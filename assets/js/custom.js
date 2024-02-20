@@ -467,6 +467,13 @@ function initOwl(){
 //
 ///////////
 
+var element =  document.getElementById('thisyear');
+if (typeof(element) != 'undefined' && element != null)
+{
+  // Exists.
 var d = new Date();
 var n = d.getFullYear();
 document.getElementById("thisyear").innerHTML = n;
+}
+
+

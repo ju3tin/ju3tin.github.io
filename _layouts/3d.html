@@ -725,6 +725,14 @@ const light = new THREE.PointLight( 0xff0000, 1, 100 );
 light.position.set( 100, 200, 300 );
 scene.add( light );
 
+const sphere = new THREE.SphereGeometry( 0.5, 16, 8 );
+
+//lights
+
+light1 = new THREE.PointLight( 0xff0040, 400 );
+light1.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xff0040 } ) ) );
+scene.add( light1 );
+
 // scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
 
 // ground

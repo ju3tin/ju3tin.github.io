@@ -721,16 +721,16 @@ dirLight.shadow.camera.left = - 120;
 dirLight.shadow.camera.right = 120;
 scene.add( dirLight );
 
-const light = new THREE.PointLight( 0xff0000, 1, 100 );
-light.position.set( 100, 200, 300 );
+const light = new THREE.PointLight( 0xffffff, 400 );
+light.position.set( 0, 200, 0 );
 scene.add( light );
 
 const sphere = new THREE.SphereGeometry( 0.5, 16, 8 );
 
 //lights
 
-const light1 = new THREE.PointLight( 0xff0040, 400 );
-light1.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xff0040 } ) ) );
+const light1 = new THREE.PointLight( 0xffffff, 400 );
+light1.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xffffff } ) ) );
 scene.add( light1 );
 
 // scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );

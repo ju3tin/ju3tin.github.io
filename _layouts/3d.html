@@ -729,7 +729,7 @@ const sphere = new THREE.SphereGeometry( 0.5, 16, 8 );
 
 //lights
 
-light1 = new THREE.PointLight( 0xff0040, 400 );
+const light1 = new THREE.PointLight( 0xff0040, 400 );
 light1.add( new THREE.Mesh( sphere, new THREE.MeshBasicMaterial( { color: 0xff0040 } ) ) );
 scene.add( light1 );
 

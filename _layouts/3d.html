@@ -739,8 +739,16 @@ scene.add(light2);
 // scene.add( new THREE.CameraHelper( dirLight.shadow.camera ) );
 
 // ground
+const textureLoader = new THREE.TextureLoader();
+const basecolor = textureLoader.load('/assets/glb/textures/baseColor.jpg');
+const basecolor1 = textureLoader.load('/assets/glb/textures/baseColor001.jpg');
+const basecolor2 = textureLoader.load('/assets/glb/textures/baseColor002.jpg');
+const basecolor3 = textureLoader.load('/assets/glb/textures/baseColor003.jpg');
+const hair = textureLoader.load('/assets/glb/textures/hair-53-N.jpg');
+const glasses = textureLoader.load('/assets/glb/textures/glasses-02-D.png');
+const teeth = textureLoader.load('/assets/glb/textures/Wolf3D_Teeth.jpg');
 	/*
-var textureLoader = new THREE.TextureLoader();
+
 var skirt = textureLoader.load('/assets/glb/textures/skirt.png');
 var head = textureLoader.load('/assets/glb/textures/Std_Skin_Head_Diffuse.jpg');
 var body = textureLoader.load('/assets/glb/textures/Std_Skin_Body_Diffuse.jpg');

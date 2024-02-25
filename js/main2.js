@@ -218,6 +218,7 @@ function init() {
 
   window.addEventListener("load", function(){
     // ....
+    /*
     bvhLoader.load(path + '/animations/avatar_idle.bvh', (result) => {
       setupAnimation(result, model, 'avatar_idle1');
    });
@@ -230,7 +231,7 @@ function init() {
           currentAction.crossFadeTo(action, crossFadeTime, false);
         }
         currentAction = action;
-        
+       */ 
     console.log('eat dick');
     });
 

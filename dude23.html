@@ -1,0 +1,53 @@
+<head>
+    <title>three.js webgl - BVH Retargeting</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="/css/dude123.css">
+    <style>
+        a {
+            color: blue;
+        }
+        .controls {
+            position: absolute;
+            right: 0;
+            color: white;
+            width: 15em;
+            z-index: 2;
+            margin: 2px;
+            padding: 2px;
+        }
+
+        .control-button {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <input id="fileInput" type="file" style="display: none;">
+    <div id="controls" class="controls">Controls
+        <button id="openBtn" class="control-button">Open BVH File...</button>
+        <select id="animBtn" class="control-button" >
+            <option style="display: none" value="-1">Set Animation</option>
+        </select>
+    </div>
+    <div id="container"></div>
+    <div id="info">
+        <a href="https://threejs.org" target="_blank" rel="noopener">three.js</a> - BVH Retargeting<br/>
+        Model by <a href="https://opengameart.org/content/low-poly-male-base-mesh">Shingox</a>
+        Animations by <a href="http://wiki.secondlife.com/wiki/Internal_Animations">Linden Research</a>
+    </div>
+
+    <script src="/js/main2.js" type="module">
+
+    </script>
+    <input id="fileInput" type="file" style="display: none;">
+    <div id="controls">
+        <button id="openBtn">Open BVH File</button>
+        <select id="animBtn" >
+            <option style="display: none" value="-1">Set Animation</option>
+        </select>
+    </div>
+
+</body>
+</html>

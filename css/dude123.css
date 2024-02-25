@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    color: #fff;
+    font-family: Monospace;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+a {
+    color: blue;
+}
+
+#info {
+    position: absolute;
+    top: 1px;
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    z-index: 1;
+}

@@ -16,8 +16,9 @@ smallimage: "/img/tinyauthor1.jpg"
 #
 # NB! Without this *nothing* will work, because it's used in every path :)
 
-baseurl: "https://ju3tin.github.io"
+#baseurl: "https://ju3tin.github.io"
 #baseurl: /sd
+baseurl:
 
 # Google tracking id
 

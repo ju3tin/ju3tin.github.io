@@ -65,15 +65,15 @@
 				};
 
 				new MTLLoader()
-					.setPath( 'models/obj/male02/' )
-					.load( 'male02.mtl', function ( materials ) {
+					.setPath( '{{ page.path1 }}' )
+					.load( '{{ page.mtl }}', function ( materials ) {
 
 						materials.preload();
 
 						new OBJLoader()
 							.setMaterials( materials )
-							.setPath( 'models/obj/male02/' )
-							.load( 'male02.obj', function ( object ) {
+							.setPath( '{{ page.path2 }}' )
+							.load( '{{ page.model }}', function ( object ) {
 
 								object.position.y = - 0.95;
 								object.scale.setScalar( 0.01 );

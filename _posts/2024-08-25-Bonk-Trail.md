@@ -10,7 +10,7 @@ tags:
   - markup
 featimg: /images/pic991.png
 ---
-
+{% include bonkgame.html %}
 <video id="video" playsinline autoplay muted></video>
     <canvas id="canvas"></canvas>
     <div id="messageBox" class="sendmessage">

@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="{{ site.lang }}">
 {% include header8.html %}
+  <link rel="stylesheet" type="text/css" href="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.css" />
+  <script src="https://api.tiles.mapbox.com/mapbox-gl-js/v1.5.0/mapbox-gl.js"></script>
 <script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
 <body class="has-loading-screen">
 
@@ -486,8 +488,20 @@ return false;
 <script src="assets/js/leaflet.js"></script>
 <script src="assets/js/custom.js"></script>
 
+
+ <script>
+      mapboxgl.setRTLTextPlugin('https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-rtl-text/v0.1.0/mapbox-gl-rtl-text.js');
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'style-cdn.json',
+        attributionControl: true,
+        hash: true
+      });
+      map.addControl(new mapboxgl.NavigationControl());
+  </script>
+    
 <script>
-    var latitude = 51.522610;
+ /*   var latitude = 51.522610;
     var longitude = -0.085670;
     var markerImage = "assets/img/map-marker.png";
     var mapElement = "map-contact";
@@ -505,7 +519,7 @@ return false;
     });
 
     L.marker([latitude, longitude],{icon: markerIcon}).addTo(map);
-
+*/
 </script>
 
 </body>

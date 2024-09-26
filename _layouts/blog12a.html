@@ -157,7 +157,6 @@
 <div id='response'></div>
 </form>
 
-<script src="/js/TileLayer.Grayscale.js"></script>
 
  
  
@@ -326,7 +325,7 @@ return false;
 
     var map = L.map(mapElement).setView([latitude, longitude], 14);
 
-    L.tileLayer.grayscale('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
         attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
     }).addTo(map);
 
@@ -339,6 +338,8 @@ return false;
     L.marker([latitude, longitude],{icon: markerIcon}).addTo(map);
 
 </script>
+
+
 
 </body>
 </html>

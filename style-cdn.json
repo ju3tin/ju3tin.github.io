@@ -19,10 +19,10 @@
   "sources": {
     "openmaptiles": {
       "type": "vector",
-      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=Xfb74aIJXmRrUdfJyYo5"
+      "url": "https://api.maptiler.com/tiles/v3-openmaptiles/tiles.json?key=lxxeqsuRmNg63RhOLcfG"
     }
   },
-  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=Xfb74aIJXmRrUdfJyYo5",
+  "glyphs": "https://api.maptiler.com/fonts/{fontstack}/{range}.pbf?key=lxxeqsuRmNg63RhOLcfG",
   "layers": [
     {
       "id": "background",

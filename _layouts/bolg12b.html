@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="{{ site.lang }}">
+{% include header8.html %}
+<script src="https://unpkg.com/leaflet@1.0.2/dist/leaflet.js"></script>
+<body class="has-loading-screen">
+
+<div class="ts-page-wrapper">
+    <!--Brand Navigation
+    ====================================================================================================================
+    -->
+    <div id="brand-navigation">
+
+        <div class="container">
+
+            <div id="brand">
+                <button class="navbar-toggler d-block d-xl-none" type="button">
+                    <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="/index.html">
+                    <img src="assets/img/brand-light.png" alt="brand" class="mw-100">
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <!--Main Left Navigation
+    ====================================================================================================================
+    -->
+    {% include navigation1.html %}
+
+    <!--Content
+    ====================================================================================================================
+    -->
+    <div class="ts-content">
+        <!--HERO HEADER
+        ================================================================================================================
+        ================================================================================================================
+        -->
+        <header id="ts-hero" class="ts-block">
+
+            <div class="container pt-2 pt-sm-5 pt-lg-0">
+                <h1 class="ts-text-underline">Let’s Talk Together</h1>
+            </div>
+
+        </header>
+
+        <!--MAIN CONTENT
+        ================================================================================================================
+        ================================================================================================================
+        -->
+        <main id="ts-content">
+
+            <!--Map
+            ============================================================================================================
+            -->
+            <section id="map">
+                <div class="map ts-height--50vh" id="map-contact"></div>
+            </section>
+
+            <!--Contact Info
+            ============================================================================================================
+            -->
+            <section id="cotact-info" class="ts-block">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="row">
+
+                                <div class="col-sm-6 col-md-12">
+                                    <section class="mb-5">
+                                        <div class="ts-title mb-5">
+                                            <h2>I'm Here</h2>
+                                        </div>
+                                        <address>
+                                           East London
+                                            <br>
+                                            <br>
+                                            <strong>Tel:</strong> +44 7961 535 395
+                                            <br>
+                                            <strong>Email:</strong> <a href="ju3tin95@gmail.com">ju3tin95@gmail.com</a>
+                                            <br>
+                                            <strong>Skype:</strong> <a href="https://join.skype.com/invite/ncj0b8FgWqCx">ju3tin123</a>
+                                            <br>
+                                        </address>
+                                    </section>
+                                </div>
+
+                                <div class="col-sm-6 col-md-12">
+                                    <section>
+                                        <div class="ts-title mb-5">
+                                            <h2>Social</h2>
+                                        </div>
+                                        <ul class="list-unstyled">
+                                            <li>
+                                                <a href="https://www.facebook.com/justin.grierson.5">
+                                                    <i class="fab fa-facebook-square mr-2"></i>
+                                                    Facebook
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://x.com/ju3t1ng">
+                                                    <i class="fab fa-twitter-square mr-2"></i>
+                                                    Twitter
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="https://www.youtube.com/@justingrierson1698">
+                                                    <i class="fab fa-youtube-square mr-2"></i>
+                                                    Youtube
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </section>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+                            <div class="ts-title mb-5">
+                                <h2>Write Us</h2>
+                            </div>
+                            <form id='userForm' class="clearfix ts-form ts-form-email">
+<!--Row-->
+<div class="row">
+<!--Name-->
+<div class="col-md-6 col-sm-6">
+<div class="form-group">
+<label for="form-contact-name">Name *</label>
+<input type="text" class="form-control" id="form-contact-name" name="name" placeholder="Your Name" required>
+</div>
+</div>
+<!--Email-->
+<div class="col-md-6 col-sm-6">
+<div class="form-group">
+<label for="form-contact-email">Email *</label>
+<input type="email" class="form-control" id="form-contact-email" name="email" placeholder="Your Email" required>
+</div>
+</div>
+</div>
+<!--end row -->
+ <!--Subject-->
+<div class="form-group">
+<label for="form-contact-subject">Subject*</label>
+<input type="text" class="form-control" id="form-contact-subject" name="subject" placeholder="Subject" required>
+</div>
+<div class="form-group">
+<label for="form-contact-message">Message *</label>
+<textarea class="form-control" id="form-contact-message" rows="5" name="message" placeholder="Your Message" required></textarea>
+</div><div class="form-group">
+<div class="g-recaptcha float-left" data-sitekey="6LdXxtAZAAAAAMFSVn1d0tfLEBYByo6sa2bPXjoo"></div>
+<input type='submit' name='submit' value='submit' class='btn btn-primary float-right' id='form-contact-submit' /></div>
+<div id='response'></div>
+</form>
+
+
+ 
+ 
+<script>
+    
+
+$(document).ready(function()
+{
+
+    var contentType ="application/x-www-form-urlencoded; charset=utf-8";
+ 
+    if(window.XDomainRequest)
+        contentType = "text/plain";
+ 
+    $("#userForm").submit(function()
+    {
+     
+     $('#response').html("<b>Thanks For Your Message I will get back To You Soon...</b>");
+        $.ajax({
+         url:"https://west123z.herokuapp.com/mail5.php",
+         data: $(this).serialize(),
+         type:"POST",  
+         contentType:contentType
+        })
+ .done(function(data){
+
+// show the response
+$('#response').html(data);
+
+})
+.fail(function() {
+
+// just in case posting your form failed
+//alert( "Posting failed." );
+//document.getElementById("form-contact-submit").disabled = true;
+});
+
+// to prevent refreshing the whole page page
+return false;
+    });
+ 
+   
+  });
+    
+                            </script>
+                            
+                  
+                            <!--end form-contact -->
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!--The Team
+            ============================================================================================================
+            -->
+            <!--
+            <section id="the-team" class="ts-block">
+
+                <div class="container">
+
+                    <div class="ts-title">
+                        <h2>The Team</h2>
+                    </div>
+
+                    <div class="row">
+
+                        <div class="col-md-4">
+                            <div class="ts-member">
+                                <div class="ts-image">
+                                    <div class="ts-img-into-bg">
+                                        <img src="assets/img/img__person--01.jpg" alt="">
+                                    </div>
+                                </div>
+                                <h5>Gloria Derouen</h5>
+                                <h6>Company CEO</h6>
+                                <div class="ts-social">
+                                    <a href="#" class="ts-underline ts-link clearfix">Facebook</a>
+                                    <a href="#" class="ts-underline ts-link ">Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                        
+
+                        <div class="col-md-4">
+                            <div class="ts-member">
+                                <div class="ts-image">
+                                    <div class="ts-img-into-bg">
+                                        <img src="assets/img/img__person--02.jpg" alt="">
+                                    </div>
+                                </div>
+                                <h5>Thomas Quintana</h5>
+                                <h6>Head Designer</h6>
+                                <div class="ts-social">
+                                    <a href="#" class="ts-underline ts-link clearfix">Facebook</a>
+                                    <a href="#" class="ts-underline ts-link ">Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                    
+
+                        <div class="col-md-4">
+                            <div class="ts-member">
+                                <div class="ts-image">
+                                    <div class="ts-img-into-bg">
+                                        <img src="assets/img/img__person--03.jpg" alt="">
+                                    </div>
+                                </div>
+                                <h5>Connie Braden</h5>
+                                <h6>Developer</h6>
+                                <div class="ts-social">
+                                    <a href="#" class="ts-underline ts-link clearfix">Facebook</a>
+                                    <a href="#" class="ts-underline ts-link ">Twitter</a>
+                                </div>
+                            </div>
+                        </div>
+                      
+
+                    </div>
+
+                </div>
+
+                <div class="ts-background ts-img-into-bg ts-background-repeat">
+                    <img src="assets/img/bg__pattern--dot.png" alt="">
+                </div>
+
+            </section>
+-->
+            <!--Partners
+            ============================================================================================================
+            -->
+           {% include partners.html %}
+        </main>
+        <!--end #content-->
+
+        <!--FOOTER
+        ================================================================================================================
+        ================================================================================================================
+        -->
+      
+         {% include footer1.html %}
+        
+        <!--end #footer-->
+
+    </div>
+    <!--end page-->
+</div>
+
+<script src="assets/js/jquery-3.3.1.min.js"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/isInViewport.jquery.js"></script>
+<script src="assets/js/scrolla.jquery.min.js"></script>
+<script src="assets/js/jquery.validate.min.js"></script>
+<script src="assets/js/jquery-validate.bootstrap-tooltip.min.js"></script>
+<script src="assets/js/leaflet.js"></script>
+<script src="assets/js/custom.js"></script>
+
+<script>
+    var latitude = 51.522610;
+    var longitude = -0.085670;
+    var markerImage = "assets/img/map-marker.png";
+    var mapElement = "map-contact";
+
+    var map = L.map(mapElement).setView([latitude, longitude], 14);
+
+    L.tileLayer('http://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var markerIcon = L.icon({
+        iconUrl: markerImage,
+        iconSize: [28, 38],
+        iconAnchor: [14, 38]
+    });
+
+    L.marker([latitude, longitude],{icon: markerIcon}).addTo(map);
+
+</script>
+
+
+
+</body>
+</html>

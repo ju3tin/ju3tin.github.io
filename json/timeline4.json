@@ -1,13 +1,13 @@
 {
     "title": {
         "media": {
-          "url": "//www.flickr.com/photos/tm_10001/2310475988/",
-          "caption": "Whitney Houston performing on her My Love is Your Love Tour in Hamburg.",
+          "url": "/assets/img/bg-office2.jpg",
+          "caption": "Justin Grierson in Hackathon",
           "credit": "flickr/<a href='http://www.flickr.com/photos/tm_10001/'>tm_10001</a>"
         },
         "text": {
           "headline": "Justin Grierson<br/> 1979 - Still Here",
-          "text": "<p>Houston's voice caught the imagination of the world propelling her to superstardom at an early age becoming one of the most awarded performers of our time. This is a look into the amazing heights she achieved and her personal struggles with substance abuse and a tumultuous marriage.</p>"
+          "text": "<p>My love for Computing started in 1984 when I was given a christmas present, Friser Price My First Computer</p>"
         }
     },
     "events": [
@@ -269,4 +269,5 @@
       }
     ]
 }
+
 

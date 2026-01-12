@@ -269,9 +269,21 @@
           "headline": "Radix Hackathon<br/> 2024",
           "text": "<p>Coming 3rd in this hackathon.</p>"
         }
+      },
+      {
+        "media": {
+        "url": "",
+        "caption": "Working for IBM as a Developer Advacate"
+        },
+        "start_date": {
+          "month": "2",
+          "day": "3",
+          "year": "2013" 
+        },
       }
     ]
 }
+
 
 
 

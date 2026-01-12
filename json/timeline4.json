@@ -285,10 +285,14 @@
         },
         "background": {
             "url": "/images/1234.jpg"
+        }, "text": {
+          "headline": "Working for IBM as a Developer Advacate",
+          "text": "<p>My love for Computing started in 1984 when I was given a christmas present, Friser Price My First Computer</p>"
         }
       }
     ]
 }
+
 
 
 

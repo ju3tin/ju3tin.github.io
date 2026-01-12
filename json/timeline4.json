@@ -13,14 +13,14 @@
     "events": [
       {
         "media": {
-          "url": "{{ static_url }}/images/s-l1600.png",
+          "url": "/images/s-l1600.png",
           "caption": "The First Programing Line I wrote was on a Commadore 64",
           "credit": "Cissy Houston photo:<a href='http://www.flickr.com/photos/11447043@N00/418180903/'>Tom Marcello</a><br/><a href='http://commons.wikimedia.org/wiki/File%3ADionne_Warwick_television_special_1969.JPG'>Dionne Warwick: CBS Television via Wikimedia Commons</a>"
         },
         "start_date": {
-          "month": "8",
-          "day": "9",
-          "year": "1963"
+          "month": "12",
+          "day": "25",
+          "year": "1987"
         },
         "text": {
           "headline": "A Musical Heritage",
@@ -269,6 +269,7 @@
       }
     ]
 }
+
 
 
 

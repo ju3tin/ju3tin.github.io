@@ -8,6 +8,9 @@
         "text": {
           "headline": "Justin Grierson<br/> 1979 - Still Here",
           "text": "<p>My love for Computing started in 1984 when I was given a christmas present, Friser Price My First Computer</p>"
+        },
+        "background": {
+            "url": "/assets/img/bg-office2.jpg"
         }
     },
     "events": [
@@ -269,6 +272,7 @@
       }
     ]
 }
+
 
 
 

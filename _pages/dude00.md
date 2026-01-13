@@ -1,5 +1,5 @@
 ---
-layout: null
+layout: none
 permalink: /json/timeline102.json   # optional but recommended
 ---
 {

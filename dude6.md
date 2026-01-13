@@ -1,6 +1,6 @@
 ---
 layout: null
-permalink: /json/timeline00.json   # optional but recommended
+permalink: /json/timeline02.json   # optional but recommended
 ---
 {
   "title": {

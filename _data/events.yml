@@ -1,0 +1,49 @@
+- media:
+    url: "/images/s-l1600.png"
+    caption: "The First Programming Line I wrote was on a Commodore 64"
+    credit: ""
+  start_date:
+    year: 1987
+    month: 12
+    day: 25
+  text:
+    headline: "First Code on Commodore 64"
+    text: "<p>My early hands-on programming began here.</p>"
+
+- media:
+    url: "https://youtu.be/VebCu-UC3G4"
+    caption: "Working for IBM as a Developer Advocate"
+    credit: ""
+  start_date:
+    year: 2013
+    month: 2
+    day: 3
+  text:
+    headline: "IBM Developer Advocate"
+    text: "<p>Role at IBM – sharing knowledge and building with Watson and other tech.</p>"
+  background:
+    url: "/images/1234.jpg"
+
+- media:
+    url: "/assets/img/watson2.gif"
+    caption: "Working with IBM Watson"
+    credit: ""
+  start_date:
+    year: 2013
+  text:
+    headline: "IBM Watson Era"
+    text: "<p>Deep involvement with cognitive computing and developer tools.</p>"
+
+- media:
+    url: "https://youtu.be/keXEnbiA7vA"
+    caption: "Radix Hackathon 2024"
+    credit: ""
+  start_date:
+    year: 2024
+    month: 2
+    day: 11
+  text:
+    headline: "Radix Hackathon<br/>2024"
+    text: "<p>Placed 3rd in the hackathon – great team effort!</p>"
+  background:
+    url: "/images/123.gif"

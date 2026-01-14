@@ -346,6 +346,25 @@
       "background": {
           "url": "/images/123.gif"
       }
+    },
+    {
+      "media": {
+        "url": "/video/ert4.mp4",
+        "caption": "Houston, performing on Good Morning America in 2009.",
+        "credit": "<a href='http://commons.wikimedia.org/wiki/File%3AFlickr_Whitney_Houston_performing_on_GMA_2009_4.jpg'>Asterio Tecson</a> via Wikimedia"
+      },
+      "start_date": {
+        "month": "12",
+        "day": "13",
+        "year": "2024"
+      },
+      "text": {
+        "headline": "Solana<br/> Black Tech Day",
+        "text": "<p>Fitclash was one of the fetured Apps for Black Tech Day Because of the Wins of Fitclash and the Amount of work we put into it</p>"
+      },
+      "background": {
+          "url": "/images/123.gif"
+      }
     }
   ]
 }

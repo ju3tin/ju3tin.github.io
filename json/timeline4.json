@@ -308,6 +308,25 @@
       "background": {
           "url": "/images/123.gif"
       }
+    },
+    {
+      "media": {
+        "url": "//youtu.be/a5JqJiTfHws",
+        "caption": "Houston, performing on Good Morning America in 2009.",
+        "credit": "<a href='http://commons.wikimedia.org/wiki/File%3AFlickr_Whitney_Houston_performing_on_GMA_2009_4.jpg'>Asterio Tecson</a> via Wikimedia"
+      },
+      "start_date": {
+        "month": "12",
+        "day": "13",
+        "year": "2024"
+      },
+      "text": {
+        "headline": "Radix Hackathon<br/> 2024",
+        "text": "<p>Coming 3rd in this hackathon. Was a great lesson for me.<br /> Winnig Isn't everything as I was able to use <a href='https://fitclash.vercel.app'>Fitclash</a> for a startup and for more than 1 hackathon</p>"
+      },
+      "background": {
+          "url": "/images/123.gif"
+      }
     }
   ]
 }

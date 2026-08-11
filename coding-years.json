@@ -1,0 +1,10 @@
+---
+layout: null
+---
+
+{
+  "schemaVersion": 1,
+  "label": "years of coding",
+  "message": "{{ site.time | date: '%Y' | minus: site.data.coding.start_year }} years",
+  "color": "blue"
+}

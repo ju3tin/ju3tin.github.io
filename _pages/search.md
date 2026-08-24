@@ -407,7 +407,7 @@ permalink: /search2.html
                                 <br>
                                 <strong>Email:</strong> <a href="#">hello@example.com</a>
                                 <br>
-                                <strong>Skype:</strong> <a href="#">wearepreus</a>
+                                <strong>Telegram:</strong> <a href="https://t.me/Ju5tADev">@Ju5tadev</a>
                                 <br>
                             </address>
                         </div>
